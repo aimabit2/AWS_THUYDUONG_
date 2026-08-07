@@ -42,7 +42,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: false
+      - name: Clone theme
+        run: |
+          if [ ! -d themes/hugo-theme-learn ]; then
+            git clone --depth 1 https://github.com/matcornic/hugo-theme-learn.git themes/hugo-theme-learn
+          fi
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
