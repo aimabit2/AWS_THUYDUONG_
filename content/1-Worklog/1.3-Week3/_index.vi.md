@@ -1,59 +1,97 @@
 ---
-title: "Worklog Tuần 3"
+title: "Tuần 3 - Kiến trúc AWS Data Lake và Thiết kế Nền tảng Dữ liệu Tài chính"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
+<!-- {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+{{% /notice %}} -->
 
 
-### Mục tiêu tuần 3:
+### Tổng quan Tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+Trong Tuần 3, tôi tập trung tìm hiểu kiến trúc **AWS Data Lake** và các dịch vụ hỗ trợ thông qua tài liệu AWS Building Data Lakes on AWS. Những kiến thức thu được sau đó được áp dụng để đánh giá và cải thiện kiến trúc, chiến lược thu thập dữ liệu cũng như thiết kế lưu trữ của dự án **Financial Data Lake**.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Lĩnh vực | Nội dung chính | Kiến thức rút ra |
+| --- | --- | --- |
+| A | Nền tảng AWS Data Lake | Hiểu rõ kiến trúc và các nguyên tắc thiết kế của AWS Data Lake là nền tảng để xây dựng hệ thống dữ liệu có khả năng mở rộng, tối ưu chi phí và sẵn sàng cho các tác vụ phân tích. |
+| B | Thu thập dữ liệu, Lưu trữ và Quản trị dữ liệu | Việc tổ chức dữ liệu theo các vùng lưu trữ hợp lý và áp dụng chiến lược thu thập dữ liệu, quản lý metadata cũng như quản trị dữ liệu sẽ giúp nâng cao chất lượng dữ liệu, khả năng tìm kiếm và dễ dàng bảo trì trong dài hạn. |
+| C | Hoàn thiện Kiến trúc Financial Data Lake | Áp dụng các nguyên tắc thiết kế của AWS Data Lake giúp xây dựng kiến trúc ETL có khả năng mở rộng, phục vụ cho phân tích dữ liệu, trực quan hóa dữ liệu và các ứng dụng Machine Learning trong tương lai. |
 
+### Lĩnh vực A: Nền tảng AWS Data Lake
 
-### Kết quả đạt được tuần 3:
+#### *Thứ Hai, 06/07 | Building Data Lakes on AWS – Tổng quan Kiến trúc*
+- Tìm hiểu khái niệm **Data Lake** và vai trò của Data Lake trong các tổ chức hoạt động dựa trên dữ liệu.
+- Nghiên cứu kiến trúc tham chiếu (Reference Architecture) của AWS để xây dựng Data Lake có khả năng mở rộng, bảo mật và dễ quản lý.
+- Tìm hiểu sự khác biệt giữa **Cơ sở dữ liệu truyền thống (Traditional Database)**, **Data Warehouse** và **Data Lake** về cách lưu trữ, khả năng mở rộng và năng lực phân tích dữ liệu.
+- Nghiên cứu các dịch vụ cốt lõi trong kiến trúc AWS Data Lake, bao gồm:
+  - Amazon S3
+  - AWS Glue
+  - Amazon Athena
+  - AWS Lambda
+  - AWS Lake Formation
+- Tài liệu tham khảo:
+> **Kiến thức rút ra:** Amazon S3 đóng vai trò là lớp lưu trữ trung tâm của AWS Data Lake, trong khi các dịch vụ xử lý và phân tích được tách biệt khỏi lớp lưu trữ, giúp hệ thống có khả năng mở rộng và tối ưu chi phí.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### *Thứ Ba, 07/07 | Chiến lược Thu thập và Đồng bộ Dữ liệu*
+- Tìm hiểu các phương pháp thu thập dữ liệu, bao gồm:
+  - Batch Ingestion.
+  - Streaming Ingestion.
+  - Incremental Data Loading.
+- Nghiên cứu cách các dịch vụ thu thập dữ liệu của AWS tích hợp với **Amazon S3** để xây dựng kho lưu trữ tập trung.
+- Tìm hiểu các nguyên tắc thiết kế pipeline thu thập dữ liệu có khả năng mở rộng bằng **AWS Lambda** và **Amazon EventBridge**.
+- Đánh giá các chiến lược thu thập dữ liệu phù hợp để lấy dữ liệu thị trường chứng khoán Việt Nam từ nhiều nguồn dữ liệu công khai khác nhau.
+- Tài liệu tham khảo:
+> **Kiến thức rút ra:** Đối với dữ liệu tài chính được cập nhật theo chu kỳ, phương pháp **Batch Ingestion** là lựa chọn đơn giản, ổn định và tối ưu chi phí hơn so với xử lý dữ liệu theo thời gian thực.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Lĩnh vực B: Lưu trữ và Xử lý Dữ liệu trong Data Lake
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### *Thứ Tư, 08/07 | Tổ chức Dữ liệu trong Amazon S3*
+- Tìm hiểu các phương pháp tổ chức dữ liệu trong Amazon S3 theo mô hình các vùng lưu trữ (Storage Zones).
+- Nghiên cứu vai trò của các tầng:
+  - Raw Layer
+  - Curated Layer
+  - Analytics (Feature) Layer
+trong kiến trúc Data Lake hiện đại.
+- Tìm hiểu các chiến lược phân vùng dữ liệu (Partitioning), tổ chức metadata, quy tắc đặt tên và quản lý vòng đời dữ liệu (Lifecycle Management) nhằm tối ưu việc lưu trữ và truy vấn dữ liệu.
+- Phân tích tác động của việc tổ chức dữ liệu hợp lý đối với hiệu năng của quy trình ETL và các tác vụ phân tích dữ liệu.
+- Tài liệu tham khảo:
+> **Kiến thức rút ra:** Một cấu trúc lưu trữ được thiết kế hợp lý sẽ giúp nâng cao khả năng bảo trì, tối ưu hiệu năng truy vấn và dễ dàng mở rộng khi triển khai các bài toán Machine Learning hoặc phân tích dữ liệu trong tương lai.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+#### *Thứ Năm, 09/07 | Xử lý Dữ liệu, Quản lý Metadata và Quản trị Dữ liệu*
+- Tìm hiểu **AWS Glue** trong việc xử lý ETL, khám phá schema và quản lý Metadata Catalog.
+- Tìm hiểu cách **AWS Glue** Crawlers tự động nhận diện cấu trúc dữ liệu và xây dựng kho metadata tập trung.
+- Nghiên cứu **AWS Lake Formation** để quản trị dữ liệu, kiểm soát quyền truy cập và phân quyền trên nhiều tập dữ liệu khác nhau.
+- Tìm hiểu các phương pháp đảm bảo chất lượng dữ liệu, tính nhất quán và quản trị dữ liệu trong toàn bộ vòng đời của Data Lake.
+- Tài liệu tham khảo:
+> **Kiến thức rút ra:** Quản lý metadata và xây dựng cơ chế quản trị tập trung là yếu tố quan trọng giúp dữ liệu trong Data Lake luôn dễ tìm kiếm, an toàn và có thể tái sử dụng trong các hệ thống quy mô lớn.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+### Lĩnh vực C: Hoàn thiện Kiến trúc Dự án
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+#### *Thứ Sáu, 10/07 | Áp dụng Kiến trúc AWS Data Lake vào Nền tảng Dữ liệu Tài chính*
+- Áp dụng các nguyên tắc thiết kế của AWS Data Lake để đánh giá và cải thiện kiến trúc của dự án Financial Data Lake.
+- Rà soát quy trình ETL đã đề xuất, bao gồm:
+  - Data Ingestion.
+  - Raw Zone.
+  - Curated Zone.
+  - Feature Store.
+  - Analytics.
+  - Monitoring.
+- Đánh giá việc lựa chọn các dịch vụ AWS cho dự án như:
+  - Amazon S3.
+  - AWS Lambda.
+  - AWS Glue.
+  - Amazon Athena.
+  - Amazon CloudWatch.
+  - Terraform.
+- Thảo luận các hướng cải tiến kiến trúc nhằm nâng cao khả năng mở rộng, khả năng bảo trì, tối ưu chi phí và hỗ trợ tích hợp Machine Learning trong tương lai.
+- Tài liệu tham khảo:
+> **Kiến thức rút ra:** Việc áp dụng các nguyên tắc thiết kế của AWS ngay từ giai đoạn đầu giúp xây dựng nền tảng dữ liệu có khả năng mở rộng, dễ bảo trì và sẵn sàng phục vụ các tác vụ phân tích, trực quan hóa dữ liệu cũng như các ứng dụng AI trong tương lai.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+### Kết quả đạt được
+- Hiểu rõ kiến trúc **AWS Data Lake** và vai trò của các dịch vụ hỗ trợ trong hệ sinh thái AWS.
+- Nắm được các nguyên tắc và thực tiễn tốt trong việc thu thập dữ liệu, tổ chức lưu trữ, quản lý metadata và quản trị dữ liệu trên AWS.
+- Củng cố kiến thức về xây dựng quy trình ETL có khả năng mở rộng bằng **Amazon S3, AWS Lambda, AWS Glue và Amazon Athena.**
+- Áp dụng các nguyên tắc thiết kế của AWS để cải thiện kiến trúc của dự án **Financial Data Lake**, tạo nền tảng vững chắc cho việc phát triển các chức năng phân tích dữ liệu, dashboard và tích hợp Machine Learning trong các giai đoạn tiếp theo.

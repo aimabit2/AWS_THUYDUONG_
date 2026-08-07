@@ -6,35 +6,26 @@ chapter: false
 pre: " <b> 1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Worklog này ghi lại toàn bộ quá trình học tập và thực hiện dự án của tôi trong **8 tuần thực tập**. Mỗi tuần đều được cập nhật dựa trên các hoạt động thực tế, bao gồm nghiên cứu tài liệu, tham gia các buổi hướng dẫn, thảo luận nhóm và triển khai các nhiệm vụ được giao trong dự án.
 
-**Trong trang này** bạn sẽ cần giới thiệu worklog của bạn **như thế nào**? Bạn hoàn thành chương trình trong vòng **bao nhiêu tuần**? Bạn **đã làm gì** trong các tuần đó?
+Trong suốt 8 tuần, tôi đã lần lượt xây dựng kiến thức từ nền tảng Cloud và AWS, đến việc thiết kế kiến trúc Data Lake, triển khai pipeline dữ liệu, xây dựng mạng AWS an toàn, tự động hóa hạ tầng và vận hành cảnh báo, rồi cuối cùng là bảo mật đám mây và triển khai frontend tối ưu.
 
+Song song với việc học lý thuyết, tôi đã áp dụng trực tiếp các kiến thức này vào dự án Financial Data Lake. Quá trình thực hiện bao gồm phân tích yêu cầu, thiết kế hệ thống, triển khai ETL, xây dựng và kiểm thử pipeline thu thập dữ liệu, thiết lập bảo mật và giám sát, đồng thời hoàn thiện phần giao diện người dùng được phân phối qua mạng CDN.
 
-Thông thường và cũng là tiêu chuẩn, một worklog được thực hiện trong khoảng 3 tháng (trong suốt thời gian thực tập) với nội dung các tuần như sau:
+Nội dung worklog được tổ chức theo từng tuần, phản ánh hành trình chuyển đổi từ kiến thức nền tảng đến thực hành hiện thực hóa các giải pháp AWS và Data Engineering. Mỗi tuần trình bày rõ các chủ đề học, công việc đã thực hiện, kiến thức rút ra và kết quả đạt được, nhằm thể hiện sự phát triển cả về chuyên môn lẫn kỹ năng vận hành.
 
-**Tuần 1:** [Làm quen với AWS và các dịch vụ cơ bản trong AWS](1.1-week1/)
+**Tuần 1:** [Xây dựng nền tảng về Cloud, AI và IAM.](1.1-week1/)
 
-**Tuần 2:** [Làm công việc A...](1.2-week2/)
+**Tuần 2:** [Học các dịch vụ AWS cốt lõi và bắt đầu dự án Data Engineering.](1.2-week2/)
 
-**Tuần 3:** [Làm công việc B...](1.3-week3/)
+**Tuần 3:** [Thiết kế kiến trúc Data Lake và hoàn thiện kiến trúc nền tảng dữ liệu tài chính.](1.3-week3/)
 
-**Tuần 4:** [Làm công việc C...](1.4-week4/)
+**Tuần 4:** [Triển khai pipeline thu thập dữ liệu đầu tiên với kiến trúc serverless, adapter, batch processing và cơ chế mở rộng.](1.4-week4/)
 
-**Tuần 5:** [Làm công việc D...](1.5-week5/)
+**Tuần 5:** [Các nguyên lý mạng trong AWS.](1.5-week5/)
 
-**Tuần 6:** [Làm công việc E...](1.6-week6/)
+**Tuần 6:** [Tự động hóa hạ tầng và chuyển giao liên tục (CI/CD) trên AWS.](1.6-week6/)
 
-**Tuần 7:** [Làm công việc G...](1.7-week7/)
+**Tuần 7:** [Triển khai bảo mật đám mây, giám sát và phát hiện mối đe dọa.](1.7-week7/)
 
-**Tuần 8:** [Làm công việc H...](1.8-week8/)
-
-**Tuần 9:** [Làm công việc I...](1.9-week9/)
-
-**Tuần 10:** [Làm công việc L...](1.10-week10/)
-
-**Tuần 11:** [Làm công việc M...](1.11-week11/)
-
-**Tuần 12:** [Làm công việc N...](1.12-week12/)
+**Tuần 8:** [Xây dựng pipeline dữ liệu serverless và triển khai frontend tối ưu CloudFront.](1.8-week8/)

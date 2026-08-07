@@ -1,125 +1,86 @@
 ---
-title: "Event 2"
+title: "Sự kiện 2"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
+Dưới đây là phiên bản **tiếng Việt** theo đúng cấu trúc của bản tiếng Anh.
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+---
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+## Thông tin chung
 
-### Mục Đích Của Sự Kiện
+* **Tên sự kiện:** AWS AgentCore Workshop – Day 1: Foundations & Agent Setup
+* **Thời gian:** Thứ Sáu, ngày 01/08/2026 | 09:00 – 11:00
+* **Địa điểm:** *(Workshop / Training Session)*
+* **Vai trò:** Người tham gia (Participant)
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+---
 
-### Danh Sách Diễn Giả
+## Nội dung chính & Hoạt động
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+Buổi học đầu tiên của workshop tập trung giới thiệu về **Amazon Bedrock AgentCore** và hướng dẫn xây dựng một AI Agent cơ bản trên nền tảng AWS. Chương trình bao gồm cả phần lý thuyết và thực hành nhằm giúp người tham gia hiểu được kiến trúc cũng như quy trình triển khai AI Agent trong môi trường thực tế.
 
-### Nội Dung Nổi Bật
+### **09:00 – 10:00 | Phiên 1: Giới thiệu Amazon Bedrock AgentCore**
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+* **Nội dung:**
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+  Workshop mở đầu bằng phần giới thiệu tổng quan về **Amazon Bedrock AgentCore**, một nền tảng hỗ trợ phát triển, triển khai và quản lý các AI Agent trên AWS. Diễn giả trình bày kiến trúc tổng thể của AgentCore và giải thích vai trò của ba thành phần chính:
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+  * **AgentCore Runtime:** Môi trường thực thi AI Agent, chịu trách nhiệm vận hành và quản lý vòng đời của Agent.
+  * **AgentCore Gateway:** Cung cấp cơ chế kết nối an toàn giữa AI Agent với các API, công cụ và dịch vụ bên ngoài.
+  * **AgentCore Identity:** Quản lý xác thực (Authentication) và phân quyền (Authorization), giúp AI Agent truy cập tài nguyên AWS và các hệ thống khác một cách bảo mật.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+  Ngoài ra, phiên học cũng giới thiệu cách AgentCore hỗ trợ xây dựng các AI Agent có khả năng mở rộng, dễ quản lý và sẵn sàng triển khai trong môi trường doanh nghiệp.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+---
 
-#### Domain-Driven Design (DDD)
+### **10:00 – 11:00 | Thực hành: Xây dựng AI Agent đầu tiên**
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+* **Hoạt động:**
 
-#### Event-Driven Architecture
+  Trong phần thực hành, người tham gia được hướng dẫn từng bước để xây dựng một AI Agent hoàn chỉnh trên AWS, bao gồm:
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+  * Triển khai một AI Agent cơ bản bằng Amazon Bedrock AgentCore.
+  * Kết nối AI Agent với các **External Tools** và **Knowledge Bases** nhằm mở rộng khả năng xử lý và cung cấp thông tin theo ngữ cảnh.
+  * Xây dựng giao diện Web đơn giản để người dùng tương tác với AI Agent.
+  * Tích hợp **Amazon Cognito** nhằm triển khai chức năng xác thực người dùng và bảo vệ quyền truy cập vào ứng dụng.
 
-#### Compute Evolution
+  Qua bài thực hành, người tham gia hiểu rõ quy trình xây dựng một ứng dụng AI từ khâu triển khai Agent, kết nối dữ liệu cho đến phát triển giao diện và cơ chế đăng nhập.
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+---
 
-#### Amazon Q Developer
+## Điểm nổi bật
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+Ngày đầu tiên của workshop tập trung xây dựng nền tảng về **Amazon Bedrock AgentCore** và quy trình phát triển AI Agent trên AWS. Thông qua phần lý thuyết và thực hành, người tham gia hiểu được kiến trúc của AgentCore, cách AI Agent giao tiếp với các dịch vụ bên ngoài và phương pháp triển khai một ứng dụng AI hoàn chỉnh có tích hợp xác thực người dùng.
 
-### Những Gì Học Được
+> * Giới thiệu Amazon Bedrock AgentCore
+> * AgentCore Runtime
+> * AgentCore Gateway
+> * AgentCore Identity
+> * Triển khai AI Agent
+> * Kết nối Knowledge Bases và External Tools
+> * Tích hợp Amazon Cognito
 
-#### Tư Duy Thiết Kế
+---
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+## Kiến thức đạt được
 
-#### Kiến Trúc Kỹ Thuật
+* Hiểu được kiến trúc tổng thể và các thành phần chính của Amazon Bedrock AgentCore.
+* Nắm được vai trò của AgentCore Runtime, Gateway và Identity trong việc xây dựng AI Agent trên nền tảng AWS.
+* Có kinh nghiệm thực hành triển khai một AI Agent cơ bản bằng Amazon Bedrock AgentCore.
+* Hiểu cách tích hợp Knowledge Base và External Tools nhằm mở rộng khả năng xử lý của AI Agent.
+* Nắm được quy trình xây dựng giao diện Web và tích hợp Amazon Cognito để xác thực người dùng.
+* Củng cố kiến thức về cách kết hợp nhiều dịch vụ AWS nhằm xây dựng một ứng dụng AI hoàn chỉnh.
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+---
 
-#### Chiến Lược Hiện Đại Hóa
+## Áp dụng vào công việc
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+Kiến thức thu được từ buổi workshop có thể được áp dụng trực tiếp vào dự án **Financial Data Lake** đang thực hiện:
 
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
-
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+* Hiểu rõ hơn về cách xây dựng các ứng dụng AI trên nền tảng AWS, từ đó hỗ trợ thiết kế kiến trúc tổng thể của hệ thống.
+* Có thể áp dụng **Amazon Cognito** để xây dựng cơ chế xác thực và phân quyền người dùng cho ứng dụng quản lý dữ liệu tài chính.
+* Định hướng tích hợp **Amazon Bedrock Agent** trong tương lai nhằm hỗ trợ phân tích dữ liệu tài chính, trả lời câu hỏi bằng ngôn ngữ tự nhiên và tự động hóa việc khai thác dữ liệu từ Data Lake.
+* Vận dụng mô hình kết nối **Knowledge Base** và **External Tools** để AI Agent có thể truy vấn dữ liệu từ **Amazon Athena**, **AWS Glue Data Catalog**, hoặc các dịch vụ AWS khác, giúp nâng cao khả năng phân tích và hỗ trợ ra quyết định trong hệ thống.

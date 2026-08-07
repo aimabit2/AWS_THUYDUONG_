@@ -7,26 +7,26 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
 
-&emsp; **Số điện thoại:** 0989888999
+&emsp; **Họ và tên:** Nguyen Thi Thuy Duong
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Số điện thoại:** 0909529884 
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
+&emsp; **Email:** downinthedm779@gmail.com
 
-&emsp; **Ngành:** Công nghệ thông tin
+&emsp; **Trường:** Trường Đại học Sài Gòn
 
-&emsp; **Lớp:** AWS082025
+&emsp; **Ngành:** Công Nghệ Thông Tin
 
-&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
+&emsp; **Lớp:**
+
+&emsp; **Công ty thực tập:**Công ty TNHH Amazon Web Services Viet Nam
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
+&emsp; **Thời gian thực tập:** Từ ngày  đến ngày 15/08/2026
 
-![Ảnh đại diện của bạn](/images/avatar.png)
-
+![Your profile picture](/images/avatar.jpg)
 
 
 ### Nội dung báo cáo

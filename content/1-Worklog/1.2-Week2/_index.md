@@ -1,57 +1,80 @@
 ---
-title: "Week 2 Worklog"
+title: "Week 2 - AWS Storage, Compute, Networking, and Data Engineering Foundations"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
+<!-- {{% notice warning %}} 
 ⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+{{% /notice %}} -->
 
 
-### Week 2 Objectives:
+### Week 2 Overview
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+This week focused on AWS storage and compute foundations, hybrid networking design, and the kickoff of the team Data Engineering project.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Domain | Main Focus | Key Takeaway |
+| --- | --- | --- |
+| A | AWS Storage & Compute Foundations | S3 and EC2 provide the basic building blocks for scalable data storage and flexible compute. |
+| B | AWS Networking & Hybrid Connectivity | A well-planned VPC with layered security controls is the foundation of secure hybrid architectures. |
+| C | Data Engineering Project Initiation | A clear ETL architecture and local ingestion pipeline create a strong base for cloud migration later. |
 
+### Domain A: AWS Storage & Compute Foundations
 
-### Week 2 Achievements:
+#### Mon, Jun 29 | Amazon S3, Data Lake & Data Warehouse Fundamentals
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Explored Amazon S3 as AWS's scalable object storage service.
+- Distinguished the roles of Amazon S3, Data Lakes, and Data Warehouses in modern data architectures.
+- Learned bucket and object concepts, storage organization, metadata, access control mechanisms, and common enterprise use cases such as backup, big data analytics, and data lake implementation.
+- Compared structured analytical storage (Data Warehouse) with raw data repositories (Data Lake) to understand their roles in a data engineering workflow.
+- Ref:
 
-* Successfully created and configured an AWS Free Tier account.
+> Key takeaway: Amazon S3 serves as the storage foundation for building scalable Data Lakes, while Data Warehouses focus on optimized analytical performance over processed datasets.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Tue, Jun 30 | Amazon EC2 Fundamentals & Static Website Hosting
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Studied Amazon EC2 fundamentals, including instance types, key pairs, security groups, and application deployment workflows.
+- Learned how to provision compute resources and manage virtual servers within AWS.
+- Practiced hosting a static website using Amazon S3 to understand cloud-native web hosting without dedicated web servers.
+- Ref:
 
-* Used AWS CLI to perform basic operations such as:
+> Key takeaway: Amazon EC2 provides flexible compute capacity, while Amazon S3 enables highly available and cost-effective hosting for static web applications.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+### Domain B: AWS Networking & Hybrid Connectivity
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+#### Wed, Jul 01 | Amazon VPC & AWS Site-to-Site VPN
+
+- Studied Amazon Virtual Private Cloud (VPC), including CIDR planning, Regions, Availability Zones, Subnets, Route Tables, Internet Gateway (IGW), Security Groups, and Network ACLs.
+- Learned subnet segmentation strategies such as Public, Private, and VPN-only subnets following AWS networking best practices.
+- Practiced establishing secure hybrid connectivity between on-premises infrastructure and AWS Cloud using AWS Site-to-Site VPN.
+- Ref:
+
+> Key takeaway: A well-designed VPC architecture, combined with layered security controls and secure hybrid connectivity, forms the foundation of highly available cloud infrastructures.
+
+### Domain C: Data Engineering Project Initiation
+
+#### Thu, Jul 02 | Project Planning & Data Pipeline Architecture
+
+- Officially started the team Data Engineering project.
+- Participated in project discussions to analyze business objectives, system architecture, and implementation roadmap.
+- Designed the overall ETL workflow consisting of Data Ingestion, Bronze (Raw JSON), Silver (Clean Parquet), Gold (Feature Engineering), Data Validation, and Analytics layers.
+- Reviewed project structure, development responsibilities, and deployment strategy for future cloud migration.
+- Ref:
+
+#### Fri, Jul 03 | Local Data Ingestion with VNStock3
+
+- Configured the local development environment by installing VNStock3 and Pandas.
+- Developed the first Python-based data ingestion script to collect Vietnamese stock market data from VNStock3.
+- Successfully executed the initial ETL pipeline locally by storing raw data in the Bronze layer before subsequent cleaning, validation, and feature engineering stages.
+- Reviewed the pipeline architecture and discussed future deployment to AWS cloud services.
+- Ref:
+
+> Key takeaway: Separating the pipeline into Bronze, Silver, and Gold layers improves data quality, maintainability, and scalability while preparing the project for cloud-native deployment.
+
+### Achievements
+
+- Built a comprehensive understanding of AWS core services, including Amazon S3, Amazon EC2, Amazon VPC, and AWS Site-to-Site VPN.
+- Acquired practical experience in designing secure cloud networking and hybrid connectivity architectures following AWS best practices.
+- Successfully initiated the team's Data Engineering project by implementing the first stage of a local ETL pipeline using VNStock3.
+- Established the technical foundation for future cloud deployment by combining AWS infrastructure knowledge with real-world data engineering practices.

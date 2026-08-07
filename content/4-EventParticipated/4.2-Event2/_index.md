@@ -6,121 +6,64 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+## General Information
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+* **Event name:** AWS AgentCore Workshop – Day 1: Foundations & Agent Setup
+* **Date and time:** Friday, August 1, 2026 / 09:00 – 11:00
+* **Location:** *(Workshop / Training Session)*
+* **Role:** Participant
 
-### Event Objectives
+## Main Content & Activities
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+The first day of the workshop introduced the fundamentals of Amazon Bedrock AgentCore and guided participants through building and deploying an AI agent using AWS services. The session combined theoretical concepts with practical hands-on exercises.
 
-### Speakers
+### *09:00 – 10:00 | Session 1: Introduction to Amazon Bedrock AgentCore*
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+* **Content:** The workshop began with an overview of Amazon Bedrock AgentCore and its role in developing production-ready AI agents. The session explained the architecture of AgentCore and introduced its three primary components:
 
-### Key Highlights
+  * **AgentCore Runtime:** Executes and manages AI agents in a scalable cloud environment.
+  * **AgentCore Gateway:** Enables agents to securely communicate with external APIs, tools, and services.
+  * **AgentCore Identity:** Handles authentication and authorization for agents, ensuring secure access to AWS resources and external systems.
 
-#### Identifying the drawbacks of legacy application architecture
+Participants also learned how AgentCore simplifies the deployment, orchestration, and management of enterprise AI agents built on Amazon Bedrock foundation models.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+### *10:00 – 11:00 | Hands-on Lab: Building Your First Agent*
 
-#### Transitioning to modern application architecture – Microservices
+* **Activities:** Participants completed a practical lab to gain experience with AgentCore by:
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+  * Deploying a basic AI agent using Amazon Bedrock AgentCore.
+  * Connecting external tools and Knowledge Bases to provide the agent with additional capabilities and contextual information.
+  * Building a simple web interface for interacting with the agent.
+  * Integrating **Amazon Cognito** to implement user authentication and secure access to the application.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+The hands-on exercises demonstrated how multiple AWS services can be integrated to develop secure, scalable, and user-friendly AI applications.
 
-#### Domain-Driven Design (DDD)
+## Key Highlights
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+The first day focused on establishing a strong foundation in Amazon Bedrock AgentCore and its ecosystem. Participants explored the core architecture of AI agents, learned how agents communicate with external services, and gained practical experience deploying and securing an AI-powered web application.
 
-#### Event-Driven Architecture
+> * Introduction to Amazon Bedrock AgentCore
+> * AgentCore Runtime
+> * AgentCore Gateway
+> * AgentCore Identity
+> * Deploying an AI Agent
+> * Knowledge Base Integration
+> * Amazon Cognito Authentication
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+## Key Takeaways
 
-#### Compute Evolution
+* Developed a solid understanding of Amazon Bedrock AgentCore and its core architecture.
+* Learned the responsibilities of AgentCore Runtime, Gateway, and Identity when building enterprise AI applications.
+* Gained hands-on experience deploying AI agents on AWS.
+* Understood how Knowledge Bases enhance AI agents by providing contextual information.
+* Learned how Amazon Cognito can be integrated to provide secure authentication for AI-powered applications.
+* Improved practical knowledge of integrating multiple AWS services into a complete AI solution.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+## Apply to Work
 
-#### Amazon Q Developer
+The concepts learned during this workshop can be directly applied to the Financial Data Lake project in several ways:
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
-
-### Key Takeaways
-
-#### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
-
-### Event Experience
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+* Strengthened the understanding of building cloud-native AI applications using AWS services, supporting the overall system architecture.
+* Provided insights into designing secure authentication and authorization mechanisms that could be applied to the project's web application through Amazon Cognito.
+* Inspired future integration of Amazon Bedrock agents to automate financial data analysis, answer user queries, and provide intelligent insights from the curated financial dataset.
+* Demonstrated how external tools and Knowledge Bases can be connected to AI agents, which could later enable the Financial Data Lake platform to interact with Athena, Glue Data Catalog, and other AWS services for intelligent data exploration.

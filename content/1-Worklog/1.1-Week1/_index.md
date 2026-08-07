@@ -1,57 +1,80 @@
 ---
-title: "Week 1 Worklog"
+title: "Week 1 - Foundations of AWS Cloud Architecture, AI-Driven SDLC, and IAM Security"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
+<!-- {{% notice warning %}} 
 ⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+{{% /notice %}} -->
 
 
-### Week 1 Objectives:
+### Week 1 Overview
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+This week covered three themes: AWS infrastructure fundamentals, modern Gen-AI / SDLC practices, and IAM security basics.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Domain | Main Focus | Key Takeaway |
+| --- | --- | --- |
+| A | AWS Global Infrastructure & Foundations | Resilient systems should be designed with fault isolation in mind, ideally across at least two AZs. |
+| B | Advanced Gen-AI & Modern SDLC | AI delivery becomes reliable when prompts are backed by structure, checkpoints, and automated testing. |
+| C | Identity & Access Management (IAM) | Least privilege and temporary roles are the safest default for AWS permissions. |
 
+### Domain A: AWS Global Infrastructure & Foundations
 
-### Week 1 Achievements:
+Understanding physical and logical boundaries of cloud architecture for HA design.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### Mon, Jun 22 | Cloud Computing Definitions & Benefits
 
-* Successfully created and configured an AWS Free Tier account.
+- Defined cloud computing as on-demand IT resources delivered via the Internet with pay-as-you-go pricing.
+- Identified four core benefits: 
+     - cost optimization
+     - accelerated development through automation and AI
+     - high flexibility
+     - global scale
+- Ref:
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Tue, Jun 23 | Infrastructure Topology Breakdown
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Studied the infrastructure layers: Data Centers, Availability Zones (AZs), Regions, and Edge Locations.
+- AZs are fault-isolated and connected via high-speed private links.
+- Regions contain at least three AZs, while Edge Locations serve as Points of Presence for CloudFront CDN, WAF, and Route 53.
+- Ref:
 
-* Used AWS CLI to perform basic operations such as:
+> Key takeaway: A resilient production environment should keep a minimum dual-AZ footprint to preserve fault isolation.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+### Domain B: Advanced Gen-AI & Modern SDLC
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+#### Wed, Jun 24 | The Agentic AI Shift & Kiro IDE Framework
+
+- Explored the evolution of SDLC from basic code generation to end-to-end AI-driven feature implementation.
+- Reviewed how Kiro IDE/CLI transforms prompts into requirements, architecture, and Timeline Checkpointing for safe snapshots and rollback.
+- Ref:
+
+#### Thu, Jun 25 | Advanced Context Management & Property-Based Testing (PBT)
+
+- Analyzed Advanced Context Management using Model Context Protocol (MCP) to connect docs, databases, APIs, and UI designs.
+- Studied Property-Based Testing (PBT), which generates many randomized test cases from EARS-formatted requirements instead of writing tests manually.
+- Ref:
+
+> Key takeaway: Professional AI delivery depends on structured specs, connected context, and automated boundary testing.
+
+### Domain C: Identity & Access Management (AWS IAM)
+
+#### Fri, Jun 26 | Authentication & Authorization Structures
+
+- Deconstructed core IAM components: Root User isolation, IAM Users, Groups, JSON Policies, and IAM Roles.
+- Root User should be protected with MFA and avoided for daily usage.
+- IAM Users provide long-term credentials, Groups support RBAC management, Policies define permissions, and Roles provide temporary service-to-service credentials.
+- Ref:
+
+> Key takeaway: Enforce the Principle of Least Privilege and prefer temporary roles for cross-service permissions.
+
+#### Sat, Jun 27 | Knowledge Consolidation & Review
+
+- Organized the Week 1 technical notes and synthesized the main architectural concepts.
+- Ref:
+
+### Achievements
+
+- Compiled a comprehensive, structured technical knowledge base covering AWS core infrastructure, Agentic SDLC (Kiro IDE), and IAM security mechanics.

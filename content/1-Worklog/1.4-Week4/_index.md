@@ -1,57 +1,84 @@
 ---
-title: "Week 4 Worklog"
+title: "Week 4 - Financial Data Ingestion Pipeline Design and Implementation"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
+<!-- {{% notice warning %}} 
 ⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+{{% /notice %}} -->
 
 
-### Week 4 Objectives:
+### Week 4 Overview
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+During Week 4, I focused on designing and implementing the core data ingestion pipeline for the Financial Data Lake project. The week began with evaluating different cloud architectures and selecting an appropriate serverless design. Based on the selected architecture, I implemented the initial ingestion workflow, including provider validation, adapter development, batch processing, and scalability evaluation for collecting Vietnamese stock market data.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Domain | Main Focus | Key Takeaway |
+| --- | --- | --- |
+| A | Architecture Evaluation & Pipeline Design | Comparing different cloud architectures helps identify a scalable, cost-efficient, and maintainable solution for financial data ingestion.
+| B | Data Ingestion Pipeline Implementation | Building reusable provider adapters and ingestion workers establishes a reliable foundation for automated data collection.
+| C | Batch Processing & Scalability Validation | Implementing retry, checkpoint, and batch execution mechanisms improves pipeline robustness and prepares the system for larger-scale data ingestion.
 
+### Domain A: ARCHITECTURE EVALUATION & PIPELINE DESIGN
 
-### Week 4 Achievements:
+#### *Mon, Jul 13 | Evaluating Financial Data Lake Architectures*
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Studied different architectural approaches for building a Financial Data Lake, including traditional container-based deployment and serverless event-driven architecture.
+- Compared deployment complexity, scalability, operational cost, and maintainability between RDS-based and Amazon S3-based solutions.
+- Reviewed the proposed AWS Serverless Financial Data Lake architecture, including EventBridge, Lambda, SQS, Amazon S3, Glue Catalog, Athena, and API Gateway.
+- Analyzed how each service contributes to data ingestion, processing, storage, and analytics.
+- Ref: Architecture Comparison Document
 
-* Successfully created and configured an AWS Free Tier account.
+> Key takeaway: A serverless architecture significantly reduces operational complexity while providing automatic scalability and cost-efficient processing for periodic financial data collection.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### *Tue, Jul 14 | Designing the Local Data Ingestion Pipeline*
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Designed the overall ingestion workflow before cloud deployment.
+Defined the responsibilities of Universe Loader, Provider Adapter, Dispatcher, Worker, and Validator components.
+- Finalized the initial universe of listed companies and validated data availability using provider smoke tests.
+- Planned the local Bronze storage structure for storing raw JSON responses before ETL processing.
+- Ref: Implementation Guide Draft
 
-* Used AWS CLI to perform basic operations such as:
+> Key takeaway: Separating provider abstraction, ingestion workers, and validation logic improves modularity and simplifies future migration from local execution to AWS services.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+### Domain B: DATA INGESTION PIPELINE IMPLEMENTATION
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+#### *Wed, Jul 15 | Developing Provider Adapter & Ingestion Worker*
+
+- Implemented the provider adapter responsible for retrieving OHLCV data from the selected financial data source.
+- Developed ingestion workers capable of processing multiple stock tickers sequentially.
+- Added retry and backoff mechanisms to improve reliability during temporary provider failures.
+- Implemented structured logging for ticker symbols, execution time, provider status, and ingestion results.
+- Ref: Implementation Guide Draft
+
+> Key takeaway: Retry strategies and centralized logging greatly improve pipeline stability without increasing implementation complexity.
+
+#### *Thu, Jul 16 | Local Batch Execution & Pipeline Validation*
+
+- Executed batch ingestion using the selected universe of stock tickers.
+- Validated raw data completeness and classified successful and failed requests.
+- Tested checkpoint handling to ensure interrupted executions could resume without restarting the entire batch.
+- Evaluated local storage organization for Raw JSON outputs and prepared the pipeline for future Curated processing.
+- Ref: Implementation Guide Draft
+
+> Key takeaway: Batch execution combined with checkpoint recovery improves fault tolerance and minimizes unnecessary reprocessing.
+### Domain C: 
+
+#### *Fri, Jul 17 | Scalability Evaluation & Future Pipeline Planning*
+
+- Evaluated pipeline scalability when increasing the number of processed stock tickers.
+- Reviewed concurrency strategies, conservative rate limiting, and provider request scheduling.
+- Studied how the ingestion pipeline can be integrated with future ETL, Feature Store, and Predictive Analytics components.
+- Identified future enhancements for machine learning integration using curated financial datasets.
+- Ref: Predictive Analytics Proposal
+
+> Key takeaway: Designing the ingestion pipeline with scalability and modularity in mind enables seamless integration with downstream analytics and machine learning workflows.
+
+### Achievements
+
+- Evaluated and selected an appropriate serverless architecture for the Financial Data Lake project.
+- Designed the overall local data ingestion workflow and finalized the initial stock universe.
+- Implemented reusable provider adapters with retry, logging, and validation mechanisms.
+- Established the foundation for scalable batch ingestion using checkpoint and fault recovery strategies.
+- Prepared the ingestion pipeline for future ETL processing, feature engineering, and predictive analytics integration.

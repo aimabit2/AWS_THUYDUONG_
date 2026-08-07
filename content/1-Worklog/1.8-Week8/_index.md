@@ -5,53 +5,92 @@ weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
+<!-- {{% notice warning %}} 
 ⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+{{% /notice %}} -->
 
 
-### Week 8 Objectives:
+### Week 8 Overview
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+During Week 8, I focused on building an end-to-end serverless data processing pipeline and hosting a secure, optimized web frontend for the Financial Data Lake project. The week began with designing serverless backend APIs using AWS Lambda, API Gateway, and EventBridge for asynchronous event routing. Next, I established scalable data storage and analytical querying capabilities using Amazon S3 and Amazon Athena with partitioned dataset optimizations. Finally, I deployed and distributed the frontend application using AWS Amplify and Amazon CloudFront, implementing edge caching and secure content delivery.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Domain | Main Focus | Key Takeaway |
+| --- | --- | --- |
+| A | Serverless Backend & Event-Driven Architecture with Lambda, API Gateway & EventBridge | Decoupling backend services with event-driven triggers ensures high scalability, low latency, and resilient asynchronous data processing.
+| B | Data Lake Storage & Serverless Analytics with S3 & Athena | Partitioning S3 data stores and optimizing Athena SQL queries significantly reduces query latency and operational analytics costs.
+| C | Frontend Deployment & Edge Acceleration with Amplify & CloudFront | Hosting web assets with Amplify and routing traffic through CloudFront global edge networks improves application performance and security.
+
+### Domain A: SERVERLESS BACKEND & EVENT-DRIVEN ARCHITECTURE WITH LAMBDA, API GATEWAY & EVENTBRIDGE
+
+#### *Mon, Aug 10 | Designing RESTful APIs with API Gateway & AWS Lambda*
+
+- Designed and deployed RESTful API endpoints using Amazon API Gateway to expose financial data processing features.
+
+- Developed stateless AWS Lambda functions in Python/Node.js to handle business logic, data validation, and request transformation.
+
+- Implemented CORS configuration, request validation schemas, and custom API Gateway authorizers for secure client access.
+- Ref:
+
+> Key takeaway: Combining API Gateway with Lambda creates a highly available, auto-scaling backend API layer without the overhead of server management.
+
+#### *Tue, Aug 11 | Asynchronous Workflow Integration with Amazon EventBridge*
+
+- Configured custom EventBridge Event Busses to decouple system microservices and handle asynchronous event publishing.
+
+- Created EventBridge Rules to route real-time financial transaction events directly to target Lambda execution functions.
+
+- Implemented Dead-Letter Queues (DLQ) and retry policies for failed event execution handling to guarantee data processing reliability.
+- Ref:
+
+> Key takeaway: Event-driven architecture powered by EventBridge enables seamless service integration and improves system fault tolerance.
+
+### Domain B: DATA LAKE STORAGE & SERVERLESS ANALYTICS WITH S3 & ATHENA
+
+#### *Wed, DATA LAKE STORAGE & SERVERLESS ANALYTICS WITH S3 & ATHENA*
+
+- Structured Amazon S3 storage buckets into distinct Bronze (raw), Silver (processed), and Gold (aggregated) data lake zones.
+
+- Configured S3 Bucket Policies, KMS encryption at rest, and S3 Lifecycle Rules to transition aged logs and dataset archives to lower-cost storage tiers.
+
+- Implemented S3 Event Notifications to automatically trigger downstream Lambda data parsing workflows upon file upload.
+- Ref:
+
+> Key takeaway: A well-structured multi-tier S3 layout paired with automated lifecycle rules optimizes both security compliance and storage expenditure.
+
+#### *Thu, Aug 13 | Interactive Serverless Data Analytics with Amazon Athena*
+
+- Set up Glue Data Catalog tables and metadata schemas pointing to partitioned Parquet files stored in Amazon S3.
+
+- Executed optimized SQL analytical queries using Amazon Athena to extract ad-hoc financial metrics and reporting insights.
+
+- Applied Parquet file conversion and dataset partitioning (by year/month/day) to dramatically decrease data scanned per query and cut execution costs. 
+- Ref:
+
+> Key takeaway: Leveraging columnar formats like Parquet with Athena partitioning delivers lightning-fast SQL queries at a fraction of traditional database costs.
+
+### Domain C: FRONTEND DEPLOYMENT & EDGE ACCELERATION WITH AMPLIFY & CLOUDFRONT
 
 
-### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+#### *Fri,  Aug 14 | Web Application Deployment & CDN Acceleration with Amplify & CloudFront*
 
-* Successfully created and configured an AWS Free Tier account.
+- Deployed the frontend web dashboard using AWS Amplify with automated CI/CD pipeline integration linked to the Git repository.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Configured Amazon CloudFront distributions in front of S3 static hosting and API Gateway endpoints for global edge caching.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Optimized CloudFront caching behaviors, Custom Response Headers, and SSL/TLS certificate integration via AWS Certificate Manager (ACM).
+- Ref:
 
-* Used AWS CLI to perform basic operations such as:
+> Key takeaway: Combining AWS Amplify for CI/CD deployments with CloudFront CDN caching minimizes latency for global end-users while ensuring high web availability.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+### Achievements
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Built a scalable serverless API layer using Amazon API Gateway and AWS Lambda with built-in validation and security authorization.
+
+- Architected an event-driven integration workflow using Amazon EventBridge with dead-letter queue exception handling.
+
+- Organized a multi-tier S3 Data Lake structure with automated event-driven processing and cost-efficient lifecycle rules.
+
+- Enabled high-performance serverless analytics on S3 datasets using Amazon Athena and Parquet data partitioning.
+
+- Streamlined frontend deployment with AWS Amplify CI/CD pipelines and accelerated global content delivery using Amazon CloudFront distributions.

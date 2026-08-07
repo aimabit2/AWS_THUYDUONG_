@@ -1,57 +1,104 @@
 ---
-title: "Week 6 Worklog"
+title: "Week 6 - Infrastructure Automation & Continuous Delivery with AWS"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
+<!-- {{% notice warning %}} 
 ⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+{{% /notice %}} -->
 
 
-### Week 6 Objectives:
+### Week 6 Overview
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+During Week 6, I focused on automating infrastructure deployment and establishing continuous integration and continuous delivery (CI/CD) pipelines for the Financial Data Lake project. The week began with defining Infrastructure as Code (IaC) using Terraform and AWS CloudFormation templates. Next, I configured fine-grained access policies using AWS IAM and organized automated data storage layers in Amazon S3. Finally, I built fully automated deployment pipelines using AWS CodePipeline and AWS CodeBuild to streamline application updates and infrastructure provisioning.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Domain | Main Focus | Key Takeaway |
+| --- | --- | --- |
+| A | Infrastructure as Code (IaC) with Terraform & CloudFormation | Declaring cloud infrastructure using code ensures consistent, repeatable, and version-controlled deployments across environments.
+| B | Access Control & Storage Management with IAM & Amazon S3 | Implementing strict IAM least-privilege policies alongside structured S3 storage tiers guarantees data security and efficient lifecycle management.
+| C | Automated CI/CD Pipelines with AWS CodePipeline & CodeBuild | Automating build, test, and deployment workflows accelerates release cycles and eliminates manual configuration errors.
 
+### Domain A: INFRASTRUCTURE AS CODE (IaC) WITH TERRAFORM & CLOUDFORMATION
 
-### Week 6 Achievements:
+#### *Mon, Jul 27 | Modularizing Infrastructure with Terraform & CloudFormation*
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Authored Terraform modules and AWS CloudFormation templates to provision cloud infrastructure resources programmatically.
 
-* Successfully created and configured an AWS Free Tier account.
+- Defined state management strategies using S3 remote backends and DynamoDB state locking to enable safe team collaboration.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Parametrized resource configurations to support seamless deployment across staging and production environments.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Executed plan, validation, and dry-run tests to evaluate resource dependencies and prevent unintended drift.
+- Ref:
 
-* Used AWS CLI to perform basic operations such as:
+> Key takeaway: Managing infrastructure via declarative code simplifies environmental reproducibility and enforces version control for cloud assets.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+#### *Tue, Jul 28 | Provisioning Automated Staging & Production Environments*
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Deployed foundational networking, storage, and IAM roles using automated CloudFormation stack execution.
+
+- Configured drift detection to identify and remediate manual configuration changes outside the IaC framework.
+
+- Evaluated modular Terraform state management versus nested CloudFormation stacks for multi-tier architectures.
+- Ref:
+
+> Key takeaway: Automated environment provisioning eliminates configuration drift and ensures strict alignment between code definitions and live cloud resources.
+
+### Domain B: ACCESS CONTROL & STORAGE MANAGEMENT WITH IAM & AMAZON S3
+
+#### *Wed, Jul 29 | Implementing IAM Security Controls & Least-Privilege Policies*
+
+- Designed granular IAM roles, policies, and service trust relationships for automated deployment tools and applications.
+
+- Configured identity-based and resource-based policies to restrict unauthorized cross-service operations.
+
+- Enforced least-privilege principles by scoping down permission boundaries for automated build agents and deployment roles.
+
+- Ref:
+
+> Key takeaway: Strict IAM access controls minimize the attack surface by ensuring services only hold the minimal permissions necessary for execution.
+
+### Domain C: 
+
+#### *Thu, Jul 30 | Structuring Amazon S3 Data Layers & Lifecycle Rules*
+
+- Configured structured S3 bucket topologies for raw Bronze, curated Silver, and analytical Gold data layers.
+
+- Implemented default server-side encryption (KMS/S3-managed), bucket policies, and public access blocks.
+
+- Established S3 Lifecycle rules to automatically transition older datasets to Glacier cold storage for cost optimization.
+
+- Enabled bucket versioning and object locking to prevent accidental data deletion or tampering.
+
+- Ref:
+
+> Key takeaway: Layered S3 storage combined with automated lifecycle policies optimizes data governance and storage costs over extended periods.
+
+### Domain C: AUTOMATED CI/CD PIPELINES WITH AWS CODEPIPELINE & CODEBUILD
+
+#### *Fri, Jul 31 | Building Continuous Integration & Deployment Workflows*
+
+- Configured AWS CodePipeline to automate multi-stage workflows spanning source control, build, test, and deployment stages.
+
+- Created custom buildspec.yml files for AWS CodeBuild to automate unit testing, linting, and infrastructure deployment scripts.
+
+- Integrated automated gate checks, approval stages, and rollback mechanisms upon pipeline failure.
+
+- Connected S3 source triggers and repository Webhooks to initiate automated builds upon new code commits.
+- Ref:
+
+> Key takeaway: Integrating CodePipeline with CodeBuild creates an automated release mechanism that speeds up feature delivery while maintaining build quality.
+
+### Achievements
+
+- Defined modular Terraform and CloudFormation templates for automated provisioning of Data Lake infrastructure.
+
+- Established secure S3 bucket topologies with encryption, versioning, and automated lifecycle storage policies.
+
+- Implemented fine-grained IAM roles and least-privilege permission boundaries for build agents and cloud services.
+
+- Constructed automated CI/CD pipelines using AWS CodePipeline and CodeBuild for seamless continuous delivery.
+
+- Reduced manual operational overhead by fully automating build, test, and infrastructure deployment processes.

@@ -1,57 +1,99 @@
 ---
-title: "Week 5 Worklog"
+title: "Week 5 - Principles of AWS Networking"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
+<!-- {{% notice warning %}} 
 ⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+{{% /notice %}} -->
 
 
-### Week 5 Objectives:
+### Week 5 Overview
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+During Week 5, I focused on deploying the user-facing interface and setting up serverless query capabilities for the Financial Data Lake project. The week began with setting up automated frontend deployment using AWS Amplify, followed by configuring global content distribution and caching via AWS CloudFront. Finally, I configured AWS Athena to execute ad-hoc SQL queries and analytics directly over raw and processed financial datasets stored in Amazon S3.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Domain | Main Focus | Key Takeaway |
+| --- | --- | --- |
+| A | Frontend Deployment with AWS Amplify | Automating hosting and CI/CD workflows accelerates feature delivery while providing a seamless hosting environment for web applications.
+| B | Global Distribution & Edge Caching with AWS CloudFront | Utilizing a global CDN improves application loading speeds, enhances security, and reduces direct load on origin resources.
+| C | Serverless Data Analytics with AWS Athena | Querying S3 data directly via SQL enables cost-effective, high-performance analytics without the overhead of managing database infrastructure.
 
+### Domain A: Querying S3 data directly via SQL enables cost-effective, high-performance analytics without the overhead of managing database infrastructure.
 
-### Week 5 Achievements:
+#### *Mon, Jul 20 | Setting Up AWS Amplify & CI/CD Pipeline*
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Configured AWS Amplify to host the frontend dashboard for visualizing financial data and execution status.
 
-* Successfully created and configured an AWS Free Tier account.
+- Connected the project repository to set up automated build and deployment pipelines triggered by commit updates.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- Configured environment variables, build settings, and deployment branch strategies for staging and production environments.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Monitored initial deployment builds and optimized build scripts to reduce bundle size and deployment times.
+- Ref:
 
-* Used AWS CLI to perform basic operations such as:
+> Key takeaway: Automated CI/CD integration with AWS Amplify drastically reduces deployment overhead and ensures rapid iteration of frontend interfaces.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+#### *Tue, Jul 21 | Managing Domain & Custom Environment Configurations*
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Configured custom domain mapping and automatic SSL/TLS certificate provisioning through AWS Amplify.
+
+- Configured routing rules, rewrites, and redirects for single-page application (SPA) navigation.
+
+- Integrated API Gateway endpoints into the frontend configuration to allow seamless secure calls to backend services.
+- Ref:
+
+> Key takeaway: Automated SSL management and routing configurations simplify custom domain setup while keeping application communication secure.
+
+### Domain B: GLOBAL DISTRIBUTION & EDGE CACHING WITH AWS CLOUDFRONT
+
+#### *Wed, Jul 22 | CloudFront Distribution Setup & Origin Configuration*
+
+- Created an AWS CloudFront distribution to cache static frontend assets and accelerate API response delivery.
+
+- Configured CloudFront origins pointing to S3 buckets and custom API Gateway endpoints.
+
+- Implemented Origin Access Control (OAC) to restrict direct S3 bucket access, forcing traffic through CloudFront for enhanced security.
+- Ref:
+
+> Key takeaway: Securing S3 origins with CloudFront OAC enforces single-point ingress security while lowering latency for global end users.
+
+#### *Thu, Jul 23 | Optimizing Cache Behaviors & Invalidation Strategies*
+
+- Defined custom cache behaviors based on path patterns for static assets versus dynamic API endpoints.
+
+- Configured TTL (Time-To-Live) settings and cache key policies to optimize edge hit ratios.
+
+- Executed and tested cache invalidations when updating static frontend resources.
+
+- Evaluated performance improvements using CloudFront compression (Gzip/Brotli) and edge location routing.
+- Ref:
+
+> Key takeaway: Tailoring cache behaviors according to asset types prevents stale data issues while maximizing response speed for static resources.
+### Domain C: SERVERLESS DATA ANALYTICS WITH AWS ATHENA
+
+#### *Fri, SERVERLESS DATA ANALYTICS WITH AWS ATHENA*
+
+- Integrated Glue Data Catalog tables with AWS Athena to query Bronze and Silver financial data buckets in S3.
+
+- Executed ad-hoc SQL queries to validate ingestion consistency, schema drift, and data formatting across historical records.
+
+- Configured output location, query result encryption, and workgroups to control query costs and access permissions.
+
+- Tested partition projection and columnar formats (Parquet) to minimize scanned data volume and speed up query execution.
+- Ref:
+
+> Key takeaway: Combining Glue Catalog with Athena allows instant SQL analytics over S3 data lakes while optimizing costs through proper data partitioning.
+
+### Achievements
+
+- Successfully deployed the project frontend interface using AWS Amplify with automated CI/CD integration.
+
+- Established global content distribution using AWS CloudFront, securing origins with Origin Access Control.
+
+- Optimized static asset caching, response compression, and cache invalidation strategies across edge locations.
+
+- Configured AWS Athena to perform serverless SQL queries directly over raw and processed S3 financial data.
+
+- Reduced analytical query costs and latency by configuring Glue Data Catalog integration and S3 partition structures.
