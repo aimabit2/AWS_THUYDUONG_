@@ -6,14 +6,23 @@ chapter : false
 pre : " <b> 5.1. </b> "
 ---
 
-#### Giới thiệu về VPC Endpoint
+#### Tóm tắt
 
-+ Điểm cuối VPC (endpoint) là thiết bị ảo. Chúng là các thành phần VPC có thể mở rộng theo chiều ngang, dự phòng và có tính sẵn sàng cao. Chúng cho phép giao tiếp giữa tài nguyên điện toán của bạn và dịch vụ AWS mà không gây ra rủi ro về tính sẵn sàng.
-+ Tài nguyên điện toán đang chạy trong VPC có thể truy cập Amazon S3 bằng cách sử dụng điểm cuối Gateway. Interface Endpoint  PrivateLink có thể được sử dụng bởi tài nguyên chạy trong VPC hoặc tại TTDL.
+Workshop này chuyển đổi kiến trúc dữ liệu của hệ thống dự báo tài chính thành một minh họa AWS thực tế. Bạn sẽ học cách giữ đường dẫn dữ liệu đến Amazon S3 nằm trong mạng riêng không gian AWS, đồng thời mô phỏng truy cập từ môi trường on-premise qua VPN và PrivateLink.
 
-#### Tổng quan về workshop
-Trong workshop này, bạn sẽ sử dụng hai VPC.
-+ **"VPC Cloud"** dành cho các tài nguyên cloud như Gateway endpoint và EC2 instance để kiểm tra.
-+ **"VPC On-Prem"** mô phỏng môi trường truyền thống như nhà máy hoặc trung tâm dữ liệu của công ty. Một EC2 Instance chạy phần mềm StrongSwan VPN đã được triển khai trong "VPC On-prem" và được cấu hình tự động để thiết lập đường hầm VPN Site-to-Site với AWS Transit Gateway. VPN này mô phỏng kết nối từ một vị trí tại TTDL (on-prem) với AWS cloud. Để giảm thiểu chi phí, chỉ một phiên bản VPN được cung cấp để hỗ trợ workshop này. Khi lập kế hoạch kết nối VPN cho production workloads của bạn, AWS khuyên bạn nên sử dụng nhiều thiết bị VPN để có tính sẵn sàng cao.
+#### Nội dung chính
+
+- Mô hình VPC Cloud chứa workload điện toán và S3 Data Lake.
+- Mô phỏng VPC On-Prem dùng VPN để truy cập S3 qua Interface endpoint.
+- Sử dụng Gateway endpoint để giữ traffic S3 trong AWS khi chạy trên VPC.
+- Xây dựng một giải pháp hybrid riêng tư dành cho dữ liệu nhạy cảm.
+
+#### Kiến trúc
 
 ![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+
+Kiến trúc workshop bao gồm:
+- **VPC Cloud**: môi trường AWS chứa EC2 và tài nguyên truy cập S3.
+- **VPC On-Prem**: mô phỏng dữ liệu nội bộ kết nối qua VPN.
+- **Amazon S3**: Data Lake trung tâm cho dữ liệu tài chính.
+- **VPC Endpoints**: Gateway và Interface endpoints giúp bảo vệ lưu lượng S3.

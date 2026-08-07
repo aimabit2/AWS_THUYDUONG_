@@ -6,13 +6,23 @@ chapter : false
 pre : " <b> 5.3. </b> "
 ---
 
-#### Sử dụng Gateway endpoint
+#### Workshop narrative
 
-Trong phần này, bạn sẽ tạo một Gateway endpoint để truy cập Amazon S3 từ một EC2 instance. Gateway endpoint sẽ cho phép tải một object lên S3 bucket mà không cần sử dụng Internet Công cộng. Để tạo endpoint, bạn phải chỉ định VPC mà bạn muốn tạo endpoint và dịch vụ (trong trường hợp này là S3) mà bạn muốn thiết lập kết nối.
+Phần này nối kiến trúc S3 Data Lake từ đề xuất đến một giải pháp AWS cụ thể: Gateway endpoint cho Amazon S3.
 
-![overview](/images/5-Workshop/5.3-S3-vpc/diagram2.png)
+Gateway endpoint cho phép các workload trong VPC truy cập S3 mà không đi qua Internet công cộng. Với một nền tảng phân tích tài chính, điều này giúp giảm rủi ro và giữ dữ liệu nhạy cảm trong mạng riêng của AWS.
 
 #### Nội dung
 
-- [Tạo gateway endpoint](3.1-create-gwe/)
-- [Test gateway endpoint](3.2-test-gwe/)
+- vai trò của Gateway endpoint trong kiến trúc data lake.
+- lợi ích vận hành khi giữ traffic trên hạ tầng nội bộ AWS.
+- cấu hình VPC Cloud để dùng S3 riêng tư.
+
+#### Kết luận
+
+Gateway endpoint là cách đơn giản và hiệu quả nhất để kết nối workload VPC với S3 một cách an toàn khi các tài nguyên cùng nằm trong VPC.
+
+#### Trang liên quan
+
+- [Tạo gateway endpoint](5.3.1-create-gwe/)
+- [Test gateway endpoint](5.3.2-test-gwe/)

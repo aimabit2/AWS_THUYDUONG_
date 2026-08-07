@@ -6,6 +6,23 @@ chapter : false
 pre : " <b> 5.2. </b> "
 ---
 
+#### Ngữ cảnh workshop
+
+Workshop này sử dụng cùng môi trường và mục tiêu với phần Proposal và BlogsPosted. Nó không phải là bài lab AWS chung chung mà tập trung vào thiết lập kết nối riêng tư cho dữ liệu S3 trong hệ thống tài chính.
+
+#### Yêu cầu môi trường
+
+- Tài khoản AWS có quyền quản lý VPC, EC2, S3, IAM, Route 53 Resolver và CloudFormation.
+- AWS CLI đã cài đặt và cấu hình.
+- Hiểu biết cơ bản về VPC, route table, security group và S3.
+- Hiểu biết sơ bộ về thiết kế Data Lake trên S3.
+
+#### Mục đích
+
+- Đảm bảo S3 Data Lake không bị lộ qua Internet công cộng.
+- Chuẩn bị hạ tầng để kiểm tra truy cập riêng tư qua VPC endpoint và VPN.
+- Tập trung vào tính bảo mật và khả năng mở rộng của kiến trúc hybrid.
+
 #### IAM permissions
 Gắn IAM permission policy sau vào tài khoản aws user của bạn để triển khai và dọn dẹp tài nguyên trong workshop này.
 ```
@@ -213,30 +230,4 @@ Gắn IAM permission policy sau vào tài khoản aws user của bạn để tri
         }
     ]
 }
-
 ```
-
-#### Khởi tạo tài nguyên bằng CloudFormation
-
-Trong lab này, chúng ta sẽ dùng N.Virginia region (us-east-1).
-
-Để chuẩn bị cho môi trường làm workshop, chúng ta deploy CloudFormation template sau (click link): [PrivateLinkWorkshop ](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.us-east-1.amazonaws.com/reinvent-endpoints-builders-session/Nested.yaml&stackName=PLCloudSetup). Để nguyên các lựa chọn mặc định.
-
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack1.png)
-
-+ Lựa chọn 2 mục acknowledgement 
-+ Chọn Create stack
-
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack2.png)
-
-Quá trình triển khai CloudFormation cần khoảng 15 phút để hoàn thành.
-
-![complete](/images/5-Workshop/5.2-Prerequisite/complete.png)
-
-+ 2 VPCs đã được tạo
-
-![vpcs](/images/5-Workshop/5.2-Prerequisite/vpcs.png)
-
-+ 3 EC2s đã được tạo
-
-![EC2](/images/5-Workshop/5.2-Prerequisite/ec2.png)
