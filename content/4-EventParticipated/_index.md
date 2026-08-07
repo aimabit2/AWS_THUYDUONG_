@@ -27,10 +27,16 @@ Through this event, I gained a deeper understanding of modern AI technologies, A
 ---
 
 ### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** 
+&emsp;**Event Name:** AWS AgentCore Workshop – Day 1: Foundations & Agent Setup
 
-&emsp;**Date & Time:** 
+&emsp;**Date & Time:** 09:00 – 11:00, August 1, 2026
 
-&emsp;**Location:** 
+&emsp;**Location:** Workshop / Training Session
 
-&emsp;**Role:** 
+&emsp;**Role:** Participant
+
+**Description:**
+The workshop introduced Amazon Bedrock AgentCore fundamentals and provided hands-on labs to deploy a basic AI agent, integrate external tools and knowledge bases, and secure access using Amazon Cognito.
+
+**Outcomes:**
+Participants gained practical experience in deploying AI agents on AWS, understanding AgentCore components (Runtime, Gateway, Identity), and applying these concepts to the Financial Data Lake project for future AI integration.

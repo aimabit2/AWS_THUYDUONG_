@@ -6,23 +6,6 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-<!-- {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}} -->
-
-<!-- > Trong phần này, các bạn cần liệt kê và mô tả chi tiết các sự kiện (event) mà mình đã tham gia trong suốt quá trình thực tập hoặc làm việc. 
-> 
-> Mỗi sự kiện nên được trình bày theo định dạng Event 1, Event 2, Event 3…, kèm theo các thông tin:
-> * Tên sự kiện
-> * Thời gian tổ chức
-> * Địa điểm (nếu có)
-> * Vai trò của bạn trong sự kiện (người tham dự, hỗ trợ tổ chức, diễn giả, v.v.)
-> * Mô tả ngắn gọn nội dung và hoạt động chính trong sự kiện
-> * Kết quả hoặc giá trị đạt được (bài học, kỹ năng mới, đóng góp cho nhóm/dự án)
-> * Việc liệt kê này giúp thể hiện rõ sự tham gia thực tế của bạn, cũng như các kỹ năng mềm và kinh nghiệm bạn đã tích lũy qua từng sự kiện.
-
-
-Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là nhứng món quà và những khoảnh khắc rất tuyệt vời. -->
 
 Trong thời gian thực tập, tôi đã có cơ hội tham gia một sự kiện chuyên môn do FCAJ Community tổ chức. Đây là dịp để tôi tiếp cận các xu hướng mới về Cloud Computing, Artificial Intelligence (AI) và các giải pháp AWS dành cho doanh nghiệp. Sự kiện không chỉ giúp tôi mở rộng kiến thức kỹ thuật mà còn mang đến góc nhìn thực tế về cách các công nghệ hiện đại được triển khai trong môi trường doanh nghiệp, từ đó hỗ trợ quá trình thực hiện dự án Financial Data Lake trong kỳ thực tập.
 
@@ -40,6 +23,7 @@ Trong thời gian thực tập, tôi đã có cơ hội tham gia một sự ki�
 
 **Đúc kết:**
     Thông qua sự kiện, tôi hiểu rõ hơn về các xu hướng AI hiện đại, kiến trúc Cloud trên AWS và cách các doanh nghiệp ứng dụng AI vào vận hành thực tế. Tôi cũng học được các nguyên tắc thiết kế hạ tầng Cloud an toàn, tối ưu chi phí và có khả năng mở rộng. Những kiến thức này được áp dụng trực tiếp vào dự án Financial Data Lake, đặc biệt trong việc lựa chọn kiến trúc AWS, thiết kế Amazon VPC, quản lý chi phí Cloud và định hướng tích hợp AI vào nền tảng trong tương lai.
+    s
 ### [Sự kiện 2](4.2-Event2/)
 **Tên sự kiện:** 
 
