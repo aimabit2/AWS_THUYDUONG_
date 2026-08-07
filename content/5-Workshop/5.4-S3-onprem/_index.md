@@ -1,20 +1,30 @@
+﻿---
+title: "Access S3 from On-premises"
+date: 2024-01-01
+weight: 4
+chapter: false
+pre: " <b> 5.4. </b> "
 ---
-title : "Access S3 from on-premises"
-date : 2024-01-01
-weight : 4
-chapter : false
-pre : " <b> 5.4. </b> "
----
 
-#### Overview
+#### Workshop narrative
 
-+ In this section, you will create an Interface endpoint to access Amazon S3 from a simulated on-premises environment. The Interface endpoint will allow you to route to Amazon S3 over a VPN connection from your simulated on-premises environment.
+This section extends the financial data platform beyond AWS by simulating private access from an on-premises network. It uses an S3 Interface endpoint and a VPN-connected hybrid architecture.
 
-+ Why using **Interface endpoint**: 
-    + Gateway endpoints only work with resources running in the VPC where they are created. Interface endpoints work with resources running in VPC, and also resources running in on-premises environments. Connectivty from your on-premises environment to the cloud can be provided by AWS Site-to-Site VPN or AWS Direct Connect.
-    + Interface endpoints allow you to connect to services powered by AWS PrivateLink. These services include some AWS services, services hosted by other AWS customers and partners in their own VPCs (referred to as PrivateLink Endpoint Services), and supported AWS Marketplace Partner services. For this workshop, we will focus on connecting to Amazon S3.
+For a risk analytics system, some data sources may originate outside AWS. This module shows how to keep those flows private and integrated with the same S3 Data Lake used by cloud workloads.
 
-![Interface endpoint architecture](/images/5-Workshop/5.4-S3-onprem/diagram3.png)
+#### What this section covers
 
+- the hybrid connectivity model for an on-premises client,
+- the role of PrivateLink Interface endpoints for on-premise S3 access,
+- how DNS and VPN routing enable the hybrid path.
 
+#### Key takeaway
 
+An S3 Interface endpoint over a VPN lets on-premises systems access S3 securely while preserving the private network boundary of the data lake.
+
+#### Related pages
+
+- [Prepare the environment](4.1-prepare/)
+- [Create interface endpoint](4.2-create-interface-enpoint/)
+- [Test interface endpoint](4.3-test-endpoint/)
+- [DNS simulation](4.4-dns-simulation/)

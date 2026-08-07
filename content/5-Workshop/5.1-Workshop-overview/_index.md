@@ -1,18 +1,32 @@
+﻿---
+title: "Workshop Overview"
+date: 2024-01-01
+weight: 1
+chapter: false
+pre: " <b> 5.1. </b> "
 ---
-title : "Introduction"
-date : 2024-01-01 
-weight : 1 
-chapter : false
-pre : " <b> 5.1. </b> "
----
 
-#### VPC endpoints
-+ **VPC endpoints** are virtual devices. They are horizontally scaled, redundant, and highly available VPC components. They allow communication between your compute resources and AWS services without imposing availability risks.
-+ Compute resources running in VPC can access  **Amazon S3**  using a Gateway endpoint. PrivateLink interface endpoints can be used by compute resources running in VPC or on-premises.
+#### Executive summary
 
-#### Workshop overview
-In this workshop, you will use two VPCs. 
-+ **"VPC Cloud"** is for cloud resources such as a  **Gateway endpoint** and an EC2 instance to test with. 
-+ **"VPC On-Prem"** simulates an on-premises environment such as a factory or corporate datacenter. An EC2 instance running strongSwan VPN software has been deployed in "VPC On-prem" and automatically configured to establish a Site-to-Site VPN tunnel with AWS Transit Gateway. This VPN simulates connectivity from an on-premises location to the AWS cloud. To minimize costs, only one VPN instance is provisioned to support this workshop. When planning VPN connectivity for your production workloads, AWS recommends using multiple VPN devices for high availability.
+This workshop translates the architecture and automation narrative from the Proposal into a tangible AWS networking story. It demonstrates how a financial data platform can protect S3 Data Lake access without exposing sensitive traffic to the public internet.
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+#### Key themes
+
+- Secure data ingestion for the Vietnam Financial Distress Prediction System.
+- Private connectivity for cloud-native workloads and on-premises data clients.
+- Service segmentation using VPC endpoints and endpoint policies.
+- Validation of private S3 access from EC2 and hybrid networks.
+
+#### Why this matters
+
+In a production-grade financial analytics platform, raw financial statements and normalized datasets must remain within trusted networks. This workshop shows how to keep the data path private from the first upload through downstream analytics.
+
+#### Architecture
+
+![Overview Diagram](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+
+The workshop architecture includes:
+- **VPC Cloud**: the AWS environment hosting secure ingestion and analytics workloads.
+- **VPC On-Prem**: a simulated on-premises network connected over VPN.
+- **Amazon S3**: a centralized Data Lake for raw and curated financial data.
+- **VPC Endpoints**: Gateway and Interface endpoints that keep S3 traffic private.
