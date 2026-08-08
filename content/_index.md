@@ -29,7 +29,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 22/06/2026 to 15/08/2026
 
-![Your profile picture](https://workshop-sample.awsfcaj.com/images/avatar.jpg)
+![Your profile picture](/static/images/avatar.jpg)
 
 ### Report Content
 
