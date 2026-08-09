@@ -1,37 +1,48 @@
 ---
-title : "Dọn dẹp tài nguyên"
+title : "Dọn dẹp tài nguyên & Tổng kết"
 date : 2024-01-01
 weight : 6
 chapter : false
 pre : " <b> 5.6. </b> "
 ---
 
-#### Dọn dẹp tài nguyên
+### 5.6 Triển khai Web Dashboard & Hệ thống Cảnh báo (Amplify, Lambda & SES)
+#### 5.6.1. Triển khai giao diện và Hệ thống thông báo
+Để tránh phát sinh các chi phí dịch vụ AWS đám mây ngoài ý muốn sau khi hoàn tất xây dựng và kiểm thử bài thực hành workshop, nhóm mình hướng dẫn quy trình dọn dẹp tài nguyên theo từng bước dưới đây.
 
-Xin chúc mừng bạn đã hoàn thành lab này! Trong lab, bạn đã học cách sử dụng các mô hình kiến trúc để truy cập Amazon S3 mà không sử dụng Public Internet.
+#### 5.6.2. Bảng quy trình kích hoạt và xử lý Cảnh báo tự động
+| Thứ tự  | Dịch vụ AWS   | Thao tác dọn dẹp bắt buộc | Mục đích phòng tránh chi phí |
+| :--- | :--- | :--- | :--- |
+| **1**| Amazon S3 | Empty & Delete các `S3 Raw` và `S3 Curated Buckets` | Tránh phí lưu trữ tài nguyên tĩnh |
+| **2** | AWS Glue | Delete Crawlers, ETL Jobs & Data Catalog Databases | Tránh phí Glue Schema Catalog |
+| **3** | API Gateway & WAF | Delete REST APIs & gỡ bỏ Web ACLs trên WAF | Tránh phí Glue Schema Catalog |
+| **4** | Compute & Frontend | Delete Lambdas, Step Functions & Delete Amplify App | Tránh phí Glue Schema Catalog |
 
-- Bằng cách tạo Gateway endpoint, bạn đã cho phép giao tiếp trực tiếp giữa EC2 và Amazon S3 mà không đi qua Internet Gateway.
-- Bằng cách tạo Interface endpoint, bạn đã mở rộng kết nối S3 đến môi trường truyền thống giả lập thông qua VPN và PrivateLink.
+#### 5.6.3. Hướng dẫn các bước thực hiện
+1. **Xóa AWS Amplify Application:**
+   Truy cập **AWS Amplify Console** ➔ chọn `app vietnam-financial-dashboard` ➔ Nhấp **Actions ➔ Delete app.**
+2. **Xóa Amazon API Gateway & AWS WAF:**
+   Vào **Amazon API Gateway** ➔ chọn `vietnam-financial-api` ➔ Nhấp **Delete**.
+   Vào **AWS WAF** ➔ xóa Web ACL đã gắn vào API Gateway.
+3. **Xóa Amazon Cognito User Pool:**
+   Vào **Amazon Cognito** ➔ chọn `vietnam-financial-user-pool` ➔ Xóa App Client và nhấp Delete user pool.
+4. **Xóa các AWS Lambda Functions & Step Functions:**
+   Vào **AWS Lambda Console** ➔ Xóa các hàm: `lambda-ingestor-vnstock`, `lambda-backend-api`, `lambda-ses-alert.`
+   Vào **AWS Step Functions** ➔ chọn State Machine cào dữ liệu ➔ Nhấp **Delete**.
+5. **Xóa AWS Glue Jobs, Crawlers & Data Catalog:**
+   Vào **AWS Glue Console** ➔ Xóa Job `glue-job-pyspark-financial-etl.`
+   Xóa Crawler `crawler-vietnam-financial-curated.`
+   Vào **Data Catalog Databases** ➔ Xóa Database `vietnam_financial_db.`
+6. **Xóa dữ liệu và Amazon S3 Buckets:**
+   Truy cập **Amazon S3 Console.**
+   Chọn `s3-vietnam-financial-raw-data-prod` ➔ Nhấp **Empty** để làm rỗng toàn bộ objects/versions ➔ Nhấp **Delete**.
+   Chọn `s3-vietnam-financial-curated-data-prod` ➔ Nhấp **Empty** ➔ Nhấp **Delete**.
 
-#### Hướng dẫn dọn dẹp
+### Tổng kết Bài thực hành Workshop
+Sau khi hoàn tất toàn bộ chuỗi bài lab, bạn đã làm chủ quy trình xây dựng **Hệ thống Thu thập và Phân tích Dữ liệu Tài chính Chứng khoán Việt Nam trên nền tảng AWS Serverless** end-to-end:
 
-1. Điều hướng đến Hosted Zones trên Route 53. Chọn zone `s3.us-east-1.amazonaws.com`, sau đó xóa zone và xác nhận bằng cách nhập `delete`.
-
-![hosted zone](/images/5-Workshop/5.6-Cleanup/delete-zone.png)
-
-2. Disassociate Route 53 Resolver Rule `myS3Rule` khỏi VPC Onprem và xóa rule.
-
-![hosted zone](/images/5-Workshop/5.6-Cleanup/vpc.png)
-
-3. Mở CloudFormation console và xóa hai stack đã tạo cho bài lab:
-   - `PLOnpremSetup`
-   - `PLCloudSetup`
-
-![delete stack](/images/5-Workshop/5.6-Cleanup/delete-stack.png)
-
-4. Xóa các S3 bucket đã tạo cho lab:
-   - Mở S3 console.
-   - Chọn bucket và đảm bảo nó rỗng.
-   - Xóa bucket và xác nhận.
-
-![delete s3](/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+   - Xây dựng luồng cào dữ liệu tài chính tự động với Lambda, EventBridge và Step Functions.
+   - Làm sạch và tính toán bộ chỉ số tài chính ($CR$, $ROA$, $ROE$, $DAR$, $WCTA$, Altman Z-Score) bằng PySpark trên AWS Glue.
+   - Truy vấn SQL dữ liệu phân trang Parquet tốc độ cao với Amazon Athena.
+   - Bảo mật API với Amazon Cognito, AWS WAF và REST API Gateway.
+   - Trực quan hóa dữ liệu trên Web Dashboard AWS Amplify và phát Email cảnh báo rủi ro phá sản bằng Amazon SES.
