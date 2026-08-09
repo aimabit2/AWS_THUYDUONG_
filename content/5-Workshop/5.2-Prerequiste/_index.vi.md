@@ -42,7 +42,7 @@ Do cấu trúc Báo cáo Tài chính của ngành ngân hàng và tài chính c�
 
 - **Bước 3:  Viết mã nguồn AWS Lambda Ingestor với `vnstock`**
 Viết mã nguồn AWS Lambda Ingestor với vnstock
-import json
+`import json
 import boto3
 import pandas as pd
 from vnstock import financial_report
@@ -86,9 +86,9 @@ def lambda_handler(event, context):
     1. AWS Step Functions: Tạo State Machine để duyệt qua danh sách danh mục mã cổ phiếu, gọi Lambda Ingestor xử lý song song, hỗ trợ cơ chế Retry khi gặp Rate Limit và tự động ghi log Checkpoint.
     2. Amazon EventBridge Scheduler: Cấu hình quy tắc Cron Job kích hoạt Step Functions định kỳ (ví dụ: vào 00:00 ngày đầu tiên của mỗi tháng) để tự động thu thập báo cáo tài chính quý/năm mới nhất.
 
-    ![Sơ đồ AWS Step Functions](/images/StepFunction.png)
-    
-    - Ảnh mô tả luồng điều phối Step Functions.
+![Sơ đồ AWS Step Functions](/images/StepFunction.png)
+
+- Ảnh mô tả luồng điều phối Step Functions.
 
 *Mô tả luồng điều phối Step Functions State Machine trong hệ thống:*
 
