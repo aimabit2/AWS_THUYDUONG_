@@ -86,7 +86,8 @@ df_zscore.write \
 
 print("Hoàn tất Glue Job xử lý dữ liệu và ghi Parquet!")
 ```
-![StepFunction](../../../static/images/StepFunction.png)
+![Luồng điều phối Step Functions](../../../images/StepFunction.png)
+
 - *Hình ảnh thực tế State Machine của AWS Step Functions tự động gọi tác vụ AWS Glue Job (`StartJobRun`), kiểm tra trạng thái hoàn tất (`GetJobRun`) và kích hoạt Glue Crawler quét dữ liệu.*
 
 - **Bước 3:  Tạo AWS Glue Crawler & Data Catalog**
