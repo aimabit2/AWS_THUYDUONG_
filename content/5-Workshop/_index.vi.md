@@ -43,9 +43,9 @@ Sau khi hoàn thành bài workshop này, người thực hiện sẽ đạt đư
 | **5.5** | **Web Dashboard & Email Alerts (Amplify, Lambda & SES)** | Triển khai giao diện Web Dashboard (React/Next.js) trên AWS Amplify, cấu hình dịch vụ Amazon SES gửi mail cảnh báo tự động khi xuất hiện rủi ro. |
 | **5.6** | **Resource Cleanup & Summary** | Quy trình từng bước dọn dẹp, xóa tài nguyên cloud để phòng tránh phát sinh chi phí ngoài ý muốn và tổng kết dự án. |
 
-1. [Overview & System Architecture](5.1-Workshop-overview/)
-2. [Automated Data Ingestion Pipeline](5.2-Prerequiste/)
-3. [Data Processing & Data Lake (AWS Glue ETL, Data Catalog & Athena)](5.3-S3-vpc/)
-4. [REST API & User Authentication (Cognito, API Gateway & Lambda API)](5.4-S3-onprem/)
+1. [Tổng quan & Kiến trúc hệ thống](5.1-Workshop-overview/)
+2. [Đường ống thu thập dữ liệu tự động](5.2-Pipeline/)
+3. [Data Processing & Data Lake (AWS Glue ETL, Data Catalog & Athena)](5.3-glue-config/)
+4. [REST API & User Authentication (Cognito, API Gateway & Lambda API)](5.4-amplify/)
 5. [Web Dashboard & Email Alerts (Amplify, Lambda & SES)](5.5-Policy/)
 6. [Resource Cleanup & Summary](5.6-Cleanup/)

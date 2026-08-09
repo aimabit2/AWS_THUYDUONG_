@@ -18,11 +18,6 @@ Bước đầu tiên trong đường ống thu thập là khởi tạo S3 Raw Bu
 | **Bộ điều phối Workflow** | AWS Step Functions State Machine | Điều phối song song (Parallel execution), lưu checkpoint và xử lý retry lùi thời gian khi lỗi API|
 | **Đích lưu trữ thô** | Amazon S3 Raw Bucket | Lưu trữ dữ liệu thô dạng : *s3://financial-raw-data/ticker/year/quarter/* | 
 
-#### MÔ TẢ VÀ GIẢI THÍCH HÌNH ẢNH 5.2:
-![Sơ đồ Điều phối Luồng Thu thập Dữ liệu với AWS Step Functions.] ()
-
-- Hình ảnh hiển thị đồ thị trạng thái (State Machine Graph) của Step Functions. Nút bắt đầu (Start) kích hoạt bước phân tách mã cổ phiếu theo danh sách. Các nhánh song song đại diện cho việc gọi các hàm Lambda cào dữ liệu từ nhiều API khác nhau. Nếu một tác vụ gặp lỗi kết nối, đường dẫn sẽ rẽ sang nhánh Retry_Logic với cơ chế lùi thời gian ngẫu nhiên (exponential backoff) trước khi ghi file JSON/CSV thành công vào S3 Raw.
-
 #### 5.2.3. Hướng dẫn các bước thực hiện
 - **Bước 1: Khởi tạo S3 Raw Bucket**
     1. Truy cập vào AWS Management Console ➔ chọn dịch vụ S3.
@@ -38,6 +33,7 @@ Do cấu trúc Báo cáo Tài chính của ngành ngân hàng và tài chính c�
     - ❌ Công ty Chứng khoán (Securities)
     - ❌ Công ty Bảo hiểm (Insurance)
     - ❌ Công ty Tài chính & Quỹ đầu tư
+    
 ✅ Chỉ giữ lại danh sách doanh nghiệp phi tài chính niêm yết trên 3 sàn HOSE, HNX, UPCOM.
 
 - **Bước 3:  Viết mã nguồn AWS Lambda Ingestor với `vnstock`**
@@ -90,7 +86,7 @@ def lambda_handler(event, context):
 
 ![Luồng điều phối Step Functions](../../../images/StepFunction.png)
 
-- Ảnh mô tả luồng điều phối Step Functions.
+
 
 *Mô tả luồng điều phối Step Functions State Machine trong hệ thống:*
 
