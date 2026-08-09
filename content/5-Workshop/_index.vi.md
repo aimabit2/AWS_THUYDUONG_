@@ -45,7 +45,7 @@ Sau khi hoàn thành bài workshop này, người thực hiện sẽ đạt đư
 
 1. [Tổng quan & Kiến trúc hệ thống](5.1-overview/)
 2. [Đường ống thu thập dữ liệu tự động](5.2-Pipeline/)
-3. [Data Processing & Data Lake (AWS Glue ETL, Data Catalog & Athena)](5.3-glue-config/)
-4. [REST API & User Authentication (Cognito, API Gateway & Lambda API)](5.4-amplify/)
-5. [Web Dashboard & Email Alerts (Amplify, Lambda & SES)](5.5-Policy/)
-6. [Resource Cleanup & Summary](5.6-Cleanup/)
+3. [XỬ LÝ DỮ LIỆU & DATA LAKE (AWS GLUE ETL & ATHENA QUERY)](5.3-glue-config/)
+4. [Xây dựng REST API & Xác thực người dùng (Cognito, API Gateway & Lambda API)](5.4-amplify/)
+5. [Triển khai Web Dashboard & Hệ thống Cảnh báo (Amplify, Lambda & SES)](5.5-Policy/)
+6. [Dọn dẹp tài nguyên & Tổng kết](5.6-Cleanup/)

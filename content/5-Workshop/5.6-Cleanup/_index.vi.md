@@ -6,8 +6,7 @@ chapter : false
 pre : " <b> 5.6. </b> "
 ---
 
-### 5.6 Triển khai Web Dashboard & Hệ thống Cảnh báo (Amplify, Lambda & SES)
-#### 5.6.1. Triển khai giao diện và Hệ thống thông báo
+### 5.6 Dọn dẹp tài nguyên & Tổng kết
 Để tránh phát sinh các chi phí dịch vụ AWS đám mây ngoài ý muốn sau khi hoàn tất xây dựng và kiểm thử bài thực hành workshop, nhóm mình hướng dẫn quy trình dọn dẹp tài nguyên theo từng bước dưới đây.
 
 #### 5.6.2. Bảng quy trình kích hoạt và xử lý Cảnh báo tự động

@@ -8,7 +8,7 @@ chapter: false
 # Báo cáo thực tập
 ### Thông tin sinh viên:
 
-&emsp; **Họ và tên:** Nguyen Thi Thuy Duong
+&emsp; **Họ và tên:** Nguyễn Thị Thùy Dương
 
 &emsp; **Số điện thoại:** 0909529884 
 
@@ -20,7 +20,7 @@ chapter: false
 
 &emsp; **Lớp:** DCT122C1
 
-&emsp; **Công ty thực tập:**Công ty TNHH Amazon Web Services Viet Nam
+&emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
