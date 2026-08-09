@@ -1,13 +1,11 @@
 ---
-title: "Worklog Tuần 8"
+title: "Tuần 8 - Xây dựng pipeline dữ liệu serverless và triển khai frontend tối ưu CloudFront."
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 8:

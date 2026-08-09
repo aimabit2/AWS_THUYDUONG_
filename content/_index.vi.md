@@ -6,6 +6,8 @@ chapter: false
 ---
 
 # Báo cáo thực tập
+
+
 ### Thông tin sinh viên:
 
 &emsp; **Họ và tên:** Nguyễn Thị Thùy Dương
@@ -24,7 +26,7 @@ chapter: false
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày  đến ngày 15/08/2026
+&emsp; **Thời gian thực tập:** Từ ngày 22/06/2026 đến ngày 15/08/2026 
 
 ![Your profile picture](/images/avatar.jpg)
 
