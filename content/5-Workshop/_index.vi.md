@@ -1,12 +1,11 @@
 ﻿---
-title: "Workshop"
+title: "WORKSHOP TRIỂN KHAI HỆ THỐNG"
 date: 2026-08-08
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
 
-# WORKSHOP TRIỂN KHAI HỆ THỐNG
 ### 5.1 TỔNG QUAN WORKSHOP
 #### 1. TỔNG QUAN
 
