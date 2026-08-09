@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-<!-- {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}} -->
+
 
 ### Thông tin chung
 - **Tên sự kiện:** FCAJ COMMUNITY DAY – "DATA DRIVEN, AI RISEN"
@@ -16,10 +14,10 @@ pre: " <b> 4.1. </b> "
 - **Địa điểm:** Bitexco Financial Tower	
 - **Vai trò:**	Người tham dự (Attendee)
 
-
+---
 ### Nội dung chính & Các hoạt động
 Sự kiện bao gồm 05 phiên chia sẻ chuyên sâu xoay quanh các chủ đề về hạ tầng Cloud hiện đại và Trí tuệ nhân tạo (AI).
-
+---
 #### *9:00 – 9:25 AM | Phiên 1: Deep Response Engine – Từ Phát hiện Sự cố đến Tự động Khắc phục*
 - **Diễn giả:** Steve Tran (CTO/Founder, CloudThinker)
 - **Nội dung:** 
@@ -31,7 +29,7 @@ Sự kiện bao gồm 05 phiên chia sẻ chuyên sâu xoay quanh các chủ đ�
         - Kiểm thử xâm nhập (Penetration Testing).
         - Phân tích log hệ thống.
     - Mục tiêu hướng tới việc xây dựng hệ thống có thời gian gián đoạn gần như bằng không (Zero-Downtime).
-
+---
 #### *9:25 – 9:55 | Phiên 2: Voice Agents – Xây dựng Hội thoại AI Tự nhiên ở Quy mô Lớn*
 - **Diễn giả:** Nghi Danh (AI Engineer, Renova Cloud), Trung Vu (CEO, Revve AI), Kiet Tran (AI Engineer, AWS Student Builder Group)
 - **Nội dung:** 
@@ -39,7 +37,7 @@ Sự kiện bao gồm 05 phiên chia sẻ chuyên sâu xoay quanh các chủ đ�
     - Phân tích những thách thức về độ trễ thấp (Low Latency) và độ chính xác trong quá trình xử lý hội thoại.
     - Giới thiệu mô hình nền tảng **Amazon Nova Sonic** theo kiến trúc Speech-to-Speech.
     - Trình bày cách kết hợp **Model Context Protocol (MCP)** với **Amazon Bedrock** để xây dựng các Voice Agent có khả năng mở rộng và xử lý ngữ cảnh hiệu quả.
-
+---
 #### *9:55 – 10:20 | Phiên 3: AWS DevOps Agent – Đồng đội Vận hành Luôn Sẵn sàng của Bạn*
 - **Diễn giả:** Nguyen Nguyen & Bao Phan (Cloud Engineers, Cloud Kinetics)
 - **Nội dung:** 
@@ -50,7 +48,7 @@ Sự kiện bao gồm 05 phiên chia sẻ chuyên sâu xoay quanh các chủ đ�
         - Chẩn đoán lỗi.
         - Xác định nguyên nhân.
         - Tự động xử lý các sự cố đang xảy ra trên **Amazon ECS**.
-
+---
 #### *10:20 – 10:45 | Phiên 4: AI-Powered Productivity – Hoạch định Nguồn nhân lực cho Doanh nghiệp*
 - **Diễn giả:** Truong Tran & Anh Dang (Solution Sales, Noventiq)
 - **Nội dung:** 
@@ -60,7 +58,7 @@ Sự kiện bao gồm 05 phiên chia sẻ chuyên sâu xoay quanh các chủ đ�
         - Sàng lọc hồ sơ ứng viên.
         - Phân tích dữ liệu nguồn nhân lực.
     - Minh họa cách AI hỗ trợ doanh nghiệp trong việc lập kế hoạch nhân sự và ra quyết định ở cấp chiến lược.
-
+---
 #### *10:45 – 11:30 | Phiên 5: Xây dựng Kết nối MCP Riêng tư và An toàn với Amazon Quick*
 - **Diễn giả:** Toan Nguyen (AWS Security Builder) & Nghi Danh (AI Engineer, Renova Cloud)
 - **Nội dung:** 
@@ -69,7 +67,7 @@ Sự kiện bao gồm 05 phiên chia sẻ chuyên sâu xoay quanh các chủ đ�
     - Chia sẻ kinh nghiệm thực tế trong việc quản lý chi phí vận hành dựa trên:
         - Khối lượng dữ liệu truyền tải.
         - Tần suất thực hiện truy vấn.
-
+---
 ### Điểm nổi bật
 
 Sự kiện FCAJ Community Day tập trung vào các xu hướng mới trong lĩnh vực điện toán đám mây và trí tuệ nhân tạo thông qua năm phiên chia sẻ kỹ thuật đến từ các chuyên gia trong ngành. Nội dung chương trình nhấn mạnh vào các hệ thống AI tự động, tự động hóa DevOps trên nền tảng Cloud-Native, ứng dụng AI trong doanh nghiệp và xây dựng hạ tầng Cloud an toàn.
@@ -81,14 +79,13 @@ Các phần trình diễn trực tiếp đã minh họa cách kết hợp các d
 > - **AWS DevOps Agent: Your Always-Available Operations Teammate**
 > - **AI-Powered Productivity: Workforce Planning For Enterprise**
 > - **Building Secure Private MCP Connection with Amazon Quick**
-
-
+---
 ### Kiến thức rút ra
 - Hiểu sâu hơn về các hệ thống AI tự động (Autonomous AI Systems), bao gồm **Deep Response Engine, Voice Agents** và kiến trúc **Multi-Agent DevOps**.
 - Nắm được các phương pháp thiết kế mạng Cloud an toàn bằng **Amazon VPC** và mô hình kết nối riêng (Private Connectivity) dành cho các ứng dụng AI trong doanh nghiệp.
 - Nâng cao nhận thức về việc tối ưu chi phí hạ tầng Cloud dựa trên mô hình truyền tải dữ liệu và mức độ sử dụng các dịch vụ.
 - Tiếp cận nhiều kinh nghiệm thực tế thông qua các buổi trình diễn trực tiếp và các tình huống triển khai AI trong môi trường doanh nghiệp.
-
+---
 ### Áp dụng vào công việc
 Những kiến thức thu được từ sự kiện có thể được áp dụng trực tiếp vào dự án **Financial Data Lake** ở nhiều khía cạnh khác nhau:
 - Củng cố hiểu biết về kiến trúc AWS Cloud và tăng thêm cơ sở cho việc lựa chọn các dịch vụ AWS để xây dựng hệ thống **Financial Data Lake** có khả năng mở rộng.

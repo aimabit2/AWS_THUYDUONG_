@@ -5,15 +5,18 @@ weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
-Dưới đây là phiên bản **tiếng Việt** theo đúng cấu trúc của bản tiếng Anh.
 
----
+
+
+
+
+
 
 ## Thông tin chung
 
 * **Tên sự kiện:** AWS AgentCore Workshop – Day 1: Foundations & Agent Setup
 * **Thời gian:** Thứ Sáu, ngày 01/08/2026 | 09:00 – 11:00
-* **Địa điểm:** *(Workshop / Training Session)*
+* **Địa điểm:** Bitexco Financial Tower	
 * **Vai trò:** Người tham gia (Participant)
 
 ---

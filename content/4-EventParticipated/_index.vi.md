@@ -23,7 +23,7 @@ Trong thời gian thực tập, tôi đã có cơ hội tham gia một sự ki�
 
 **Đúc kết:**
     Thông qua sự kiện, tôi hiểu rõ hơn về các xu hướng AI hiện đại, kiến trúc Cloud trên AWS và cách các doanh nghiệp ứng dụng AI vào vận hành thực tế. Tôi cũng học được các nguyên tắc thiết kế hạ tầng Cloud an toàn, tối ưu chi phí và có khả năng mở rộng. Những kiến thức này được áp dụng trực tiếp vào dự án Financial Data Lake, đặc biệt trong việc lựa chọn kiến trúc AWS, thiết kế Amazon VPC, quản lý chi phí Cloud và định hướng tích hợp AI vào nền tảng trong tương lai.
-    s
+    
 ### [Sự kiện 2](4.2-Event2/)
 **Tên sự kiện:** 
 
