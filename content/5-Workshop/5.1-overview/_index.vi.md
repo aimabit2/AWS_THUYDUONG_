@@ -23,9 +23,9 @@ Hệ thống được thiết kế nhằm tự động hóa toàn bộ quy trìn
 | **4. REST API & Security Layer**  | Amazon Cognito, API Gateway, AWS WAF, Lambda API  | Quản lý danh tính JWT, định tuyến REST API, chống tấn công web (DDoS, SQLi) và thực thi logic backend  | ~$0.35 USD  |
 | **5. Presentation & Alert**  | AWS Amplify, Amazon SES  | Hosting Web Dashboard (React/Next.js) và tự động gửi email cảnh báo rủi ro cho nhà đầu tư  | ~$0.40 USD  |
 
-#### MÔ TẢ VÀ GIẢI THÍCH HÌNH ẢNH 5.1:
 
-![Sơ đồ Kiến trúc Hệ thống 5 tầng trên AWS Cloud.](<../../../static/images/Untitled Diagram-3layer_v1.0.drawio.png>)
+
+![Sơ đồ Kiến trúc Hệ thống 5 tầng trên AWS Cloud.](/images/diagram-3layer_v1.0.drawio.png)
 
 
 - Sơ đồ mô tả luồng dữ liệu giữa các dịch vụ Cloud theo kiến trúc Serverless. Bên trái là các nguồn dữ liệu chứng khoán đi qua tầng Ingestion (EventBridge, Step Functions, Lambda) đổ vào S3 Raw Bucket. Tiếp theo, luồng dữ liệu đi qua tầng Processing (AWS Glue Jobs, Data Catalog) sang S3 Curated Bucket và kết nối tới Athena. Tầng REST API & Security (Cognito, API Gateway, WAF, Lambda Backend) đóng vai trò trung gian định tuyến yêu cầu truy vấn. Bên phải sơ đồ là tầng Presentation & Notification hiển thị giao diện phân tích trên AWS Amplify và gửi mail tự động qua Amazon SES.
