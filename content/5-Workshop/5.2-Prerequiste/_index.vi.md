@@ -88,7 +88,7 @@ def lambda_handler(event, context):
     1. AWS Step Functions: Tạo State Machine để duyệt qua danh sách danh mục mã cổ phiếu, gọi Lambda Ingestor xử lý song song, hỗ trợ cơ chế Retry khi gặp Rate Limit và tự động ghi log Checkpoint.
     2. Amazon EventBridge Scheduler: Cấu hình quy tắc Cron Job kích hoạt Step Functions định kỳ (ví dụ: vào 00:00 ngày đầu tiên của mỗi tháng) để tự động thu thập báo cáo tài chính quý/năm mới nhất.
 
-![Luồng điều phối Step Functions]({{ "/images/StepFunction.png" | relURL }})
+![Luồng điều phối Step Functions](../../../images/StepFunction.png)
 
 - Ảnh mô tả luồng điều phối Step Functions.
 
