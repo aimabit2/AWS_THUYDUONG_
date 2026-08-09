@@ -5,27 +5,25 @@ weight: 1
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+# CHUẨN HÓA DỮ LIỆU TÀI CHÍNH QUY MÔ LỚN VỚI AWS GLUE JOBS VÀ AMAZON S3 DATA LAKE
 
-Các điểm chính cần nắm:
+Một trong những mảnh ghép quan trọng nhất trong quá trình xây dựng hạ tầng dữ liệu của nhóm mình là thiết lập tiến trình tích hợp dữ liệu (ETL) tự động. Dữ liệu thô thu thập từ nhiều nguồn báo cáo tài chính khác nhau thường xuất hiện mâu thuẫn về tên gọi chỉ tiêu, cấu trúc khuyết thiếu và khối lượng lớn bản ghi chưa qua xử lý. Nhóm mình đã chọn ứng dụng AWS Glue Jobs — dịch vụ tích hợp dữ liệu serverless mạnh mẽ của AWS. Dưới đây là những điểm cốt lõi quan trọng nhất về việc chuẩn hóa dữ liệu với AWS Glue Jobs mà nhóm mình đúc kết:
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+* **Tự động khám phá Schema bằng AWS Glue Crawlers**: Nhóm mình thiết lập Glue Crawlers định kỳ quét các tệp dữ liệu thô (JSON/CSV) từ `S3 Raw Bucket`, tự động trích xuất cấu trúc schema của 3 bảng Báo cáo Tài chính và đăng ký metadata vào AWS Glue Data Catalog làm kho quản lý trung tâm.
+* **Xử lý biến đổi dữ liệu phân tán với PySpark ETL Jobs**: Nhóm mình lập trình các script PySpark trên AWS Glue Jobs để đồng bộ hóa hàng trăm biến thể tên chỉ tiêu tài chính đa nguồn về chuẩn tên thống nhất (`total_assets`, `net_revenue`, `ebit`, `ocf`), đồng thời loại bỏ khối ngành tài chính đặc thù (Ngân hàng, Chứng khoán, Bảo hiểm).
+* **Lọc điều kiện khuyết thiếu và xử lý nhiễu bằng Winsorization**: Nhóm mình cài đặt điều kiện lọc chỉ giữ lại doanh nghiệp đủ 5 năm dữ liệu liên tục và tích hợp thuật toán Winsorization (1%-99%) để giới hạn các giá trị ngoại lệ bất thường mà không làm méo lệch bản chất dữ liệu.
+* **Tối ưu chi phí DPU với tính năng Job Bookmarks**: Nhóm mình tận dụng tính năng Job Bookmarks để Glue Job tự động ghi nhớ trạng thái các tệp đã xử lý, giúp tiến trình ETL chỉ tập trung làm sạch phần BCTC mới bổ sung trong mỗi kỳ cào định kỳ, tránh xử lý trùng lặp và tiết kiệm chi phí DPU đáng kể.
+* **Chuyển đổi Parquet nén Snappy và phân vùng Data Lake**: Dữ liệu sạch được nhóm mình chuyển sang định dạng Apache Parquet nén Snappy phân vùng theo `year` và `quarter` tại `S3 Curated Bucket`, giúp giảm 80% dung lượng lưu trữ S3 và tăng tốc độ truy vấn SQL từ Amazon Athena lên gấp nhiều lần.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+Qua bài viết này, nhóm mình hy vọng giúp người đọc dễ dàng nắm bắt được các nguyên lý cốt lõi khi vận hành AWS Glue Jobs để xây dựng một pipeline chuẩn hóa dữ liệu tài chính tự động, tối ưu chi phí và mở rộng linh hoạt trên đám mây.
 
-...Hình ảnh...
+![]()
+![Sơ đồ kiến trúc xử lý dữ liệu ETL với AWS Glue Jobs và Amazon S3 Data Lake](/images/aws_glue.jpg)
 
-...Link...
-
-...Hướng dẫn...
+### Nguồn tham khảo:
+### Các đường liên kết tài nguyên & Bài đăng:
+* **Link bài post chính thức trên AWS Study Group**: [Đường link bài post](https://www.facebook.com/groups/660548818043427/?multi_permalinks=2239447706820189&hoisted_section_header_type=recently_seen&__cft__[0]=AZYjPC5eYAkY3CgAaI5vZ5OqOjkK0zflTONSBapri0ExFz4aKgrSKouFUH5fv43AwVkfKqG5qNARTsyAa0ldBX542gdeBNkiREKx313Nx-wb1uMNtonyw9qlLIfHNjNPNUstg9vLZwyZerxS-XwnIroi&__tn__=%2CO%2CP-R)
+* **Link trực tiếp hệ thống ứng dụng (Live System)**: [Link hệ thống ứng dụng]()
+* **Link hướng dẫn cài đặt & vận hành chi tiết**: [Hướng dẫn cài đặt & sử dụng]()

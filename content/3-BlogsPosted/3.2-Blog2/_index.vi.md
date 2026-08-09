@@ -18,11 +18,12 @@ Sau khi hoàn thiện Data Lake lưu trữ dữ liệu tài chính, bước ti�
 
 Qua bài viết này, nhóm mình hy vọng đã cung cấp những điểm cốt lõi nhất về cách ứng dụng Amazon SageMaker AI để xây dựng quy trình MLOps tự động, chuẩn hóa và tối ưu cho các bài toán phân tích rủi ro tài chính doanh nghiệp.
 
-![Sơ đồ quy trình huấn luyện và triển khai mô hình với Amazon SageMaker AI]()
 
----
+
+![Sơ đồ quy trình huấn luyện và triển khai mô hình với Amazon SageMaker AI](/images/amazon_sagemaker.jpg)
 
 ### Nguồn tham khảo:
-* [Trang chủ sản phẩm Amazon SageMaker AI](https://aws.amazon.com/sagemaker/)
-* [Tài liệu kỹ thuật chính thức AWS SageMaker Documentation](https://docs.aws.amazon.com/sagemaker/)
-* [Bài viết chuyên sâu AWS Machine Learning Blog](https://aws.amazon.com/blogs/machine-learning/)
+### Các đường liên kết tài nguyên & Bài đăng:
+* **Link bài post chính thức trên AWS Study Group**: [Đường link bài post](https://www.facebook.com/groups/660548818043427/?multi_permalinks=2239716780126615&hoisted_section_header_type=recently_seen&__cft__[0]=AZZwOqj4ZKDX76uta5WTz5EII0qAlhZgyrMtd3ovNa_efcYq-0IqzTAv7cbrn_sBPfM-ZVfPdk7qOTUSpZ5Zf8sANwvX9sHzlZqvGeQfrWdkr96uO4gGcygBDQ6R2YNWB93aA9Mr3Yx0TP24073yEd92&__tn__=%2CO%2CP-R)
+* **Link trực tiếp hệ thống ứng dụng (Live System)**: [Link hệ thống ứng dụng]()
+* **Link hướng dẫn cài đặt & vận hành chi tiết**: [Hướng dẫn cài đặt & sử dụng]()

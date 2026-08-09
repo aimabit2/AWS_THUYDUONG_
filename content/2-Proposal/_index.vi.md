@@ -28,49 +28,48 @@ Nền tảng tận dụng **Amazon EventBridge** và **AWS Step Functions** đ�
 ### 3. Kiến trúc giải pháp  
 Hệ thống áp dụng kiến trúc Serverless 5 phân vùng chuyên biệt trên AWS Cloud:  
 
-![Vietnam Financial Distress System Architecture](/images/2-Proposal/architecture_overview.png)  
-
+![Vietnam Financial Distress System Architecture](/images/diagram-3layer_v1.0.drawio.png)
 ![Data Pipeline Architecture](/images/2-Proposal/pipeline_architecture.png)  
 
 *Dịch vụ AWS sử dụng*  
-- *Amazon EventBridge*: Kích hoạt cron schedule định kỳ cho luồng thu thập dữ liệu BCTC quý/năm.  
-- *AWS Step Functions*: Điều phối workflow thu thập dữ liệu đa luồng, retry và quản lý checkpointing.  
-- *AWS Lambda / ECS*: Gọi API/Crawl dữ liệu tài chính từ vnstock, TCBS, CafeF, Vietstock và xử lý backend REST API.  
-- *Amazon S3*: Lưu trữ Data Lake gồm 2 bucket (S3 raw data cho JSON/CSV và S3 curated data cho Parquet).  
-- *AWS Glue*: Glue Jobs (Python/Spark ETL) làm sạch và biến đổi dữ liệu; Glue Crawlers quét schema; Glue Data Catalog lưu trữ metadata.  
-- *Amazon Athena*: Truy vấn SQL Serverless trực tiếp trên S3 curated data với tốc độ cao.  
-- *AWS Amplify*: Hosting giao diện Web Dashboard (React/Next.js).  
-- *Amazon Cognito*: Quản lý đăng nhập, phân quyền (Admin / Guest / Analyst) và cấp JWT token.  
-- *Amazon API Gateway*: RESTful API Gateway bảo mật tiếp nhận request từ Web Frontend.  
-- *AWS WAF*: Tường lửa bảo vệ API Gateway và Amplify khỏi tấn công mạng (DDoS, SQL Injection).  
-- *Amazon SES*: Tự động gửi email cảnh báo rủi ro kiệt quệ tài chính cho người dùng.  
+- **Amazon EventBridge**: Kích hoạt cron schedule định kỳ cho luồng thu thập dữ liệu BCTC quý/năm.  
+- **AWS Step Functions**: Điều phối workflow thu thập dữ liệu đa luồng, retry và quản lý checkpointing.  
+- **AWS Lambda / ECS**: Gọi API/Crawl dữ liệu tài chính từ vnstock, TCBS, CafeF, Vietstock và xử lý backend REST API.  
+- **Amazon S3**: Lưu trữ Data Lake gồm 2 bucket (S3 raw data cho JSON/CSV và S3 curated data cho Parquet).  
+- **AWS Glue**: Glue Jobs (Python/Spark ETL) làm sạch và biến đổi dữ liệu; Glue Crawlers quét schema; Glue Data Catalog lưu trữ metadata.  
+- **Amazon Athena**: Truy vấn SQL Serverless trực tiếp trên S3 curated data với tốc độ cao.  
+- **AWS Amplify**: Hosting giao diện Web Dashboard (React/Next.js).  
+- **Amazon Cognito**: Quản lý đăng nhập, phân quyền (Admin / Guest / Analyst) và cấp JWT token.  
+- **Amazon API Gateway**: RESTful API Gateway bảo mật tiếp nhận request từ Web Frontend.  
+- **AWS WAF**: Tường lửa bảo vệ API Gateway và Amplify khỏi tấn công mạng (DDoS, SQL Injection).  
+- **Amazon SES**: Tự động gửi email cảnh báo rủi ro kiệt quệ tài chính cho người dùng.  
 
 *Thiết kế thành phần*  
-- *Ingestion Layer*: EventBridge kích hoạt Step Functions gọi Lambda/ECS Task thu thập dữ liệu 3 BCTC (Bảng cân đối kế toán, Kết quả kinh doanh, Lưu chuyển tiền tệ) và giá cổ phiếu, loại bỏ hoàn toàn ngành tài chính (Ngân hàng, Chứng khoán, Bảo hiểm, Quỹ đầu tư).  
-- *Storage Layer*: S3 Raw lưu trữ dữ liệu gốc dạng JSON/CSV; S3 Curated lưu trữ dữ liệu đã chuẩn hóa, làm sạch và gán nhãn dạng Parquet phân theo năm/quý.  
-- *Processing & ETL Layer*: AWS Glue Job chuẩn hóa tên chỉ tiêu, lọc doanh nghiệp đủ 5 năm dữ liệu, xử lý outlier (Winsorize 1%-99%), tính bộ chỉ số tài chính (CR, WCTA, ROA, ROE, EBIT_REV, DAR, STDR, LTDR, LogAsset, MC_Debt) và gán nhãn distress.  
-- *Query & ML Layer*: Glue Crawler trích xuất schema vào Data Catalog; Athena phục vụ truy vấn ad-hoc và backend API. Mô hình Machine Learning (Logistic Regression, XGBoost, Random Forest, CatBoost) được huấn luyện trên chuỗi thời gian (Time-series split 2018-2022 train, 2023-2025 test).  
-- *User Interface & Alerting*: Amplify giao diện Dashboard trực quan; API Gateway + Lambda Backend xử lý yêu cầu; Cognito đảm bảo an toàn truy cập; SES phát thông báo cảnh báo tức thì.  
+- **Ingestion Layer**: EventBridge kích hoạt Step Functions gọi Lambda/ECS Task thu thập dữ liệu 3 BCTC (Bảng cân đối kế toán, Kết quả kinh doanh, Lưu chuyển tiền tệ) và giá cổ phiếu, loại bỏ hoàn toàn ngành tài chính (Ngân hàng, Chứng khoán, Bảo hiểm, Quỹ đầu tư).  
+- **Storage Layer**: S3 Raw lưu trữ dữ liệu gốc dạng JSON/CSV; S3 Curated lưu trữ dữ liệu đã chuẩn hóa, làm sạch và gán nhãn dạng Parquet phân theo năm/quý.  
+- **Processing & ETL Layer**: AWS Glue Job chuẩn hóa tên chỉ tiêu, lọc doanh nghiệp đủ 5 năm dữ liệu, xử lý outlier (Winsorize 1%-99%), tính bộ chỉ số tài chính (CR, WCTA, ROA, ROE, EBIT_REV, DAR, STDR, LTDR, LogAsset, MC_Debt) và gán nhãn distress.  
+- **Query & ML Layer**: Glue Crawler trích xuất schema vào Data Catalog; Athena phục vụ truy vấn ad-hoc và backend API. Mô hình Machine Learning (Logistic Regression, XGBoost, Random Forest, CatBoost) được huấn luyện trên chuỗi thời gian (Time-series split 2018-2022 train, 2023-2025 test).  
+- **User Interface & Alerting**: Amplify giao diện Dashboard trực quan; API Gateway + Lambda Backend xử lý yêu cầu; Cognito đảm bảo an toàn truy cập; SES phát thông báo cảnh báo tức thì.  
 
 ### 4. Triển khai kỹ thuật  
 *Các giai đoạn triển khai*  
 Dự án được triển khai qua 4 giai đoạn chính:  
-1. *Nghiên cứu & Thiết kế Kiến trúc (Tháng 1)*: Khảo sát cấu trúc BCTC các nguồn (VCI, MAS, KBS, vnstock), định hình 5 phân vùng kiến trúc AWS Serverless và xây dựng bộ tiêu chí gán nhãn Rule-based & Z-Score.  
-2. *Xây dựng Data Pipeline & Storage (Tháng 2)*: Khởi tạo S3 Raw/Curated buckets, lập trình Lambda Crawler, thiết lập Step Functions workflow, Glue ETL Jobs và Glue Data Catalog + Athena query layer.  
-3. *Phát triển Engine Chỉ số, Gán nhãn & ML Pipeline (Tháng 3)*: Xây dựng Ratio Engine, Distress Labeling Engine, huấn luyện và đánh giá các mô hình ML (XGBoost, Random Forest) dựa trên chỉ số Recall & AUC-ROC.  
-4. *Triển khai Web Dashboard, Auth & Cảnh báo (Tháng 4)*: Phát triển giao diện React/Next.js trên Amplify, tích hợp Cognito Auth, API Gateway, Lambda Service và Amazon SES email notifications.  
+1. **Nghiên cứu & Thiết kế Kiến trúc (Tháng 1)**: Khảo sát cấu trúc BCTC các nguồn (VCI, MAS, KBS, vnstock), định hình 5 phân vùng kiến trúc AWS Serverless và xây dựng bộ tiêu chí gán nhãn Rule-based & Z-Score.  
+2. **Xây dựng Data Pipeline & Storage (Tháng 2)**: Khởi tạo S3 Raw/Curated buckets, lập trình Lambda Crawler, thiết lập Step Functions workflow, Glue ETL Jobs và Glue Data Catalog + Athena query layer.  
+3. **Phát triển Engine Chỉ số, Gán nhãn & ML Pipeline (Tháng 3)**: Xây dựng Ratio Engine, Distress Labeling Engine, huấn luyện và đánh giá các mô hình ML (XGBoost, Random Forest) dựa trên chỉ số Recall & AUC-ROC.  
+4. **Triển khai Web Dashboard, Auth & Cảnh báo (Tháng 4)**: Phát triển giao diện React/Next.js trên Amplify, tích hợp Cognito Auth, API Gateway, Lambda Service và Amazon SES email notifications.  
 
 *Yêu cầu kỹ thuật*  
-- *Data Engine*: Python 3.11+, `vnstock`, `pandas`, `pyarrow`, `numpy`, `scikit-learn`, `xgboost`, `lightgbm`, `catboost`.  
-- *AWS Services & Infrastructure*: AWS CDK / SAM / Terraform để quản lý Infrastructure as Code (IaC).  
+- **Data Engine**: Python 3.11+, `vnstock`, `pandas`, `pyarrow`, `numpy`, `scikit-learn`, `xgboost`, `lightgbm`, `catboost`.  
+- **AWS Services & Infrastructure**: AWS CDK / SAM / Terraform để quản lý Infrastructure as Code (IaC).  
 - *Backend & Web App*: FastAPI / Node.js cho Lambda Service, React / Next.js cho Frontend, Zustand cho Client State Management, Tailwind CSS / Vanilla CSS cho giao diện.  
-- *Bảo mật & Chuẩn hóa*: SSL/TLS, WAF, OAuth2 / JWT với Amazon Cognito, tuân thủ nguyên tắc Least Privilege trên IAM Roles.  
+- **Bảo mật & Chuẩn hóa**: SSL/TLS, WAF, OAuth2 / JWT với Amazon Cognito, tuân thủ nguyên tắc Least Privilege trên IAM Roles.  
 
 ### 5. Lộ trình & Mốc triển khai  
-- *Mốc 1 (Tháng 1)*: Hoàn thành bản đề xuất kiến trúc, chuẩn hóa schema BCTC và thiết kế dữ liệu.  
-- *Mốc 2 (Tháng 2)*: Hoàn thành Data Ingestion pipeline (Step Functions + Lambda + S3) và Glue ETL Job.  
-- *Mốc 3 (Tháng 3)*: Hoàn thành Ratio Engine, Distress Labeling (Altman Z-Score) và huấn luyện mô hình ML.  
-- *Mốc 4 (Tháng 4)*: Hoàn thiện Web Dashboard (Amplify + Cognito), API Gateway backend, tích hợp SES Alerts và kiểm thử End-to-End.  
+- **Mốc 1 (Tháng 1)**: Hoàn thành bản đề xuất kiến trúc, chuẩn hóa schema BCTC và thiết kế dữ liệu.  
+- **Mốc 2 (Tháng 2)**: Hoàn thành Data Ingestion pipeline (Step Functions + Lambda + S3) và Glue ETL Job.  
+- **Mốc 3 (Tháng 3)**: Hoàn thành Ratio Engine, Distress Labeling (Altman Z-Score) và huấn luyện mô hình ML.  
+- **Mốc 4 (Tháng 4)**: Hoàn thiện Web Dashboard (Amplify + Cognito), API Gateway backend, tích hợp SES Alerts và kiểm thử End-to-End.  
 
 ### 6. Ước tính ngân sách  
 Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
