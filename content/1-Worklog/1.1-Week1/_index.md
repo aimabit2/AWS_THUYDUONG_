@@ -6,71 +6,91 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-### Week 1 Overview
+### Week 1 Overview:
 
-This week covered three themes: AWS infrastructure fundamentals, modern Gen-AI / SDLC practices, and IAM security basics.
+This week, I focused on three main themes: AWS infrastructure foundations, modern software development practices with GenAI/SDLC, and basic security knowledge through AWS Identity and Access Management (IAM).
 
 | Domain | Main Focus | Key Takeaway |
 | --- | --- | --- |
-| A | AWS Global Infrastructure & Foundations | Resilient systems should be designed with fault isolation in mind, ideally across at least two AZs. |
-| B | Advanced Gen-AI & Modern SDLC | AI delivery becomes reliable when prompts are backed by structure, checkpoints, and automated testing. |
-| C | Identity & Access Management (IAM) | Least privilege and temporary roles are the safest default for AWS permissions. |
+| A | AWS Global Infrastructure Foundations | Highly available systems should be designed with fault isolation, ideally across at least two Availability Zones (AZs). |
+| B | Advanced GenAI and Modern Software Development Lifecycle (SDLC) | Software development with AI is more reliable when prompts are built on clear structure, include checkpoints, and are automatically tested. |
+| C | Identity and Access Management (IAM) | Least privilege and using temporary IAM Roles are the safest choices for managing AWS permissions. |
 
-### Domain A: AWS Global Infrastructure & Foundations
+### Domain A: AWS Global Infrastructure Foundations
 
-Understanding physical and logical boundaries of cloud architecture for HA design.
+Study the physical and logical boundaries in cloud infrastructure architecture to support the design of highly available systems.
 
-#### Mon, Jun 22 | Cloud Computing Definitions & Benefits
+#### *Monday, 22/06 | Cloud Computing Concepts and Benefits*
 
-- Defined cloud computing as on-demand IT resources delivered via the Internet with pay-as-you-go pricing.
-- Identified four core benefits: 
-     - cost optimization
-     - accelerated development through automation and AI
-     - high flexibility
-     - global scale
-- Ref:
+- Learn that cloud computing is a model delivering IT resources on demand over the Internet with pay-as-you-go pricing.
+- Identify four core benefits of cloud computing:
+  - cost optimization
+  - faster development through automation and AI
+  - flexibility in scaling and resource deployment
+  - global deployment capability
+- References:
 
-#### Tue, Jun 23 | Infrastructure Topology Breakdown
+#### *Tuesday, 23/06 | AWS Infrastructure Topology Analysis*
 
-- Studied the infrastructure layers: Data Centers, Availability Zones (AZs), Regions, and Edge Locations.
-- AZs are fault-isolated and connected via high-speed private links.
-- Regions contain at least three AZs, while Edge Locations serve as Points of Presence for CloudFront CDN, WAF, and Route 53.
-- Ref:
+- Study the components of AWS infrastructure including:
+  - **Data Centers**
+  - **Availability Zones (AZs)**
+  - **Regions**
+  - **Edge Locations**
+- Learn that each Availability Zone is fault-isolated but connected via high-speed private networking.
+- Understand that each Region contains at least three Availability Zones, while Edge Locations act as Points of Presence (PoP) for services like CloudFront CDN, AWS WAF, and Route 53.
+- References:
 
-> Key takeaway: A resilient production environment should keep a minimum dual-AZ footprint to preserve fault isolation.
+> **Key takeaway:** A real production deployment should be designed across at least two Availability Zones to ensure fault isolation and service continuity.
 
-### Domain B: Advanced Gen-AI & Modern SDLC
+### Domain B: Advanced GenAI and Modern Software Development Lifecycle
 
-#### Wed, Jun 24 | The Agentic AI Shift & Kiro IDE Framework
+#### *Wednesday, 24/06 | Agentic AI and the Kiro IDE Framework*
 
-- Explored the evolution of SDLC from basic code generation to end-to-end AI-driven feature implementation.
-- Reviewed how Kiro IDE/CLI transforms prompts into requirements, architecture, and Timeline Checkpointing for safe snapshots and rollback.
-- Ref:
+- Learn the evolution of the software development lifecycle (SDLC), from AI assisting code generation to executing end-to-end feature development.
+- Study how Kiro IDE/CLI converts a prompt into:
+  - Requirements documentation
+  - System architecture
+  - Timeline checkpointing to create safe restore points and support rollback when needed
+- References:
 
-#### Thu, Jun 25 | Advanced Context Management & Property-Based Testing (PBT)
+#### *Thursday, 25/06 | Advanced Context Management and Property-Based Testing (PBT)*
 
-- Analyzed Advanced Context Management using Model Context Protocol (MCP) to connect docs, databases, APIs, and UI designs.
-- Studied Property-Based Testing (PBT), which generates many randomized test cases from EARS-formatted requirements instead of writing tests manually.
-- Ref:
+- Analyze Advanced Context Management through the Model Context Protocol (MCP) to connect multiple data sources such as:
+  - documentation
+  - databases
+  - APIs
+  - UI design
+- Learn Property-Based Testing (PBT), a method that automatically generates many randomized test datasets from requirements described in EARS, instead of writing each test case manually.
+- References:
 
-> Key takeaway: Professional AI delivery depends on structured specs, connected context, and automated boundary testing.
+> **Key takeaway:** Effective AI-enabled software development requires clear specifications, full context management, and automated testing mechanisms to ensure product quality.
 
-### Domain C: Identity & Access Management (AWS IAM)
+### Domain C: Identity and Access Management (AWS IAM)
 
-#### Fri, Jun 26 | Authentication & Authorization Structures
+#### *Friday, 26/06 | Authentication and Authorization Structure*
 
-- Deconstructed core IAM components: Root User isolation, IAM Users, Groups, JSON Policies, and IAM Roles.
-- Root User should be protected with MFA and avoided for daily usage.
-- IAM Users provide long-term credentials, Groups support RBAC management, Policies define permissions, and Roles provide temporary service-to-service credentials.
-- Ref:
+- Learn the core components of AWS IAM, including: **Root User, IAM Users, Groups, JSON Policies**, and **IAM Roles**.
+- Learn that the **Root User** should be protected with **Multi-Factor Authentication (MFA)** and avoided for daily activities.
+- Understand the role of each IAM component:
+  - **IAM Users** provide long-term credentials for people.
+  - **Groups** support managing users by role-based access control (Role-Based Access Control - RBAC).
+  - **Policies** define the permissions that users or services are allowed.
+  - **IAM Roles** provide temporary credentials for AWS services or other resources to access each other securely.
+- References:
 
-> Key takeaway: Enforce the Principle of Least Privilege and prefer temporary roles for cross-service permissions.
+> **Key takeaway:** Apply the **Least Privilege** principle and prioritize IAM Roles with temporary credentials when AWS services need to access one another.
 
-#### Sat, Jun 27 | Knowledge Consolidation & Review
+#### *Saturday, 27/06 | Knowledge Consolidation and Review*
 
-- Organized the Week 1 technical notes and synthesized the main architectural concepts.
-- Ref:
+- Summarize the technical notes of Week 1 and systematize the main concepts about AWS architecture, Agentic AI, and AWS IAM.
+- Review the learned concepts to strengthen understanding and prepare for the next weeks.
+- References:
 
-### Achievements
+### Results Achieved
 
-- Compiled a comprehensive, structured technical knowledge base covering AWS core infrastructure, Agentic SDLC (Kiro IDE), and IAM security mechanics.
+- Built a structured knowledge base on AWS core infrastructure, AI-driven SDLC (Kiro IDE), and IAM security mechanisms.
+- Understood how to design fault-tolerant systems using AWS **Availability Zones** and **Regions**.
+- Mastered the role of **Model Context Protocol (MCP), Property-Based Testing (PBT)**, and **Timeline Checkpointing** in elevating AI-assisted software quality.
+- Understood and applied AWS IAM security principles, especially **Least Privilege**, **MFA** for Root User, and preferred **IAM Roles** for service-to-service access.
+- Completed a solid foundation in AWS Cloud and modern software development methods, serving as a basis for learning and implementing Data Engineering projects in the weeks ahead.
