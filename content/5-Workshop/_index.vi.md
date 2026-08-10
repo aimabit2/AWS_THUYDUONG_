@@ -1,11 +1,12 @@
 ﻿---
-title: "WORKSHOP TRIỂN KHAI HỆ THỐNG"
+title: "Workshop"
 date: 2026-08-08
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
 
+# HỆ THỐNG THU THẬP VÀ PHÂN TÍCH DỮ LIỆU TÀI CHÍNH CHỨNG KHOÁN VIỆT NAM TRÊN AWS SERVERLESS
 ### 5.1 TỔNG QUAN WORKSHOP
 #### 1. TỔNG QUAN
 
