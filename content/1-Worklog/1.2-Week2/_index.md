@@ -1,4 +1,4 @@
----
+﻿---
 title: "Week 2 - AWS Storage, Compute, Networking, and Data Engineering Foundations"
 date: 2024-01-01
 weight: 1
@@ -7,72 +7,82 @@ pre: " <b> 1.2. </b> "
 ---
 
 
+### Week 2 Overview:
 
-### Week 2 Overview
-
-This week focused on AWS storage and compute foundations, hybrid networking design, and the kickoff of the team Data Engineering project.
+This week, I focused on AWS core services for storage, compute, and networking, while also beginning the team Data Engineering project.
 
 | Domain | Main Focus | Key Takeaway |
 | --- | --- | --- |
-| A | AWS Storage & Compute Foundations | S3 and EC2 provide the basic building blocks for scalable data storage and flexible compute. |
-| B | AWS Networking & Hybrid Connectivity | A well-planned VPC with layered security controls is the foundation of secure hybrid architectures. |
-| C | Data Engineering Project Initiation | A clear ETL architecture and local ingestion pipeline create a strong base for cloud migration later. |
+| A | AWS Storage and Compute Foundations | Amazon S3 and Amazon EC2 are core services for building scalable data storage and flexible compute resources. |
+| B | AWS Networking and Hybrid Connectivity | A well-designed VPC with layered security is the foundation for secure hybrid systems. |
+| C | Data Engineering Project Kickoff | Defining a clear ETL architecture and local ingestion pipeline lays the groundwork for future cloud deployment. |
 
-### Domain A: AWS Storage & Compute Foundations
+### Domain A: AWS Storage and Compute Foundations
 
-#### Mon, Jun 29 | Amazon S3, Data Lake & Data Warehouse Fundamentals
+#### *Monday, 29/06 | Amazon S3, Data Lake, and Data Warehouse*
+- Studied **Amazon S3** as AWS’s highly scalable object storage service.
+- Distinguished the roles of **Amazon S3**, **Data Lake**, and **Data Warehouse** in modern data architectures.
+- Learned bucket and object concepts, data organization, metadata, access control mechanisms, and common enterprise use cases such as backup, big data analytics, and Data Lake implementation.
+- Compared structured analytical storage (**Data Warehouse**) with raw data repositories (**Data Lake**) to understand each model’s role in the Data Engineering workflow.
+- References:
+> **Key takeaway:** Amazon S3 is the primary storage platform for building scalable Data Lakes, while Data Warehouses focus on analytical performance over processed data.
 
-- Explored Amazon S3 as AWS's scalable object storage service.
-- Distinguished the roles of Amazon S3, Data Lakes, and Data Warehouses in modern data architectures.
-- Learned bucket and object concepts, storage organization, metadata, access control mechanisms, and common enterprise use cases such as backup, big data analytics, and data lake implementation.
-- Compared structured analytical storage (Data Warehouse) with raw data repositories (Data Lake) to understand their roles in a data engineering workflow.
-- Ref:
+#### *Tuesday, 30/06 | Amazon EC2 and Static Website Hosting*
+- Studied basic Amazon EC2 concepts, including:
+  - EC2 instance types
+  - key pairs
+  - security groups
+  - application deployment workflows
+- Learned how to provision and manage virtual servers on AWS.
+- Practiced hosting a static website with Amazon S3 to understand how to store and distribute a website without a dedicated web server.
+- References:
+> Key takeaway: Amazon EC2 provides flexible compute capacity, while Amazon S3 is a cost-effective and highly available solution for hosting static websites.
 
-> Key takeaway: Amazon S3 serves as the storage foundation for building scalable Data Lakes, while Data Warehouses focus on optimized analytical performance over processed datasets.
+### Domain B: AWS Networking and Hybrid Connectivity
 
-#### Tue, Jun 30 | Amazon EC2 Fundamentals & Static Website Hosting
+#### *Wednesday, 01/07 | Amazon VPC and AWS Site-to-Site VPN*
+- Studied **Amazon Virtual Private Cloud (VPC)**, including:
+  - CIDR planning
+  - Regions
+  - Availability Zones
+  - Subnets
+  - Route Tables
+  - Internet Gateway (IGW)
+  - Security Groups
+  - Network ACLs
+- Researched subnet segmentation strategies for:
+  - Public subnets
+  - Private subnets
+  - VPN-only subnets
+- Practiced establishing secure connectivity between on-premises systems and AWS Cloud through **AWS Site-to-Site VPN**.
+- References:
+> **Key takeaway:** A well-designed VPC combined with layered security and secure hybrid connectivity provides a strong foundation for highly available, secure cloud systems.
 
-- Studied Amazon EC2 fundamentals, including instance types, key pairs, security groups, and application deployment workflows.
-- Learned how to provision compute resources and manage virtual servers within AWS.
-- Practiced hosting a static website using Amazon S3 to understand cloud-native web hosting without dedicated web servers.
-- Ref:
+### Domain C: Data Engineering Project Kickoff
 
-> Key takeaway: Amazon EC2 provides flexible compute capacity, while Amazon S3 enables highly available and cost-effective hosting for static web applications.
+#### *Thursday, 02/07 | Project Planning and Pipeline Architecture*
+- Officially started the team’s **Data Engineering** project.
+- Participated in discussions to analyze business goals, system architecture, and implementation roadmap.
+- Designed the overall ETL workflow covering:
+  - **Data Ingestion**
+  - **Bronze (Raw JSON)**
+  - **Silver (Clean Parquet)**
+  - **Gold (Feature Engineering)**
+  - **Data Validation**
+  - **Analytics**
+- Reviewed project structure, development responsibilities, and cloud deployment strategy for future phases.
+- References:
 
-### Domain B: AWS Networking & Hybrid Connectivity
-
-#### Wed, Jul 01 | Amazon VPC & AWS Site-to-Site VPN
-
-- Studied Amazon Virtual Private Cloud (VPC), including CIDR planning, Regions, Availability Zones, Subnets, Route Tables, Internet Gateway (IGW), Security Groups, and Network ACLs.
-- Learned subnet segmentation strategies such as Public, Private, and VPN-only subnets following AWS networking best practices.
-- Practiced establishing secure hybrid connectivity between on-premises infrastructure and AWS Cloud using AWS Site-to-Site VPN.
-- Ref:
-
-> Key takeaway: A well-designed VPC architecture, combined with layered security controls and secure hybrid connectivity, forms the foundation of highly available cloud infrastructures.
-
-### Domain C: Data Engineering Project Initiation
-
-#### Thu, Jul 02 | Project Planning & Data Pipeline Architecture
-
-- Officially started the team Data Engineering project.
-- Participated in project discussions to analyze business objectives, system architecture, and implementation roadmap.
-- Designed the overall ETL workflow consisting of Data Ingestion, Bronze (Raw JSON), Silver (Clean Parquet), Gold (Feature Engineering), Data Validation, and Analytics layers.
-- Reviewed project structure, development responsibilities, and deployment strategy for future cloud migration.
-- Ref:
-
-#### Fri, Jul 03 | Local Data Ingestion with VNStock3
-
-- Configured the local development environment by installing VNStock3 and Pandas.
-- Developed the first Python-based data ingestion script to collect Vietnamese stock market data from VNStock3.
-- Successfully executed the initial ETL pipeline locally by storing raw data in the Bronze layer before subsequent cleaning, validation, and feature engineering stages.
-- Reviewed the pipeline architecture and discussed future deployment to AWS cloud services.
-- Ref:
-
-> Key takeaway: Separating the pipeline into Bronze, Silver, and Gold layers improves data quality, maintainability, and scalability while preparing the project for cloud-native deployment.
+#### *Friday, 03/07 | Local Data Ingestion with VNStock3*
+- Configured the local development environment by installing **VNStock3** and **Pandas**.
+- Built the first Python script to collect Vietnamese stock market data using VNStock3.
+- Successfully executed the initial ETL pipeline locally by storing raw data in the Bronze layer before continuing with cleaning, validation, and feature engineering.
+- Reviewed the pipeline architecture and discussed future AWS deployment plans.
+- References:
+> **Key takeaway:** Separating the pipeline into Bronze, Silver, and Gold layers improves data quality, maintainability, and scalability while preparing the system for cloud-native deployment.
 
 ### Achievements
-
-- Built a comprehensive understanding of AWS core services, including Amazon S3, Amazon EC2, Amazon VPC, and AWS Site-to-Site VPN.
-- Acquired practical experience in designing secure cloud networking and hybrid connectivity architectures following AWS best practices.
-- Successfully initiated the team's Data Engineering project by implementing the first stage of a local ETL pipeline using VNStock3.
-- Established the technical foundation for future cloud deployment by combining AWS infrastructure knowledge with real-world data engineering practices.
+- Developed a strong understanding of AWS core services, including Amazon S3, Amazon EC2, Amazon VPC, and AWS Site-to-Site VPN.
+- Gained practical experience designing secure cloud networking and hybrid connectivity architectures following AWS best practices.
+- Officially kicked off the team’s Data Engineering project and implemented the first local ETL pipeline stage using VNStock3.
+- Built the technical foundation for future AWS deployment by combining cloud infrastructure knowledge with practical data engineering workflows.

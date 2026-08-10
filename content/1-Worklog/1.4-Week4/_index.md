@@ -5,14 +5,12 @@ weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-<!-- {{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}} -->
+
 
 
 ### Week 4 Overview
 
-During Week 4, I focused on designing and implementing the core data ingestion pipeline for the Financial Data Lake project. The week began with evaluating different cloud architectures and selecting an appropriate serverless design. Based on the selected architecture, I implemented the initial ingestion workflow, including provider validation, adapter development, batch processing, and scalability evaluation for collecting Vietnamese stock market data.
+During Week 4, I focused on designing and implementing the core data ingestion pipeline for the **Financial Data Lake** project. The week began with evaluating different cloud architectures and selecting an appropriate serverless design. Based on the selected architecture, I implemented the initial ingestion workflow, including provider validation, adapter development, batch processing, and scalability evaluation for collecting Vietnamese stock market data.
 
 | Domain | Main Focus | Key Takeaway |
 | --- | --- | --- |
@@ -24,9 +22,16 @@ During Week 4, I focused on designing and implementing the core data ingestion p
 
 #### *Mon, Jul 13 | Evaluating Financial Data Lake Architectures*
 
-- Studied different architectural approaches for building a Financial Data Lake, including traditional container-based deployment and serverless event-driven architecture.
-- Compared deployment complexity, scalability, operational cost, and maintainability between RDS-based and Amazon S3-based solutions.
-- Reviewed the proposed AWS Serverless Financial Data Lake architecture, including EventBridge, Lambda, SQS, Amazon S3, Glue Catalog, Athena, and API Gateway.
+- Studied different architectural approaches for building a **Financial Data Lake**, including traditional container-based deployment and serverless event-driven architecture.
+- Compared deployment complexity, scalability, operational cost, and maintainability between **RDS-based** and **Amazon S3-based** solutions.
+- Reviewed the proposed AWS Serverless Financial Data Lake architecture, including:
+  - Amazon EventBridge
+  - AWS Lambda
+  - Amazon SQS
+  - Amazon S3
+  - AWS Glue Catalog
+  - Amazon Athena
+  - Amazon API Gateway
 - Analyzed how each service contributes to data ingestion, processing, storage, and analytics.
 - Ref: Architecture Comparison Document
 
@@ -46,9 +51,9 @@ Defined the responsibilities of Universe Loader, Provider Adapter, Dispatcher, W
 
 #### *Wed, Jul 15 | Developing Provider Adapter & Ingestion Worker*
 
-- Implemented the provider adapter responsible for retrieving OHLCV data from the selected financial data source.
-- Developed ingestion workers capable of processing multiple stock tickers sequentially.
-- Added retry and backoff mechanisms to improve reliability during temporary provider failures.
+- Implemented the **Provider Adapter** responsible for retrieving OHLCV data from the selected financial data source.
+- Developed **Ingestion Workers** capable of processing multiple stock tickers sequentially.
+- Added **Retry** and **Backoff** mechanisms to improve reliability during temporary provider failures.
 - Implemented structured logging for ticker symbols, execution time, provider status, and ingestion results.
 - Ref: Implementation Guide Draft
 
@@ -58,9 +63,9 @@ Defined the responsibilities of Universe Loader, Provider Adapter, Dispatcher, W
 
 - Executed batch ingestion using the selected universe of stock tickers.
 - Validated raw data completeness and classified successful and failed requests.
-- Tested checkpoint handling to ensure interrupted executions could resume without restarting the entire batch.
-- Evaluated local storage organization for Raw JSON outputs and prepared the pipeline for future Curated processing.
-- Ref: Implementation Guide Draft
+- Tested **checkpoint handling** to ensure interrupted executions could resume without restarting the entire batch.
+- Evaluated local storage organization for** Raw JSON** outputs and prepared the pipeline for future **Curated** processing.
+- Ref: *Implementation Guide Draft*
 
 > Key takeaway: Batch execution combined with checkpoint recovery improves fault tolerance and minimizes unnecessary reprocessing.
 ### Domain C: 
@@ -77,8 +82,8 @@ Defined the responsibilities of Universe Loader, Provider Adapter, Dispatcher, W
 
 ### Achievements
 
-- Evaluated and selected an appropriate serverless architecture for the Financial Data Lake project.
+- Evaluated and selected an appropriate serverless architecture for the **Financial Data Lake** project.
 - Designed the overall local data ingestion workflow and finalized the initial stock universe.
-- Implemented reusable provider adapters with retry, logging, and validation mechanisms.
-- Established the foundation for scalable batch ingestion using checkpoint and fault recovery strategies.
-- Prepared the ingestion pipeline for future ETL processing, feature engineering, and predictive analytics integration.
+- Implemented reusable **provider adapters** with **retry**, **logging**, and **validation** mechanisms.
+- Established the foundation for scalable batch ingestion using **checkpoint** and **fault recovery** strategies.
+- Prepared the ingestion pipeline for future ETL processing, feature engineering, and **predictive analytics** integration.

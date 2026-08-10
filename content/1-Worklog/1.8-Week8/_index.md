@@ -1,13 +1,11 @@
 ---
-title: "Week 8 Worklog"
+title: "Week 8 - Building a Serverless Data Pipeline and Deploying a CloudFront-Optimized Frontend"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-<!-- {{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}} -->
+
 
 
 ### Week 8 Overview
