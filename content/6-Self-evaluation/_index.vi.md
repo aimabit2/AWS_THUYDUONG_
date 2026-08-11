@@ -6,14 +6,13 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Trong suốt thời gian thực tập tại **[Tên công ty/tổ chức]** từ **[ngày bắt đầu]** đến **[ngày kết thúc]**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.  
-Tôi đã tham gia **[mô tả ngắn gọn dự án hoặc công việc chính]**, qua đó cải thiện kỹ năng **[liệt kê kỹ năng: lập trình, phân tích, viết báo cáo, giao tiếp…]**.  
 
-Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân thủ nội quy, và tích cực trao đổi với đồng nghiệp để nâng cao hiệu quả công việc.
+Trong quá trình thực tập tại **FCAJ** từ ngày **22/06/2026** đến ngày **14/08/2026**, em đã có cơ hội học hỏi, thực hành và áp dụng những kiến thức đã học ở trường vào môi trường làm việc thực tế.  
+
+Em đã trực tiếp tham gia xây dựng **Hệ thống Financial Data Lake & ETL Tự động hóa end-to-end** trên nền tảng AWS Cloud, triển khai các luồng xử lý dữ liệu Serverless, làm sạch dữ liệu bằng PySpark và trực quan hóa lên Web Dashboard. Qua dự án này, em đã nâng cao đáng kể **năng lực kỹ thuật và chuyên môn của mình, đặc biệt là trong các mảng Kiến trúc đám mây (AWS), Data Engineering, Phát triển Backend và Viết tài liệu kỹ thuật**.  
+
+Xét về đạo đức và tác phong làm việc, em luôn nỗ lực hoàn thành tốt các nhiệm vụ được giao, giữ vững tinh thần trách nhiệm đối với kết quả công việc, đồng thời chủ động phối hợp với các đồng nghiệp để nâng cao hiệu quả công việc chung.
 
 Để phản ánh một cách khách quan quá trình thực tập, tôi xin tự đánh giá bản thân dựa trên các tiêu chí dưới đây:
 
@@ -35,6 +34,8 @@ Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân t
 
 ### Cần cải thiện
 
-* Nâng cao tính kỹ luật, chấp hành nghiêm chỉnh nội quy của công ty hoặc bất kỳ trong một tổ chức nào
-* Cải thiện trong cách tư duy giải quyết vấn đề
-* Học cách giao tiếp tốt hơn trong giao tiếp hằng ngày và trong công việc, xử lý tình huống
+- **Kỷ luật**: Cần tiếp tục tăng cường kỷ luật cá nhân, tuân thủ nghiêm ngặt hơn nữa các quy định, quy trình làm việc và lịch trình của tổ chức.
+
+- **Tư duy Giải quyết Vấn đề**: Cần rèn luyện thêm tư duy giải quyết vấn đề có cấu trúc, đề xuất giải pháp sáng tạo hơn và xử lý các tình huống phức tạp (edge cases) một cách nhanh chóng hơn.
+
+- **Giao tiếp & Khả năng Thích ứng**: Cần trau dồi kỹ năng trình bày kỹ thuật, cải thiện giao tiếp công việc hàng ngày và chủ động tiếp thu phản hồi để tăng tốc độ tiến bộ của bản thân.
