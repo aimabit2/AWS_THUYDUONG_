@@ -87,7 +87,7 @@ def lambda_handler(event, context):
     1. AWS Step Functions: Create a State Machine to iterate over the ticker list, invoke Lambda Ingestor in parallel, support retry mechanisms upon hitting rate limits, and automatically record log checkpoints.
     2. Amazon EventBridge Scheduler: Configure Cron Job rules to trigger Step Functions periodically (e.g., at 00:00 on the first day of every month) to automatically ingest the latest quarterly/yearly financial reports.
 
-![Luồng điều phối Step Functions](../../../images/StepFunction.png)
+![Step Functions State Machine orchestration flow](../../../images/StepFunction.png)
 
 
 *Description of Step Functions State Machine orchestration flow in the system:*
