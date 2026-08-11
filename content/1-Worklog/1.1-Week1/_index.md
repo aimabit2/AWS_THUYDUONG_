@@ -15,7 +15,7 @@ This week, I focused on three main themes: AWS infrastructure foundations, moder
 | A | AWS Global Infrastructure Foundations | Highly available systems should be designed with fault isolation, ideally across at least two Availability Zones (AZs). |
 | B | Advanced GenAI and Modern Software Development Lifecycle (SDLC) | Software development with AI is more reliable when prompts are built on clear structure, include checkpoints, and are automatically tested. |
 | C | Identity and Access Management (IAM) | Least privilege and using temporary IAM Roles are the safest choices for managing AWS permissions. |
-
+---
 ### Domain A: AWS Global Infrastructure Foundations
 
 Study the physical and logical boundaries in cloud infrastructure architecture to support the design of highly available systems.
@@ -28,7 +28,7 @@ Study the physical and logical boundaries in cloud infrastructure architecture t
   - faster development through automation and AI
   - flexibility in scaling and resource deployment
   - global deployment capability
-- References:
+- References: https://cloudjourney.awsstudygroup.com/
 
 #### *Tuesday, 23/06 | AWS Infrastructure Topology Analysis*
 
@@ -42,7 +42,7 @@ Study the physical and logical boundaries in cloud infrastructure architecture t
 - References:
 
 > **Key takeaway:** A real production deployment should be designed across at least two Availability Zones to ensure fault isolation and service continuity.
-
+---
 ### Domain B: Advanced GenAI and Modern Software Development Lifecycle
 
 #### *Wednesday, 24/06 | Agentic AI and the Kiro IDE Framework*
@@ -65,7 +65,7 @@ Study the physical and logical boundaries in cloud infrastructure architecture t
 - References:
 
 > **Key takeaway:** Effective AI-enabled software development requires clear specifications, full context management, and automated testing mechanisms to ensure product quality.
-
+---
 ### Domain C: Identity and Access Management (AWS IAM)
 
 #### *Friday, 26/06 | Authentication and Authorization Structure*
@@ -86,7 +86,7 @@ Study the physical and logical boundaries in cloud infrastructure architecture t
 - Summarize the technical notes of Week 1 and systematize the main concepts about AWS architecture, Agentic AI, and AWS IAM.
 - Review the learned concepts to strengthen understanding and prepare for the next weeks.
 - References:
-
+---
 ### Results Achieved
 
 - Built a structured knowledge base on AWS core infrastructure, AI-driven SDLC (Kiro IDE), and IAM security mechanisms.
