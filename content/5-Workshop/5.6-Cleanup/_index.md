@@ -41,10 +41,9 @@ To avoid incurring unintended AWS cloud service costs after completing the const
     Select `s3-vietnam-financial-curated-data-prod` ➔ Click **Empty** ➔ Click **Delete**.
 ---
 ### Workshop Summary
-Upon completing the full lab series, you have mastered the process of building an end-to-end Financial Data Ingestion and Analysis System for Vietnamese Stocks on AWS Serverless 
-
-    - Platform:Built an automated financial data scraping pipeline using Lambda, EventBridge, and Step Functions.
-    - Cleaned and calculated financial ratio sets (CR ,  ROA ,  ROE ,  DAR ,  WCTA , Altman Z-Score) using PySpark on AWS Glue.
-    - Queried high-speed partitioned Parquet data via SQL using Amazon Athena.
-    - Secured APIs with Amazon Cognito, AWS WAF, and REST API Gateway.
-    - Visualized data on an AWS Amplify Web Dashboard and dispatched bankruptcy risk warning emails via Amazon SES.
+Upon completing the full lab series, you have mastered the process of building an end-to-end **Financial Data Ingestion and Analysis System for Vietnamese Stocks on AWS Serverless**:
+- Platform:Built an automated financial data scraping pipeline using Lambda, EventBridge, and Step Functions.
+- Cleaned and calculated financial ratio sets (CR ,  ROA ,  ROE ,  DAR ,  WCTA , Altman Z-Score) using PySpark on AWS Glue.
+- Queried high-speed partitioned Parquet data via SQL using Amazon Athena.
+- Secured APIs with Amazon Cognito, AWS WAF, and REST API Gateway.
+- Visualized data on an AWS Amplify Web Dashboard and dispatched bankruptcy risk warning emails via Amazon SES.
