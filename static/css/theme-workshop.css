@@ -170,7 +170,7 @@ div.notices p:first-child:before {
 
 body {
   color: var(--MAIN-TEXT-color) !important;
-  font-family: "Amazon Ember", "Work Sans", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   text-align: left;
 }
 
