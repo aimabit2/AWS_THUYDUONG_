@@ -22,7 +22,7 @@ Bước đầu tiên trong đường ống thu thập là khởi tạo S3 Raw Bu
 - **Bước 1: Khởi tạo S3 Raw Bucket**
     1. Truy cập vào AWS Management Console ➔ chọn dịch vụ S3.
     2. Nhấp Create bucket.
-    3. Đặt tên Bucket: s3-vietnam-financial-raw-data-prod.
+    3. Đặt tên Bucket: `s3-vietnam-financial-raw-data-prod`.
     4. Chọn AWS Region: ap-southeast-1 (Singapore).
     5. Giữ nguyên cấu hình mã hóa SSE-S3 (AES-256) và bật tính năng Bucket Versioning.
     6. Nhấp Create bucket. 
@@ -92,6 +92,6 @@ def lambda_handler(event, context):
 
 - **Khởi chạy Workflow:** Triggers tự động từ Amazon EventBridge Cron Scheduler hoặc gọi thủ công để kích hoạt toàn bộ pipeline dữ liệu.
 - **Tác vụ cào & lưu trữ dữ liệu thô:** Gọi AWS Lambda / ECS Ingestor cào dữ liệu BCTC từ `vnstock`, thực hiện checkpointing và lưu file JSON vào `S3 Raw Bucket`.
-- **Tác vụ AWS Glue ETL Job:** Step Functions chuyển sang bước gọi tác vụ **AWS Glue StartJobRun**, tự động kích hoạt tiến trình PySpark ETL làm sạch dữ liệu thô, tính toán các chỉ số tài chính ($CR$, $ROA$, $ROE$, $DAR$, $WCTA$) và gán nhãn nguy cơ phá sản **Altman Z-Score**.
+- **Tác vụ AWS Glue ETL Job:** Step Functions chuyển sang bước gọi tác vụ **AWS Glue StartJobRun**, tự động kích hoạt tiến trình PySpark ETL làm sạch dữ liệu thô, tính toán các chỉ số tài chính *( CR ,  ROA ,  ROE ,  DAR ,  WCTA )* và gán nhãn nguy cơ phá sản **Altman Z-Score**.
 - **Cập nhật Catalog & Hoàn tất:** Sau khi Glue Job hoàn tất thành công, Step Functions tiếp tục kích hoạt AWS Glue Crawler quét metadata cập nhật vào Glue Data Catalog. Nếu phát sinh lỗi, hệ thống tự động thực hiện cơ chế Retry và chuyển sang trạng thái cảnh báo Fail State.
 

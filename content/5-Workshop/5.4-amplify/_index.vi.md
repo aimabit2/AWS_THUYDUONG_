@@ -29,6 +29,7 @@ Hệ thống thiết lập cổng giao tiếp an toàn cho ứng dụng frontend
 
 - **Bước 2:  Viết mã nguồn AWS Lambda Backend API (Athena Integration)**
 Mã nguồn AWS Lambda nhận REST API request từ API Gateway, khởi tạo truy vấn SQL trên Amazon Athena và trả dữ liệu JSON cho Client:
+
 ```PYTHON
 import json
 import boto3
@@ -88,6 +89,4 @@ def lambda_handler(event, context):
     3. Tạo Cognito Authorizer: Thêm `vietnam-financial-user-pool` làm Authorizer kiểm tra JWT Token ở mỗi request.
     4. Gắn AWS WAF (Web Application Firewall) để chống các cuộc tấn công Web phổ biến (DDoS, SQL Injection, Cross-Site Scripting).
     5. Nhấp Deploy API sang Stage `prod`. Lưu lại `Invoke URL`.
-
-
-
+    

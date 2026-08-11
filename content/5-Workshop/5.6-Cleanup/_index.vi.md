@@ -36,12 +36,12 @@ pre : " <b> 5.6. </b> "
    Truy cập **Amazon S3 Console.**
    Chọn `s3-vietnam-financial-raw-data-prod` ➔ Nhấp **Empty** để làm rỗng toàn bộ objects/versions ➔ Nhấp **Delete**.
    Chọn `s3-vietnam-financial-curated-data-prod` ➔ Nhấp **Empty** ➔ Nhấp **Delete**.
-
+---
 ### Tổng kết Bài thực hành Workshop
 Sau khi hoàn tất toàn bộ chuỗi bài lab, bạn đã làm chủ quy trình xây dựng **Hệ thống Thu thập và Phân tích Dữ liệu Tài chính Chứng khoán Việt Nam trên nền tảng AWS Serverless** end-to-end:
 
    - Xây dựng luồng cào dữ liệu tài chính tự động với Lambda, EventBridge và Step Functions.
-   - Làm sạch và tính toán bộ chỉ số tài chính ($CR$, $ROA$, $ROE$, $DAR$, $WCTA$, Altman Z-Score) bằng PySpark trên AWS Glue.
+   - Làm sạch và tính toán bộ chỉ số tài chính ( CR ,  ROA ,  ROE ,  DAR ,  WCTA , Altman Z-Score) bằng PySpark trên AWS Glue.
    - Truy vấn SQL dữ liệu phân trang Parquet tốc độ cao với Amazon Athena.
    - Bảo mật API với Amazon Cognito, AWS WAF và REST API Gateway.
    - Trực quan hóa dữ liệu trên Web Dashboard AWS Amplify và phát Email cảnh báo rủi ro phá sản bằng Amazon SES.

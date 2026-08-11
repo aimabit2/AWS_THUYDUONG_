@@ -100,7 +100,7 @@ print("Hoàn tất Glue Job xử lý dữ liệu và ghi Parquet!")
 
 
 - **Bước 4: Truy vấn SQL Serverless trên Amazon Athena**
-Mở Amazon Athena, chọn database vietnam_financial_db và chạy truy vấn thống kê danh sách doanh nghiệp có Z-Score nguy cơ phá sản cao:
+Mở Amazon Athena, chọn database *vietnam_financial_db* và chạy truy vấn thống kê danh sách doanh nghiệp có Z-Score nguy cơ phá sản cao:
 
 ```python
 SELECT 

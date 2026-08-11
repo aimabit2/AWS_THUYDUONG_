@@ -13,7 +13,7 @@ Giao diện Web Dashboard trực quan hóa dữ liệu được lưu trữ trên
 #### 5.5.2. Bảng quy trình kích hoạt và xử lý Cảnh báo tự động
 | Bước  | Thành phần thực thi   | Hành động kỹ thuật cụ thể |
 | :--- | :--- | :--- |
-| **1. Phát hiện sự cố**| AWS Glue ETL Job | Xác định nhãn rủi ro distress = 1 sau khi hoàn tất kỳ tính toán BCTC |
+| **1. Phát hiện sự cố**| AWS Glue ETL Job | Xác định nhãn rủi ro `distress = 1` sau khi hoàn tất kỳ tính toán BCTC |
 | **2. Kích hoạt sự kiện** | Amazon EventBridge / S3 Event | Gửi thông điệp sự kiện chứa thông tin mã cổ phiếu vi phạm đến AWS Lambda |
 | **3. Định dạng thông báo** | AWS Lambda | Trích xuất email người theo dõi, render template HTML chứa lý do vi phạm & chỉ số Z-Score |
 | **4. Gửi Mail** | Amazon SES (Simple Email Service) | Thực thi gửi email cảnh báo tự động tức thì đến hộp thư nhà đầu tư |
