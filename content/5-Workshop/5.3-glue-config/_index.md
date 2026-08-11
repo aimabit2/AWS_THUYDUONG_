@@ -90,7 +90,7 @@ df_zscore.write \
 
 print("Hoàn tất Glue Job xử lý dữ liệu và ghi Parquet!")
 ```
-![Luồng điều phối Step Functions](/images/StepFunction.png)
+![Step Functions State Machine orchestration flow](/images/StepFunction.png)
 
 - *Actual AWS Step Functions State Machine interface automatically invoking the AWS Glue Job task (StartJobRun), checking completion status (GetJobRun), and triggering the Glue Crawler scan.*
 
