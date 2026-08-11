@@ -36,7 +36,7 @@ Through this event, I gained a deeper understanding of modern AI technologies, A
 &emsp;**Role:** Participant
 
 **Description:**
-The workshop introduced Amazon Bedrock AgentCore fundamentals and provided hands-on labs to deploy a basic AI agent, integrate external tools and knowledge bases, and secure access using Amazon Cognito.
+The workshop introduced Amazon Bedrock AgentCore fundamentals through hands-on labs focused on deploying functional AI agents, connecting external APIs and Knowledge Bases, and securing session access using Amazon Cognito user authentication and IAM policies.
 
 **Outcomes:**
-Participants gained practical experience in deploying AI agents on AWS, understanding AgentCore components (Runtime, Gateway, Identity), and applying these concepts to the Financial Data Lake project for future AI integration.
+Participants gained hands-on experience in building and deploying AI agents on AWS, mastered core AgentCore components (Runtime, Gateway, Memory, Identity), and learned how to apply secure agentic workflows to automate financial data querying and pipeline monitoring in the Financial Data Lake project.

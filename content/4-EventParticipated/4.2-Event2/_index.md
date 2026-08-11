@@ -46,7 +46,7 @@ The knowledge and technical insights gained from AgentForge can be directly appl
   - Secure Integration: Apply AgentCore security policies and IAM access controls when connecting AI reasoning tools to backend data stores like Amazon Athena and Amazon S3.
   - System Observability: Implement centralized logging and tracing principles for AI operations to ensure transparency, auditability, and governance across all automated tasks.
 
-### Photo of the Day
+### Photos of the Day
 ![pic-1](</images/0108-1 (1).jpg>)
 ![pic-2](</images/0108-1 (2).jpg>)
 ![pic-3](</images/0108-1 (3).jpg>)
