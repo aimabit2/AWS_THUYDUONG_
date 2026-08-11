@@ -18,7 +18,7 @@ Following the deployment of our financial Data Lake, the next milestone in our r
 
 Through this article, our team hopes to highlight the essential principles of leveraging Amazon SageMaker AI to construct an automated, standardized, and cost-optimized MLOps workflow for corporate financial risk analytics.
 
-![Amazon SageMaker AI Training and Deployment Workflow Diagram]()
+![Amazon SageMaker AI Training and Deployment Workflow Diagram](/images/amazon_sagemaker.jpg)
 
 ---
 

@@ -19,7 +19,7 @@ One of the most essential components in building our team's data architecture wa
 
 Through this article, our team hopes readers gain a clear understanding of the fundamental principles behind operating AWS Glue Jobs to build an automated, cost-optimized, and scalable financial data normalization pipeline on the cloud.
 
-![AWS Glue Jobs ETL Architecture and S3 Data Lake Flow Diagram]()
+![AWS Glue Jobs ETL Architecture and S3 Data Lake Flow Diagram](static/images/aws_glue.jpg)
 
 ---
 
