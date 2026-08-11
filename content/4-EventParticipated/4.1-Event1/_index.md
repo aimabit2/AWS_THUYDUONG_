@@ -61,6 +61,8 @@ The knowledge gained from this event can be directly applied to the Financial Da
 - Improved awareness of cloud cost management, which supports selecting cost-effective AWS services such as Amazon S3, AWS Lambda, AWS Glue, and Amazon Athena for the MVP. 
 - Inspired future enhancements by exploring how AI agents and Amazon Bedrock could be integrated into the platform for intelligent financial analysis, automated data quality monitoring, and AI-assisted investment insights.
 --- 
-Photo of the Day
+### Photo of the Day
 ![Community-Day-FCAJ](/images/community_day.jpg)
-
+![pic-1](/images/2706-1.jpg)
+![pic-2](/images/2706-2.jpg)
+![pic-3](/images/2706-3.jpg)

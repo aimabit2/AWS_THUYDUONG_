@@ -12,78 +12,47 @@ pre: " <b> 4.2. </b> "
 
 
 
-## Thông tin chung
-
-* **Tên sự kiện:** AWS AgentCore Workshop – Day 1: Foundations & Agent Setup
-* **Thời gian:** Thứ Sáu, ngày 01/08/2026 | 09:00 – 11:00
-* **Địa điểm:** Bitexco Financial Tower	
-* **Vai trò:** Người tham gia (Participant)
-
+### Thông tin chung 
+* **Tên sự kiện**: AgentForge – Building Production-Ready Agentic AI Systems
+* **Thời gian**: Thứ Bảy, ngày 01 tháng 08 năm 2026 / 8:30 – 11:30
+* **Địa điểm**: Bitexco Financial Tower, Số 2 Hải Triều, Sài Gòn, TP. Hồ Chí Minh
+* **Vai trò**: Người tham dự (Attendee)
 ---
 
-## Nội dung chính & Hoạt động
+### Nội dung chính & Các hoạt động
+Sự kiện bao gồm một phiên phân tích chuyên sâu về mặt kỹ thuật và bài thực hành workshop tập trung vào việc xây dựng các hệ thống AI Agent sẵn sàng cho môi trường Production sử dụng Amazon Bedrock AgentCore:
 
-Buổi học đầu tiên của workshop tập trung giới thiệu về **Amazon Bedrock AgentCore** và hướng dẫn xây dựng một AI Agent cơ bản trên nền tảng AWS. Chương trình bao gồm cả phần lý thuyết và thực hành nhằm giúp người tham gia hiểu được kiến trúc cũng như quy trình triển khai AI Agent trong môi trường thực tế.
+#### *8:30 – 9:00 | Đón khách & Giao lưu (Check-in & Welcome Networking)*
+Nội dung: Đón tiếp người tham dự, hoàn tất thủ tục check-in và giao lưu kết nối đầu giờ cùng các Kiến trúc sư giải pháp AWS (AWS Solutions Architects), Kỹ sư AI và cộng đồng phát triển Cloud.
 
-### **09:00 – 10:00 | Phiên 1: Giới thiệu Amazon Bedrock AgentCore**
+#### *9:00 – 10:30 | Phiên 1: Xây dựng hệ thống Agentic AI đáp ứng chuẩn Production với Amazon Bedrock AgentCore*
+* **Diễn giả**: Chuyên gia AWS AI/ML & Kiến trúc sư Giải pháp (AWS Solutions Architects)
+* **Nội dung**: Giới thiệu các khái niệm cốt lõi về Agentic AI và phân tích những thách thức thực tế khi triển khai AI Agent trong môi trường doanh nghiệp. Cung cấp bức tranh kiến trúc tổng thể về Amazon Bedrock AgentCore, đi sâu vào 4 thành phần nền tảng: Thực thi Runtime, Quản lý bộ nhớ (Agent Memory), Quản lý danh tính & Truy cập (Identity & Access), và Khả năng quan sát/Giám sát (Observability/Monitoring). Chia sẻ các thiết kế chuẩn (Design Patterns) và thực hành tốt nhất về bảo mật cho quy trình làm việc tự động.
 
-* **Nội dung:**
+#### *10:30 – 11:30 | Phiên 2: Agent Forge – Workshop thực hành & Triển khai thực tế*
+* **Diễn giả**: Đội ngũ Kỹ thuật Giải pháp AWS (AWS Technical Solutions Team)
+* **Nội dung**: Hướng dẫn các bước triển khai thực tế. Bao gồm thiết lập môi trường phát triển, xây dựng Agent đa năng với Bedrock AgentCore, tích hợp các công cụ mở rộng (Tool Integration), cơ sở tri thức (Knowledge Bases) và mô-đun bộ nhớ. Demo quy trình kiểm thử, đánh giá và bảo mật các lệnh gọi công cụ (Tool calls) thông qua AgentCore Policy để đảm bảo AI Agent sẵn sàng vận hành an toàn trên Production.
 
-  Workshop mở đầu bằng phần giới thiệu tổng quan về **Amazon Bedrock AgentCore**, một nền tảng hỗ trợ phát triển, triển khai và quản lý các AI Agent trên AWS. Diễn giả trình bày kiến trúc tổng thể của AgentCore và giải thích vai trò của ba thành phần chính:
+### Điểm nổi bật
+Sự kiện AgentForge tại TP. Hồ Chí Minh đã mang đến cái nhìn toàn diện và sâu sắc về các AI Agent tự vận hành và phương pháp triển khai chuẩn Cloud-native trên AWS. Sự kiện nhấn mạnh chuyển dịch từ Prompt Engineering đơn thuần sang kiến trúc Agentic AI hoàn chỉnh, có khả năng xử lý các tác vụ nghiệp vụ phức tạp một cách tự động, chính xác và an toàn. Thông qua các phiên chia sẻ kỹ thuật và hướng dẫn thực hành, người tham dự đã nắm rõ cách Amazon Bedrock AgentCore đơn giản hóa việc quản lý Runtime, lưu trữ bộ nhớ, cô lập danh tính và quản trị hệ thống.
+  * Building Production-Ready Agentic AI Systems using Amazon Bedrock AgentCore
+  * Agent Forge – Hands-on Workshop & Implementation
 
-  * **AgentCore Runtime:** Môi trường thực thi AI Agent, chịu trách nhiệm vận hành và quản lý vòng đời của Agent.
-  * **AgentCore Gateway:** Cung cấp cơ chế kết nối an toàn giữa AI Agent với các API, công cụ và dịch vụ bên ngoài.
-  * **AgentCore Identity:** Quản lý xác thực (Authentication) và phân quyền (Authorization), giúp AI Agent truy cập tài nguyên AWS và các hệ thống khác một cách bảo mật.
+### Bài học rút ra
+  * Nắm vững các khái niệm cốt lõi về Agentic AI, chuyển dịch từ Chatbot thông thường sang cơ chế suy luận đa bước và động cơ tự vận hành công việc.
+  * Hiểu rõ kiến trúc và các thành phần cốt lõi của Amazon Bedrock AgentCore, bao gồm môi trường thực thi (Runtime), bộ nhớ lưu trữ (Memory), kiểm soát danh tính và khả năng giám sát toàn diện.
+  * Nắm bắt các phương pháp bảo mật và quản trị khi cho phép AI Agent tương tác và thực thi câu lệnh trên các hệ thống bên ngoài.
+  * Rèn luyện kỹ năng thực hành xây dựng, tích hợp công cụ, kiểm thử và đánh giá AI Agent trên hạ tầng AWS.
 
-  Ngoài ra, phiên học cũng giới thiệu cách AgentCore hỗ trợ xây dựng các AI Agent có khả năng mở rộng, dễ quản lý và sẵn sàng triển khai trong môi trường doanh nghiệp.
+### Ứng dụng vào công việc
+Kiến thức và kinh nghiệm thu nhận được từ sự kiện AgentForge có thể áp dụng trực tiếp vào dự án Phân tích Dữ liệu Tài chính (Financial Data Lake):
+  - Tự động hóa Giám sát & Vận hành: Nghiên cứu tích hợp các AI Agent phát triển qua Bedrock AgentCore để tự động hóa việc kiểm tra chất lượng dữ liệu tài chính, phát hiện bất thường trong pipeline cào dữ liệu và phát cảnh báo tự động.
+  - Trợ lý Phân tích Thông minh: Tận dụng kiến trúc Agentic để xây dựng công cụ phân tích dạng hội thoại, cho phép người dùng tra cứu các chỉ số tài chính, xu hướng và điểm số rủi ro ($Z\text{-Score}$) bằng ngôn ngữ tự nhiên.
+  - Tích hợp An toàn: Áp dụng các chính sách bảo mật của AgentCore và phân quyền IAM khi kết nối các công cụ suy luận của AI với hạ tầng dữ liệu backend như Amazon Athena và Amazon S3.
+  - Tăng cường khả năng Giám sát: Áp dụng nguyên tắc quản lý log và tracing tập trung cho các tác vụ AI để đảm bảo tính minh bạch, khả năng truy vết và kiểm toán hệ thống.
 
----
-
-### **10:00 – 11:00 | Thực hành: Xây dựng AI Agent đầu tiên**
-
-* **Hoạt động:**
-
-  Trong phần thực hành, người tham gia được hướng dẫn từng bước để xây dựng một AI Agent hoàn chỉnh trên AWS, bao gồm:
-
-  * Triển khai một AI Agent cơ bản bằng Amazon Bedrock AgentCore.
-  * Kết nối AI Agent với các **External Tools** và **Knowledge Bases** nhằm mở rộng khả năng xử lý và cung cấp thông tin theo ngữ cảnh.
-  * Xây dựng giao diện Web đơn giản để người dùng tương tác với AI Agent.
-  * Tích hợp **Amazon Cognito** nhằm triển khai chức năng xác thực người dùng và bảo vệ quyền truy cập vào ứng dụng.
-
-  Qua bài thực hành, người tham gia hiểu rõ quy trình xây dựng một ứng dụng AI từ khâu triển khai Agent, kết nối dữ liệu cho đến phát triển giao diện và cơ chế đăng nhập.
-
----
-
-## Điểm nổi bật
-
-Ngày đầu tiên của workshop tập trung xây dựng nền tảng về **Amazon Bedrock AgentCore** và quy trình phát triển AI Agent trên AWS. Thông qua phần lý thuyết và thực hành, người tham gia hiểu được kiến trúc của AgentCore, cách AI Agent giao tiếp với các dịch vụ bên ngoài và phương pháp triển khai một ứng dụng AI hoàn chỉnh có tích hợp xác thực người dùng.
-
-> * Giới thiệu Amazon Bedrock AgentCore
-> * AgentCore Runtime
-> * AgentCore Gateway
-> * AgentCore Identity
-> * Triển khai AI Agent
-> * Kết nối Knowledge Bases và External Tools
-> * Tích hợp Amazon Cognito
-
----
-
-## Kiến thức đạt được
-
-* Hiểu được kiến trúc tổng thể và các thành phần chính của Amazon Bedrock AgentCore.
-* Nắm được vai trò của AgentCore Runtime, Gateway và Identity trong việc xây dựng AI Agent trên nền tảng AWS.
-* Có kinh nghiệm thực hành triển khai một AI Agent cơ bản bằng Amazon Bedrock AgentCore.
-* Hiểu cách tích hợp Knowledge Base và External Tools nhằm mở rộng khả năng xử lý của AI Agent.
-* Nắm được quy trình xây dựng giao diện Web và tích hợp Amazon Cognito để xác thực người dùng.
-* Củng cố kiến thức về cách kết hợp nhiều dịch vụ AWS nhằm xây dựng một ứng dụng AI hoàn chỉnh.
-
----
-
-## Áp dụng vào công việc
-
-Kiến thức thu được từ buổi workshop có thể được áp dụng trực tiếp vào dự án **Financial Data Lake** đang thực hiện:
-
-* Hiểu rõ hơn về cách xây dựng các ứng dụng AI trên nền tảng AWS, từ đó hỗ trợ thiết kế kiến trúc tổng thể của hệ thống.
-* Có thể áp dụng **Amazon Cognito** để xây dựng cơ chế xác thực và phân quyền người dùng cho ứng dụng quản lý dữ liệu tài chính.
-* Định hướng tích hợp **Amazon Bedrock Agent** trong tương lai nhằm hỗ trợ phân tích dữ liệu tài chính, trả lời câu hỏi bằng ngôn ngữ tự nhiên và tự động hóa việc khai thác dữ liệu từ Data Lake.
-* Vận dụng mô hình kết nối **Knowledge Base** và **External Tools** để AI Agent có thể truy vấn dữ liệu từ **Amazon Athena**, **AWS Glue Data Catalog**, hoặc các dịch vụ AWS khác, giúp nâng cao khả năng phân tích và hỗ trợ ra quyết định trong hệ thống.
+### Hình ảnh ngày sự kiện
+![pic-1](</images/0108-1 (1).jpg>)
+![pic-2](</images/0108-1 (2).jpg>)
+![pic-3](</images/0108-1 (3).jpg>)
+![pic-4](</images/0108-1 (4).jpg>)

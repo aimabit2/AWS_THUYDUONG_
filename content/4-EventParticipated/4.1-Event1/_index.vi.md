@@ -93,5 +93,8 @@ Những kiến thức thu được từ sự kiện có thể được áp dụn
 - Nâng cao nhận thức về quản lý chi phí trên nền tảng Cloud, từ đó hỗ trợ lựa chọn các dịch vụ AWS phù hợp và tối ưu chi phí cho phiên bản MVP, như **Amazon S3, AWS Lambda, AWS Glue** và **Amazon Athena**.
 - Định hướng các hướng phát triển trong tương lai bằng cách nghiên cứu khả năng tích hợp **AI Agents** và **Amazon Bedrock** vào nền tảng nhằm hỗ trợ phân tích dữ liệu tài chính thông minh, giám sát chất lượng dữ liệu tự động và cung cấp các gợi ý đầu tư có sự hỗ trợ của AI.
 --- 
-Hình ảnh ngày sự kiện
+### Hình ảnh ngày sự kiện
 ![Community-Day-FCAJ](/images/community_day.jpg)
+![pic-1](/images/2706-1.jpg)
+![pic-2](/images/2706-2.jpg)
+![pic-3](/images/2706-3.jpg)

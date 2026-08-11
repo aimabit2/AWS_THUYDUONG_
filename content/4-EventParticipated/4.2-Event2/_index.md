@@ -6,64 +6,48 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-## General Information
 
-* **Event name:** AWS AgentCore Workshop – Day 1: Foundations & Agent Setup
-* **Date and time:** Friday, August 1, 2026 / 09:00 – 11:00
-* **Location:** *(Workshop / Training Session)*
-* **Role:** Participant
+### General Information
+* **Event name**: AgentForge – Building Production-Ready Agentic AI Systems
+* **Date and time**: Saturday, August 1, 2026 / 8:30 – 11:30 AM
+* **Location**: Bitexco Financial Tower, 2 Hai Trieu Street, Saigon, Ho Chi Minh City
+* **Role**: Attendee
 
-## Main Content & Activities
+### Main Content & Activities
 
-The first day of the workshop introduced the fundamentals of Amazon Bedrock AgentCore and guided participants through building and deploying an AI agent using AWS services. The session combined theoretical concepts with practical hands-on exercises.
+The event featured an intensive deep-dive technical session and a hands-on workshop focused on building enterprise-grade agentic AI systems using Amazon Bedrock AgentCore:
 
-### *09:00 – 10:00 | Session 1: Introduction to Amazon Bedrock AgentCore*
+#### *8:30 – 9:00 AM | Check-in & Welcome Networking*
 
-* **Content:** The workshop began with an overview of Amazon Bedrock AgentCore and its role in developing production-ready AI agents. The session explained the architecture of AgentCore and introduced its three primary components:
+* **Content:** Content: Welcome attendees, event check-in, and opening networking session with AWS Solutions Architects, AI Engineers, and cloud practitioners.
 
-  * **AgentCore Runtime:** Executes and manages AI agents in a scalable cloud environment.
-  * **AgentCore Gateway:** Enables agents to securely communicate with external APIs, tools, and services.
-  * **AgentCore Identity:** Handles authentication and authorization for agents, ensuring secure access to AWS resources and external systems.
+#### *9:00 – 10:30 AM | Session 1: Building Production-Ready Agentic AI Systems using Amazon Bedrock AgentCore*
+* **Speaker**: AWS AI/ML Specialists & Solutions Architects
+* **Content**: Introduced key concepts of Agentic AI systems and analyzed major production challenges faced when deploying AI agents in enterprise environments. Provided a comprehensive architectural overview of Amazon Bedrock AgentCore, diving into core foundational components including Runtime Execution, Agent Memory Management, Identity & Access, and Observability/Monitoring. Shared production design patterns and security best practices for agentic workflows.
 
-Participants also learned how AgentCore simplifies the deployment, orchestration, and management of enterprise AI agents built on Amazon Bedrock foundation models.
+#### *10:30 – 11:30 AM | Session 2: Agent Forge – Hands-on Workshop & Implementation*
+* **Speaker**: AWS Technical Solutions Team
+* **Content**: Guided participants through practical implementation steps. Covered setting up the development environment, constructing multi-capability agents with Bedrock AgentCore, and integrating external tools, custom knowledge bases, and memory modules. Demonstrated testing, evaluation, and securing tool calls using AgentCore Policy to prepare AI agents for real-world production readiness.
 
-### *10:00 – 11:00 | Hands-on Lab: Building Your First Agent*
+### Key Highlights
+The AgentForge event in Ho Chi Minh City delivered a comprehensive deep-dive into autonomous AI agents and cloud-native implementation on AWS. The event emphasized transitioning from simple prompt engineering to production-ready agentic architectures capable of handling complex business tasks safely and predictably. Through technical sessions and practical lab walk-throughs, attendees gained direct visibility into how Amazon Bedrock AgentCore streamlines runtime management, memory persistence, identity isolation, and governance.
+  * Building Production-Ready Agentic AI Systems using Amazon Bedrock AgentCore
+  * Agent Forge – Hands-on Workshop & Implementation
 
-* **Activities:** Participants completed a practical lab to gain experience with AgentCore by:
+### Key Takeaways
+  * Gained a clear understanding of agentic AI concepts, moving beyond standard chatbots to multi-step reasoning and autonomous execution engines.
+  * Learned the architecture and key building blocks of Amazon Bedrock AgentCore, including execution runtimes, persistent memory, identity controls, and end-to-end observability.
+  * Understood best practices for establishing governance and security policies when AI agents execute tool calls and interact with external systems.
+  * Acquired hands-on experience in building, integrating tools, testing, and evaluating enterprise-ready AI agents on AWS infrastructure.
 
-  * Deploying a basic AI agent using Amazon Bedrock AgentCore.
-  * Connecting external tools and Knowledge Bases to provide the agent with additional capabilities and contextual information.
-  * Building a simple web interface for interacting with the agent.
-  * Integrating **Amazon Cognito** to implement user authentication and secure access to the application.
+### Apply to Work
+The knowledge and technical insights gained from AgentForge can be directly applied to the Financial Data Lake and Analytics platform project:
+  - Autonomous Monitoring & Ops: Explore integrating AI agents built with Bedrock AgentCore to automate financial data quality checks, detect anomaly patterns in ingestion pipelines, and trigger automated alerts.- Intelligent Financial Assistant: Leverage agentic architectures to create conversational analytics tools that allow stakeholders to query financial ratios, trend analysis, and risk scoring ($Z\text{-Score}$) using natural language.
+  - Secure Integration: Apply AgentCore security policies and IAM access controls when connecting AI reasoning tools to backend data stores like Amazon Athena and Amazon S3.
+  - System Observability: Implement centralized logging and tracing principles for AI operations to ensure transparency, auditability, and governance across all automated tasks.
 
-The hands-on exercises demonstrated how multiple AWS services can be integrated to develop secure, scalable, and user-friendly AI applications.
-
-## Key Highlights
-
-The first day focused on establishing a strong foundation in Amazon Bedrock AgentCore and its ecosystem. Participants explored the core architecture of AI agents, learned how agents communicate with external services, and gained practical experience deploying and securing an AI-powered web application.
-
-> * Introduction to Amazon Bedrock AgentCore
-> * AgentCore Runtime
-> * AgentCore Gateway
-> * AgentCore Identity
-> * Deploying an AI Agent
-> * Knowledge Base Integration
-> * Amazon Cognito Authentication
-
-## Key Takeaways
-
-* Developed a solid understanding of Amazon Bedrock AgentCore and its core architecture.
-* Learned the responsibilities of AgentCore Runtime, Gateway, and Identity when building enterprise AI applications.
-* Gained hands-on experience deploying AI agents on AWS.
-* Understood how Knowledge Bases enhance AI agents by providing contextual information.
-* Learned how Amazon Cognito can be integrated to provide secure authentication for AI-powered applications.
-* Improved practical knowledge of integrating multiple AWS services into a complete AI solution.
-
-## Apply to Work
-
-The concepts learned during this workshop can be directly applied to the Financial Data Lake project in several ways:
-
-* Strengthened the understanding of building cloud-native AI applications using AWS services, supporting the overall system architecture.
-* Provided insights into designing secure authentication and authorization mechanisms that could be applied to the project's web application through Amazon Cognito.
-* Inspired future integration of Amazon Bedrock agents to automate financial data analysis, answer user queries, and provide intelligent insights from the curated financial dataset.
-* Demonstrated how external tools and Knowledge Bases can be connected to AI agents, which could later enable the Financial Data Lake platform to interact with Athena, Glue Data Catalog, and other AWS services for intelligent data exploration.
+### Photo of the Day
+![pic-1](</images/0108-1 (1).jpg>)
+![pic-2](</images/0108-1 (2).jpg>)
+![pic-3](</images/0108-1 (3).jpg>)
+![pic-4](</images/0108-1 (4).jpg>)
