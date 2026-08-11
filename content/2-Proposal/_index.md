@@ -6,8 +6,8 @@ chapter: false
 pre: " <b> 2. </b> "
 ---
 
-# Vietnam Financial Distress Prediction System  
-## AWS Cloud & Serverless Platform for Automated Financial Data Ingestion, Analysis, and Early Financial Distress Prediction  
+<!-- # Vietnam Financial Distress Prediction System   -->
+# AWS Cloud & Serverless Platform for Automated Financial Data Ingestion, Analysis, and Early Financial Distress Prediction  
 
 ### 1. Executive Summary  
 The **Vietnam Financial Distress Prediction System** is designed as an end-to-end solution built on AWS Cloud to automate the ingestion, normalization, and analysis of financial statement data and market prices for non-financial companies listed on Vietnam's three main stock exchanges (HOSE, HNX, UPCOM). The system leverages a Serverless AWS Architecture combined with Machine Learning models (Logistic Regression, Random Forest, XGBoost, LightGBM, CatBoost) to calculate financial ratio matrices (Liquidity, Profitability, Leverage, Size & Growth), automate risk labeling (Rule-based & Altman Z-Score Emerging Market variant), and provide early warning alerts for financial distress/bankruptcy risk. The platform integrates a fullstack Web Dashboard (AWS Amplify, Next.js/React), secured by Amazon Cognito, governed by Amazon API Gateway, and features automated email notifications via Amazon SES for investors, financial analysts, and risk managers.
