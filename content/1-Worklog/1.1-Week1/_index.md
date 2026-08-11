@@ -28,7 +28,7 @@ Study the physical and logical boundaries in cloud infrastructure architecture t
   - faster development through automation and AI
   - flexibility in scaling and resource deployment
   - global deployment capability
-- References: https://cloudjourney.awsstudygroup.com/1-introduce/
+- References: https://cloudjourney.awsstudygroup.com/vi/1-explore/1.1-cloudcomputing/
 
 #### *Tuesday, 23/06 | AWS Infrastructure Topology Analysis*
 
