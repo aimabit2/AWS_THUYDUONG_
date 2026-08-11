@@ -17,7 +17,7 @@ Trong tuần này, tôi tập trung vào ba chủ đề chính: nền tảng h�
 | A | Nền tảng Hạ tầng Toàn cầu của AWS | Hệ thống có tính sẵn sàng cao nên được thiết kế với khả năng cô lập lỗi, lý tưởng nhất là triển khai trên ít nhất hai Availability Zone (AZ). |
 | B | GenAI nâng cao và Quy trình phát triển phần mềm hiện đại (SDLC) | Việc phát triển phần mềm với AI sẽ đáng tin cậy hơn khi prompt được xây dựng dựa trên cấu trúc rõ ràng, có checkpoint và được kiểm thử tự động. |
 | C | Quản lý Danh tính và Quyền truy cập (IAM)  | Nguyên tắc phân quyền tối thiểu (Least Privilege) và sử dụng IAM Role tạm thời là lựa chọn an toàn nhất khi quản lý quyền trên AWS. |
-
+---
 ### Lĩnh vực A: Nền tảng Hạ tầng Toàn cầu của AWS
 
 Tìm hiểu các ranh giới vật lý và logic trong kiến trúc hạ tầng đám mây nhằm hỗ trợ thiết kế hệ thống có tính sẵn sàng cao (High Availability).
@@ -43,7 +43,7 @@ Tìm hiểu các ranh giới vật lý và logic trong kiến trúc hạ tầng 
 - Hiểu rằng mỗi Region bao gồm tối thiểu ba Availability Zone, trong khi Edge Location đóng vai trò là Point of Presence (PoP) phục vụ cho các dịch vụ như CloudFront CDN, AWS WAF và Route 53.
 - Tài liệu tham khảo:
 > **Kiến thức rút ra:** Một môi trường triển khai thực tế có tính sẵn sàng cao nên được thiết kế trên ít nhất hai Availability Zone nhằm đảm bảo khả năng cô lập lỗi và duy trì hoạt động của hệ thống.
-
+---
 ### Lĩnh vực B: GenAI Nâng cao và Quy trình Phát triển Phần mềm Hiện đại
 
 #### *Thứ Tư, 24/06 | Agentic AI và Framework của Kiro IDE*
@@ -65,7 +65,7 @@ Tìm hiểu các ranh giới vật lý và logic trong kiến trúc hạ tầng 
 - Tìm hiểu **Property-Based Testing (PBT)**, phương pháp tự động sinh ra nhiều bộ dữ liệu kiểm thử ngẫu nhiên dựa trên các yêu cầu được mô tả theo chuẩn **EARS**, thay vì phải viết từng test case thủ công.
 - Tài liệu tham khảo:
 > **Kiến thức rút ra:** Để phát triển phần mềm với AI một cách hiệu quả, cần có tài liệu đặc tả rõ ràng, quản lý ngữ cảnh đầy đủ và các cơ chế kiểm thử tự động nhằm đảm bảo chất lượng sản phẩm.
-
+---
 ### Lĩnh vực C: Quản lý Danh tính và Quyền truy cập (AWS IAM)
 
 #### *Thứ Sáu, 26/06 | Cấu trúc Xác thực và Phân quyền*
@@ -85,7 +85,7 @@ Tìm hiểu các ranh giới vật lý và logic trong kiến trúc hạ tầng 
 - Tổng hợp lại các ghi chú kỹ thuật của Tuần 1 và hệ thống hóa những kiến thức chính về kiến trúc AWS, Agentic AI và AWS IAM.
 - Rà soát lại các khái niệm đã học nhằm củng cố kiến thức và chuẩn bị cho các nội dung ở những tuần tiếp theo.
 - Tài liệu tham khảo:
-
+---
 ### Kết quả đạt được
 
 - Xây dựng được nền tảng kiến thức có hệ thống về hạ tầng cốt lõi của AWS, quy trình phát triển phần mềm hiện đại với Agentic AI (Kiro IDE) và cơ chế bảo mật của AWS IAM.

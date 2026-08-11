@@ -17,7 +17,7 @@ Trong Tuần 7, tôi tập trung vào việc triển khai giám sát toàn diệ
 | A | Khả năng Quan sát System & Giám sát với CloudWatch | Tập trung hóa nhật ký và chỉ số giúp tăng khả năng quan sát vận hành theo thời gian thực và chủ động phát hiện sự cố trên hạ tầng đám mây. |
 | B | Nhật ký Kiểm toán & Phát hiện Đe dọa với CloudTrail & GuardDuty | Kiểm toán lệnh gọi API liên tục và phân tích mối đe dọa thông minh giúp cải thiện đáng kể mức độ an toàn bảo mật và tuân thủ quy định. |
 | C | Quản lý Bí mật & Bảo vệ Lớp biên với Secrets Manager & WAF | Tập trung hóa thông tin xác thực nhạy cảm và lọc lưu lượng web độc hại giúp bảo vệ tính toàn vẹn dữ liệu và ngăn chặn truy cập trái phép. |
-
+---
 ### Lĩnh vực A: KHẢ NĂNG QUAN SÁT HỆ THỐNG & GIÁM SÁT VỚI CLOUDWATCH
 
 #### *Thứ Hai, 03/08 | Cấu hình Nhật ký Tập trung & Bảng điều khiển Tùy chỉnh*
@@ -41,7 +41,7 @@ Trong Tuần 7, tôi tập trung vào việc triển khai giám sát toàn diệ
 - Tài liệu tham khảo: 
 
 > **Kiến thức rút ra:** Việc tự động hóa quản lý SSL và cấu hình điều hướng giúp đơn giản hóa quy trình thiết lập tên miền tùy chỉnh, đồng thời giữ cho giao tiếp ứng dụng luôn an toàn.
-
+---
 ### Lĩnh vực B: PHÂN PHỐI TOÀN CẦU & LƯU TRỮ ĐỆM BIÊN VỚI AWS CLOUDFRONT
 
 #### *Thứ Tư, 22/07 | Thiết lập Phân phối CloudFront & Cấu hình Nguồn dữ liệu*
@@ -63,7 +63,7 @@ Trong Tuần 7, tôi tập trung vào việc triển khai giám sát toàn diệ
 - Đánh giá hiệu quả cải thiện hiệu năng khi sử dụng nén dữ liệu CloudFront (Gzip/Brotli) và định tuyến theo vị trí biên.
 - Tài liệu tham khảo: 
 > **Kiến thức rút ra:** Việc tùy chỉnh hành vi bộ nhớ đệm theo từng loại tài nguyên giúp ngăn ngừa tình trạng dữ liệu cũ, đồng thời tối đa hóa tốc độ phản hồi cho các tài nguyên tĩnh.
-
+---
 ### Lĩnh vực C: PHÂN TÍCH DỮ LIỆU KHÔNG MÁY CHỦ VỚI AWS ATHENA
 
 #### *Thứ Sáu, 24/07 | Định nghĩa Lược đồ Athena & Tối ưu hóa Truy vấn Linh hoạt*
@@ -76,7 +76,7 @@ Trong Tuần 7, tôi tập trung vào việc triển khai giám sát toàn diệ
 - Kiểm thử kỹ thuật chiếu phân vùng dữ liệu và định dạng lưu trữ dạng cột (Parquet) để giảm thiểu dung lượng dữ liệu cần quét, giúp tăng tốc độ thực thi truy vấn.
 - Tài liệu tham khảo: 
 > *Kiến thức rút ra:* Kết hợp Danh mục Dữ liệu Glue với Athena cho phép phân tích dữ liệu tức thì bằng SQL trên Hồ Dữ liệu S3, đồng thời tối ưu hóa chi phí nhờ phân vùng dữ liệu hợp lý.
-
+---
 ### Kết quả đạt được
 - Triển khai thành công giao diện người dùng của dự án bằng AWS Amplify tích hợp quy trình tự động hóa CI/CD.
 

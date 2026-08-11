@@ -17,7 +17,7 @@ During Week 5, I focused on deploying the user-facing interface and setting up s
 | A | Frontend Deployment with AWS Amplify | Automating hosting and CI/CD workflows accelerates feature delivery while providing a seamless hosting environment for web applications.
 | B | Global Distribution & Edge Caching with AWS CloudFront | Utilizing a global CDN improves application loading speeds, enhances security, and reduces direct load on origin resources.
 | C | Serverless Data Analytics with AWS Athena | Querying S3 data directly via SQL enables cost-effective, high-performance analytics without the overhead of managing database infrastructure.
-
+---
 ### Domain A: Querying S3 data directly via SQL enables cost-effective, high-performance analytics without the overhead of managing database infrastructure.
 
 #### *Mon, Jul 20 | Setting Up AWS Amplify & CI/CD Pipeline*
@@ -43,7 +43,7 @@ During Week 5, I focused on deploying the user-facing interface and setting up s
 - Ref:
 
 > Key takeaway: Automated SSL management and routing configurations simplify custom domain setup while keeping application communication secure.
-
+---
 ### Domain B: GLOBAL DISTRIBUTION & EDGE CACHING WITH AWS CLOUDFRONT
 
 #### *Wed, Jul 22 | CloudFront Distribution Setup & Origin Configuration*
@@ -69,6 +69,7 @@ During Week 5, I focused on deploying the user-facing interface and setting up s
 - Ref:
 
 > Key takeaway: Tailoring cache behaviors according to asset types prevents stale data issues while maximizing response speed for static resources.
+---
 ### Domain C: SERVERLESS DATA ANALYTICS WITH AWS ATHENA
 
 #### *Fri, SERVERLESS DATA ANALYTICS WITH AWS ATHENA*
@@ -83,7 +84,7 @@ During Week 5, I focused on deploying the user-facing interface and setting up s
 - Ref:
 
 > Key takeaway: Combining Glue Catalog with Athena allows instant SQL analytics over S3 data lakes while optimizing costs through proper data partitioning.
-
+---
 ### Achievements
 
 - Successfully deployed the project frontend interface using AWS Amplify with automated CI/CD integration.

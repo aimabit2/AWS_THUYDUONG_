@@ -17,7 +17,7 @@ During Week 4, I focused on designing and implementing the core data ingestion p
 | A | Architecture Evaluation & Pipeline Design | Comparing different cloud architectures helps identify a scalable, cost-efficient, and maintainable solution for financial data ingestion.
 | B | Data Ingestion Pipeline Implementation | Building reusable provider adapters and ingestion workers establishes a reliable foundation for automated data collection.
 | C | Batch Processing & Scalability Validation | Implementing retry, checkpoint, and batch execution mechanisms improves pipeline robustness and prepares the system for larger-scale data ingestion.
-
+---
 ### Domain A: ARCHITECTURE EVALUATION & PIPELINE DESIGN
 
 #### *Mon, Jul 13 | Evaluating Financial Data Lake Architectures*
@@ -46,7 +46,7 @@ Defined the responsibilities of Universe Loader, Provider Adapter, Dispatcher, W
 - Ref: Implementation Guide Draft
 
 > Key takeaway: Separating provider abstraction, ingestion workers, and validation logic improves modularity and simplifies future migration from local execution to AWS services.
-
+---
 ### Domain B: DATA INGESTION PIPELINE IMPLEMENTATION
 
 #### *Wed, Jul 15 | Developing Provider Adapter & Ingestion Worker*
@@ -68,7 +68,8 @@ Defined the responsibilities of Universe Loader, Provider Adapter, Dispatcher, W
 - Ref: *Implementation Guide Draft*
 
 > Key takeaway: Batch execution combined with checkpoint recovery improves fault tolerance and minimizes unnecessary reprocessing.
-### Domain C: 
+---
+### Domain C: Batch Processing & Scalability Validation
 
 #### *Fri, Jul 17 | Scalability Evaluation & Future Pipeline Planning*
 
@@ -79,7 +80,7 @@ Defined the responsibilities of Universe Loader, Provider Adapter, Dispatcher, W
 - Ref: Predictive Analytics Proposal
 
 > Key takeaway: Designing the ingestion pipeline with scalability and modularity in mind enables seamless integration with downstream analytics and machine learning workflows.
-
+---
 ### Achievements
 
 - Evaluated and selected an appropriate serverless architecture for the **Financial Data Lake** project.

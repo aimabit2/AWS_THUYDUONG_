@@ -16,7 +16,7 @@ Trong tuần này, tôi tập trung tìm hiểu các dịch vụ cốt lõi củ
 | A | Nền tảng AWS về Lưu trữ và Điện toán | Amazon S3 và Amazon EC2 là những dịch vụ cốt lõi giúp xây dựng hệ thống lưu trữ dữ liệu có khả năng mở rộng và cung cấp tài nguyên tính toán linh hoạt. |
 | B | Mạng AWS và Kết nối Hybrid | Một kiến trúc VPC được thiết kế hợp lý cùng với các lớp bảo mật phù hợp là nền tảng của các hệ thống hybrid an toàn. |
 | C | Khởi động Dự án Data Engineering | Xây dựng kiến trúc ETL rõ ràng và pipeline thu thập dữ liệu trên môi trường cục bộ tạo tiền đề thuận lợi cho việc triển khai lên Cloud trong tương lai. |
-
+---
 ### Lĩnh vực A: Nền tảng AWS về Lưu trữ và Điện toán
 
 #### *Thứ Hai, 29/06 | Amazon S3, Data Lake và Data Warehouse*
@@ -37,7 +37,7 @@ Trong tuần này, tôi tập trung tìm hiểu các dịch vụ cốt lõi củ
 - Thực hành triển khai một website tĩnh bằng Amazon S3 nhằm hiểu cách lưu trữ và phân phối website mà không cần sử dụng máy chủ web chuyên dụng
 - Tài liệu tham khảo:
 > Kiến thức rút ra: Amazon EC2 cung cấp tài nguyên tính toán linh hoạt, trong khi Amazon S3 là giải pháp hiệu quả về chi phí và có tính sẵn sàng cao để triển khai các website tĩnh.
-
+---
 ### Lĩnh vực B: Mạng AWS và Kết nối Hybrid
 
 #### *Thứ Tư, 01/07 | Amazon VPC và AWS Site-to-Site VPN*
@@ -57,7 +57,7 @@ Trong tuần này, tôi tập trung tìm hiểu các dịch vụ cốt lõi củ
 - Thực hành thiết lập kết nối an toàn giữa hệ thống On-premises và AWS Cloud thông qua **AWS Site-to-Site VPN**.
 - Tài liệu tham khảo:
 > **Kiến thức rút ra**: Một kiến trúc VPC được thiết kế tốt, kết hợp với nhiều lớp bảo mật và kết nối hybrid an toàn sẽ tạo nền tảng cho các hệ thống Cloud có tính sẵn sàng và bảo mật cao.
-
+---
 ### Lĩnh vực C: Khởi động Dự án Data Engineering
 
 #### *Thứ Năm, 02/07 | Lập kế hoạch Dự án và Thiết kế Kiến trúc Pipeline*
@@ -80,7 +80,7 @@ Trong tuần này, tôi tập trung tìm hiểu các dịch vụ cốt lõi củ
 - Rà soát kiến trúc pipeline và thảo luận về kế hoạch triển khai lên các dịch vụ AWS trong tương lai.
 - Tài liệu tham khảo:
 > **Kiến thức rút ra:** Việc phân chia pipeline thành các tầng **Bronze**, **Silver** và **Gold** giúp nâng cao chất lượng dữ liệu, tăng khả năng bảo trì và mở rộng hệ thống, đồng thời tạo nền tảng cho việc triển khai theo kiến trúc Cloud-Native.
-
+---
 ### Kết quả đạt được
 - Hiểu rõ các dịch vụ cốt lõi của AWS bao gồm Amazon S3, Amazon EC2, Amazon VPC và AWS Site-to-Site VPN.
 - Tích lũy kinh nghiệm trong việc thiết kế kiến trúc mạng Cloud an toàn và kết nối hybrid theo các khuyến nghị của AWS.

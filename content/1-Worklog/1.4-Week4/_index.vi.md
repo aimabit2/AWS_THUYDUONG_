@@ -17,7 +17,7 @@ Trong Tuần 4, tôi tập trung vào việc thiết kế và triển khai pipel
 | A | Đánh giá Kiến trúc và Thiết kế Pipeline | Việc so sánh các kiến trúc Cloud khác nhau giúp lựa chọn được giải pháp có khả năng mở rộng, tối ưu chi phí và dễ bảo trì cho hệ thống thu thập dữ liệu tài chính. |
 | B | Triển khai Pipeline Thu thập Dữ liệu | Xây dựng các Provider Adapter và Ingestion Worker có khả năng tái sử dụng là nền tảng để tự động hóa quá trình thu thập dữ liệu một cách ổn định. |
 | C | Xử lý Batch và Đánh giá Khả năng Mở rộng | Áp dụng cơ chế retry, checkpoint và xử lý theo lô giúp tăng tính ổn định của pipeline và chuẩn bị cho việc mở rộng hệ thống trong tương lai. |
-
+---
 ### Lĩnh vực A: Đánh giá Kiến trúc và Thiết kế Pipeline
 
 #### *Thứ Hai, 13/07 | Đánh giá Kiến trúc Financial Data Lake*
@@ -48,7 +48,7 @@ Trong Tuần 4, tôi tập trung vào việc thiết kế và triển khai pipel
 - Thiết kế cấu trúc lưu trữ dữ liệu thô (Bronze Layer) trên môi trường cục bộ để lưu các phản hồi dạng JSON trước khi thực hiện các bước ETL.
 - Tài liệu tham khảo: Implementation Guide Draft
 > **Kiến thức rút ra:** Việc tách biệt lớp Provider, Worker và Validator giúp pipeline có tính mô-đun cao hơn, đồng thời tạo điều kiện thuận lợi cho việc chuyển từ môi trường cục bộ sang các dịch vụ AWS trong tương lai.
-
+---
 ### Lĩnh vực B: Triển khai Pipeline Thu thập Dữ liệu
 
 #### *Thứ Tư, 15/07 | Phát triển Provider Adapter và Ingestion Worker*
@@ -70,7 +70,7 @@ Trong Tuần 4, tôi tập trung vào việc thiết kế và triển khai pipel
 - Đánh giá cấu trúc lưu trữ dữ liệu dạng **Raw JSON** trên môi trường cục bộ và chuẩn bị cho giai đoạn xử lý **Curated Data**.
 - Tài liệu tham khảo: *Implementation Guide Draft*
 > **Kiến thức rút ra:** Việc kết hợp xử lý theo lô với cơ chế Checkpoint giúp tăng khả năng chịu lỗi và giảm thiểu việc xử lý lại dữ liệu không cần thiết.
-
+---
 ### Lĩnh vực C: Đánh giá Khả năng Mở rộng và Định hướng Phát triển Pipeline
 
 #### *Thứ Sáu, 17/07 | Đánh giá Khả năng Mở rộng và Lập Kế hoạch Phát triển Pipeline*
@@ -83,7 +83,7 @@ Trong Tuần 4, tôi tập trung vào việc thiết kế và triển khai pipel
 - Đề xuất các hướng mở rộng nhằm tích hợp Machine Learning dựa trên các bộ dữ liệu tài chính đã được xử lý.
 - Tài liệu tham khảo: *Predictive Analytics Proposal*
 > *Kiến thức rút ra:* Thiết kế pipeline theo hướng mô-đun và có khả năng mở rộng ngay từ đầu sẽ giúp hệ thống dễ dàng tích hợp với các thành phần phân tích dữ liệu và Machine Learning trong tương lai.
-
+---
 ### Kết quả đạt được
 - Đánh giá và lựa chọn kiến trúc serverless phù hợp cho dự án **Financial Data Lake**.
 - Thiết kế quy trình thu thập dữ liệu trên môi trường cục bộ và hoàn thiện danh sách ban đầu của các mã cổ phiếu.

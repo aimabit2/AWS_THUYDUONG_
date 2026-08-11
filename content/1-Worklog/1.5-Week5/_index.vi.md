@@ -17,7 +17,7 @@ Trong Tuần 5, tôi tập trung vào việc triển khai giao diện người d
 | A | Frontend Deployment with AWS Amplify | Tự động hóa quy trình hosting và CI/CD giúp đẩy nhanh tốc độ chuyển giao tính năng, đồng thời cung cấp môi trường lưu trữ liền mạch cho ứng dụng web. |
 | B | Global Distribution & Edge Caching with AWS CloudFront | Tự động hóa quy trình hosting và CI/CD giúp đẩy nhanh tốc độ chuyển giao tính năng, đồng thời cung cấp môi trường lưu trữ liền mạch cho ứng dụng web. |
 | C | Serverless Data Analytics with AWS Athena | Truy vấn dữ liệu trên S3 trực tiếp bằng SQL cho phép phân tích dữ liệu hiệu quả về chi phí và đạt hiệu năng cao mà không tốn chi phí quản lý hạ tầng cơ sở dữ liệu. |
-
+---
 ### Lĩnh vực A: TRIỂN KHAI FRONTEND VỚI AWS AMPLIFY
 
 #### *Thứ Hai, 20/07 | Thiết lập AWS Amplify & Quy trình CI/CD*
@@ -39,7 +39,7 @@ Trong Tuần 5, tôi tập trung vào việc triển khai giao diện người d
 - Tích hợp các điểm đầu kết nối (endpoints) của API Gateway vào cấu hình giao diện người dùng để cho phép thực hiện các lệnh gọi giao diện lập trình an toàn tới dịch vụ hậu cần (backend).
 - Tài liệu tham khảo: 
 > **Kiến thức rút ra:** Việc tự động hóa quản lý SSL và cấu hình điều hướng giúp đơn giản hóa quy trình thiết lập tên miền tùy chỉnh, đồng thời giữ cho giao tiếp ứng dụng luôn an toàn.
-
+---
 ### Lĩnh vực B: PHÂN PHỐI TOÀN CẦU & LƯU TRỮ ĐỆM BIÊN VỚI AWS CLOUDFRONT
 
 #### *Thứ Tư, 22/07 | Thiết lập Phân phối CloudFront & Cấu hình Nguồn dữ liệu*
@@ -61,7 +61,7 @@ Trong Tuần 5, tôi tập trung vào việc triển khai giao diện người d
 - Đánh giá hiệu quả cải thiện hiệu năng khi sử dụng nén dữ liệu CloudFront (Gzip/Brotli) và định tuyến theo vị trí biên.
 - Tài liệu tham khảo: 
 > **Kiến thức rút ra:** Việc tùy chỉnh hành vi bộ nhớ đệm theo từng loại tài nguyên giúp ngăn ngừa tình trạng dữ liệu cũ, đồng thời tối đa hóa tốc độ phản hồi cho các tài nguyên tĩnh.
-
+---
 ### Lĩnh vực C: PHÂN TÍCH DỮ LIỆU KHÔNG MÁY CHỦ VỚI AWS ATHENA
 
 #### *Thứ Sáu, 24/07 | Định nghĩa Lược đồ Athena & Tối ưu hóa Truy vấn Linh hoạt*
@@ -74,7 +74,7 @@ Trong Tuần 5, tôi tập trung vào việc triển khai giao diện người d
 - Kiểm thử kỹ thuật chiếu phân vùng dữ liệu và định dạng lưu trữ dạng cột (Parquet) để giảm thiểu dung lượng dữ liệu cần quét, giúp tăng tốc độ thực thi truy vấn.
 - Tài liệu tham khảo: 
 > *Kiến thức rút ra:* Kết hợp Danh mục Dữ liệu Glue với Athena cho phép phân tích dữ liệu tức thì bằng SQL trên Hồ Dữ liệu S3, đồng thời tối ưu hóa chi phí nhờ phân vùng dữ liệu hợp lý.
-
+---
 ### Kết quả đạt được
 - Triển khai thành công giao diện người dùng của dự án bằng AWS Amplify tích hợp quy trình tự động hóa CI/CD.
 

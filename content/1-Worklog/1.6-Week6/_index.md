@@ -17,7 +17,7 @@ During Week 6, I focused on automating infrastructure deployment and establishin
 | A | Infrastructure as Code (IaC) with Terraform & CloudFormation | Declaring cloud infrastructure using code ensures consistent, repeatable, and version-controlled deployments across environments.
 | B | Access Control & Storage Management with IAM & Amazon S3 | Implementing strict IAM least-privilege policies alongside structured S3 storage tiers guarantees data security and efficient lifecycle management.
 | C | Automated CI/CD Pipelines with AWS CodePipeline & CodeBuild | Automating build, test, and deployment workflows accelerates release cycles and eliminates manual configuration errors.
-
+---
 ### Domain A: INFRASTRUCTURE AS CODE (IaC) WITH TERRAFORM & CLOUDFORMATION
 
 #### *Mon, Jul 27 | Modularizing Infrastructure with Terraform & CloudFormation*
@@ -43,7 +43,7 @@ During Week 6, I focused on automating infrastructure deployment and establishin
 - Ref:
 
 > Key takeaway: Automated environment provisioning eliminates configuration drift and ensures strict alignment between code definitions and live cloud resources.
-
+---
 ### Domain B: ACCESS CONTROL & STORAGE MANAGEMENT WITH IAM & AMAZON S3
 
 #### *Wed, Jul 29 | Implementing IAM Security Controls & Least-Privilege Policies*
@@ -58,7 +58,7 @@ During Week 6, I focused on automating infrastructure deployment and establishin
 
 > Key takeaway: Strict IAM access controls minimize the attack surface by ensuring services only hold the minimal permissions necessary for execution.
 
-### Domain C: 
+
 
 #### *Thu, Jul 30 | Structuring Amazon S3 Data Layers & Lifecycle Rules*
 
@@ -73,7 +73,7 @@ During Week 6, I focused on automating infrastructure deployment and establishin
 - Ref:
 
 > Key takeaway: Layered S3 storage combined with automated lifecycle policies optimizes data governance and storage costs over extended periods.
-
+---
 ### Domain C: AUTOMATED CI/CD PIPELINES WITH AWS CODEPIPELINE & CODEBUILD
 
 #### *Fri, Jul 31 | Building Continuous Integration & Deployment Workflows*
@@ -88,7 +88,7 @@ During Week 6, I focused on automating infrastructure deployment and establishin
 - Ref:
 
 > Key takeaway: Integrating CodePipeline with CodeBuild creates an automated release mechanism that speeds up feature delivery while maintaining build quality.
-
+---
 ### Achievements
 
 - Defined modular Terraform and CloudFormation templates for automated provisioning of Data Lake infrastructure.

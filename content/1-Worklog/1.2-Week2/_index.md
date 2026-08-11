@@ -16,7 +16,7 @@ This week, I focused on AWS core services for storage, compute, and networking, 
 | A | AWS Storage and Compute Foundations | Amazon S3 and Amazon EC2 are core services for building scalable data storage and flexible compute resources. |
 | B | AWS Networking and Hybrid Connectivity | A well-designed VPC with layered security is the foundation for secure hybrid systems. |
 | C | Data Engineering Project Kickoff | Defining a clear ETL architecture and local ingestion pipeline lays the groundwork for future cloud deployment. |
-
+---
 ### Domain A: AWS Storage and Compute Foundations
 
 #### *Monday, 29/06 | Amazon S3, Data Lake, and Data Warehouse*
@@ -37,7 +37,7 @@ This week, I focused on AWS core services for storage, compute, and networking, 
 - Practiced hosting a static website with Amazon S3 to understand how to store and distribute a website without a dedicated web server.
 - References:
 > Key takeaway: Amazon EC2 provides flexible compute capacity, while Amazon S3 is a cost-effective and highly available solution for hosting static websites.
-
+---
 ### Domain B: AWS Networking and Hybrid Connectivity
 
 #### *Wednesday, 01/07 | Amazon VPC and AWS Site-to-Site VPN*
@@ -57,7 +57,7 @@ This week, I focused on AWS core services for storage, compute, and networking, 
 - Practiced establishing secure connectivity between on-premises systems and AWS Cloud through **AWS Site-to-Site VPN**.
 - References:
 > **Key takeaway:** A well-designed VPC combined with layered security and secure hybrid connectivity provides a strong foundation for highly available, secure cloud systems.
-
+---
 ### Domain C: Data Engineering Project Kickoff
 
 #### *Thursday, 02/07 | Project Planning and Pipeline Architecture*
@@ -80,7 +80,7 @@ This week, I focused on AWS core services for storage, compute, and networking, 
 - Reviewed the pipeline architecture and discussed future AWS deployment plans.
 - References:
 > **Key takeaway:** Separating the pipeline into Bronze, Silver, and Gold layers improves data quality, maintainability, and scalability while preparing the system for cloud-native deployment.
-
+---
 ### Achievements
 - Developed a strong understanding of AWS core services, including Amazon S3, Amazon EC2, Amazon VPC, and AWS Site-to-Site VPN.
 - Gained practical experience designing secure cloud networking and hybrid connectivity architectures following AWS best practices.

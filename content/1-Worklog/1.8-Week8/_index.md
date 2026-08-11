@@ -17,7 +17,7 @@ During Week 8, I focused on building an end-to-end serverless data processing pi
 | A | Serverless Backend & Event-Driven Architecture with Lambda, API Gateway & EventBridge | Decoupling backend services with event-driven triggers ensures high scalability, low latency, and resilient asynchronous data processing.
 | B | Data Lake Storage & Serverless Analytics with S3 & Athena | Partitioning S3 data stores and optimizing Athena SQL queries significantly reduces query latency and operational analytics costs.
 | C | Frontend Deployment & Edge Acceleration with Amplify & CloudFront | Hosting web assets with Amplify and routing traffic through CloudFront global edge networks improves application performance and security.
-
+---
 ### Domain A: SERVERLESS BACKEND & EVENT-DRIVEN ARCHITECTURE WITH LAMBDA, API GATEWAY & EVENTBRIDGE
 
 #### *Mon, Aug 10 | Designing RESTful APIs with API Gateway & AWS Lambda*
@@ -41,7 +41,7 @@ During Week 8, I focused on building an end-to-end serverless data processing pi
 - Ref:
 
 > Key takeaway: Event-driven architecture powered by EventBridge enables seamless service integration and improves system fault tolerance.
-
+---
 ### Domain B: DATA LAKE STORAGE & SERVERLESS ANALYTICS WITH S3 & ATHENA
 
 #### *Wed, DATA LAKE STORAGE & SERVERLESS ANALYTICS WITH S3 & ATHENA*
@@ -65,7 +65,7 @@ During Week 8, I focused on building an end-to-end serverless data processing pi
 - Ref:
 
 > Key takeaway: Leveraging columnar formats like Parquet with Athena partitioning delivers lightning-fast SQL queries at a fraction of traditional database costs.
-
+---
 ### Domain C: FRONTEND DEPLOYMENT & EDGE ACCELERATION WITH AMPLIFY & CLOUDFRONT
 
 
@@ -80,7 +80,7 @@ During Week 8, I focused on building an end-to-end serverless data processing pi
 - Ref:
 
 > Key takeaway: Combining AWS Amplify for CI/CD deployments with CloudFront CDN caching minimizes latency for global end-users while ensuring high web availability.
-
+---
 ### Achievements
 
 - Built a scalable serverless API layer using Amazon API Gateway and AWS Lambda with built-in validation and security authorization.

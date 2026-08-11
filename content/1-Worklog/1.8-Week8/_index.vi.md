@@ -17,7 +17,7 @@ Trong Tuần 8, tôi tập trung vào việc xây dựng đường ống xử l�
 | A | Kiến trúc Serverless Backend & Hướng sự kiện với Lambda, API Gateway & EventBridge | Tách biệt các dịch vụ backend bằng các luồng sự kiện giúp hệ thống đạt khả năng mở rộng cao, độ trễ thấp và xử lý dữ liệu bất đồng bộ tin cậy. |
 | B | Lưu trữ Data Lake & Truy vấn phân tích Serverless với S3 & Athena | Cấu trúc phân vùng dữ liệu trên S3 và tối ưu truy vấn SQL bằng Athena giúp giảm đáng kể độ trễ truy vấn và chi phí vận hành phân tích. |
 | C | Triển khai Frontend & Tối ưu phân phối tại Edge với Amplify & CloudFront | Lưu trữ tài nguyên web với Amplify kết hợp mạng phân phối CloudFront giúp tăng tốc độ truy cập ứng dụng và nâng cao bảo mật ở quy mô toàn cầu. |
-
+---
 ### Lĩnh vực A: KIẾN TRÚC SERVERLESS BACKEND & HƯỚNG SỰ KIỆN VỚI LAMBDA, API GATEWAY & EVENTBRIDGE
 
 #### *Thứ Hai, 10/08 | Thiết kế API RESTful với API Gateway & AWS Lambda*
@@ -42,7 +42,7 @@ Trong Tuần 8, tôi tập trung vào việc xây dựng đường ống xử l�
 - Tài liệu tham khảo: 
 
 > **Kiến thức rút ra:** Kiến trúc hướng sự kiện dựa trên EventBridge cho phép tích hợp dịch vụ liền mạch và tăng khả năng chịu lỗi của hệ thống.
-
+---
 ### Lĩnh vực B: Kiến trúc hướng sự kiện dựa trên EventBridge cho phép tích hợp dịch vụ liền mạch và tăng khả năng chịu lỗi của hệ thống.  
 
 #### *Thứ Tư, 12/08 | Cấu trúc lưu trữ Data Lake & Quy tắc vòng đời S3 Lifecycle*
@@ -66,7 +66,7 @@ Trong Tuần 8, tôi tập trung vào việc xây dựng đường ống xử l�
 - Tài liệu tham khảo: 
 
 > **Kiến thức rút ra:** Tận dụng định dạng cột Parquet cùng kỹ thuật phân vùng của Athena mang lại tốc độ truy vấn SQL cực nhanh với chi phí thấp hơn nhiều so với cơ sở dữ liệu truyền thống.
-
+---
 ### Lĩnh vực C: TRIỂN KHAI FRONTEND & TỐI ƯU PHÂN PHỐI TẠI EDGE VỚI AMPLIFY & CLOUDFRONT
 
 #### *Thứ Sáu, 14/08 | Triển khai ứng dụng Web & Tăng tốc CDN với Amplify & CloudFront*
@@ -84,7 +84,7 @@ Trong Tuần 8, tôi tập trung vào việc xây dựng đường ống xử l�
 Cấu hình các phân phối Amazon CloudFront phía trước S3 static hosting và các điểm cuối API Gateway để lưu bộ nhớ đệm tại các điểm biên (edge caching) toàn cầu.
 
 Tối ưu hóa hành vi lưu đệm của CloudFront, thêm tiêu đề phản hồi tùy chỉnh (Custom Response Headers) và tích hợp chứng chỉ SSL/TLS qua AWS Certificate Manager (ACM).
-
+---
 ### Kết quả đạt được
 - Xây dựng thành công lớp API serverless có khả năng mở rộng bằng Amazon API Gateway và AWS Lambda tích hợp sẵn cơ chế xác thực và phân quyền bảo mật.
 

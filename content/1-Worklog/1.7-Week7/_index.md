@@ -17,7 +17,7 @@ During Week 7, I focused on implementing comprehensive monitoring, threat detect
 | A | System Observability & Monitoring with CloudWatch | Centralizing logs and metrics enables real-time operational visibility and proactive incident detection across cloud infrastructure.
 | B | Audit Logging & Threat Detection with CloudTrail & GuardDuty | Audit Logging & Threat Detection with CloudTrail & GuardDuty
 | C | Audit Logging & Threat Detection with CloudTrail & GuardDuty | Centralizing sensitive credentials and filtering malicious web traffic safeguards data integrity and prevents unauthorized access.
-
+---
 ### Domain A: SYSTEM OBSERVABILITY & MONITORING WITH CLOUDWATCH
 
 #### *Mon, Aug 03 | Configuring Centralized Logging & Custom Dashboards*
@@ -41,7 +41,7 @@ During Week 7, I focused on implementing comprehensive monitoring, threat detect
 - Ref:
 
 > Key takeaway: Automated threshold alerting minimizes mean time to detection (MTTD) and ensures operational teams are notified immediately during failure events.
-
+---
 ### Domain B: AUDIT LOGGING & THREAT DETECTION WITH CLOUDTRAIL & GUARDDUTY
 
 #### *Wed, Aug 05 | Enabling Multi-Region Audit Logging with AWS CloudTrail*
@@ -65,6 +65,7 @@ During Week 7, I focused on implementing comprehensive monitoring, threat detect
 - Ref:
 
 > Key takeaway: Intelligent threat detection helps identify suspicious account activity early, enabling proactive security mitigation before data breaches occur.
+---
 ### Domain C: SECRET MANAGEMENT & EDGE PROTECTION WITH SECRETS MANAGER & WAF
 
 #### *Fri, Aug 07 | Centralizing Credentials & Edge Security Rules*
@@ -79,7 +80,7 @@ During Week 7, I focused on implementing comprehensive monitoring, threat detect
 - Ref:
 
 > Key takeaway: Removing hardcoded credentials via Secrets Manager combined with edge filtering using WAF establishes robust defense-in-depth security.
-
+---
 ### Achievements
 
 - Implemented centralized logging, custom dashboards, and automated threshold alerts using Amazon CloudWatch.

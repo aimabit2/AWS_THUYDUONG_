@@ -19,7 +19,7 @@ Trong Tuần 3, tôi tập trung tìm hiểu kiến trúc **AWS Data Lake** và 
 | A | Nền tảng AWS Data Lake | Hiểu rõ kiến trúc và các nguyên tắc thiết kế của AWS Data Lake là nền tảng để xây dựng hệ thống dữ liệu có khả năng mở rộng, tối ưu chi phí và sẵn sàng cho các tác vụ phân tích. |
 | B | Thu thập dữ liệu, Lưu trữ và Quản trị dữ liệu | Việc tổ chức dữ liệu theo các vùng lưu trữ hợp lý và áp dụng chiến lược thu thập dữ liệu, quản lý metadata cũng như quản trị dữ liệu sẽ giúp nâng cao chất lượng dữ liệu, khả năng tìm kiếm và dễ dàng bảo trì trong dài hạn. |
 | C | Hoàn thiện Kiến trúc Financial Data Lake | Áp dụng các nguyên tắc thiết kế của AWS Data Lake giúp xây dựng kiến trúc ETL có khả năng mở rộng, phục vụ cho phân tích dữ liệu, trực quan hóa dữ liệu và các ứng dụng Machine Learning trong tương lai. |
-
+---
 ### Lĩnh vực A: Nền tảng AWS Data Lake
 
 #### *Thứ Hai, 06/07 | Building Data Lakes on AWS – Tổng quan Kiến trúc*
@@ -45,7 +45,7 @@ Trong Tuần 3, tôi tập trung tìm hiểu kiến trúc **AWS Data Lake** và 
 - Đánh giá các chiến lược thu thập dữ liệu phù hợp để lấy dữ liệu thị trường chứng khoán Việt Nam từ nhiều nguồn dữ liệu công khai khác nhau.
 - Tài liệu tham khảo:
 > **Kiến thức rút ra:** Đối với dữ liệu tài chính được cập nhật theo chu kỳ, phương pháp **Batch Ingestion** là lựa chọn đơn giản, ổn định và tối ưu chi phí hơn so với xử lý dữ liệu theo thời gian thực.
-
+---
 ### Lĩnh vực B: Lưu trữ và Xử lý Dữ liệu trong Data Lake
 
 #### *Thứ Tư, 08/07 | Tổ chức Dữ liệu trong Amazon S3*
@@ -67,7 +67,7 @@ trong kiến trúc Data Lake hiện đại.
 - Tìm hiểu các phương pháp đảm bảo chất lượng dữ liệu, tính nhất quán và quản trị dữ liệu trong toàn bộ vòng đời của Data Lake.
 - Tài liệu tham khảo:
 > **Kiến thức rút ra:** Quản lý metadata và xây dựng cơ chế quản trị tập trung là yếu tố quan trọng giúp dữ liệu trong Data Lake luôn dễ tìm kiếm, an toàn và có thể tái sử dụng trong các hệ thống quy mô lớn.
-
+---
 ### Lĩnh vực C: Hoàn thiện Kiến trúc Dự án
 
 #### *Thứ Sáu, 10/07 | Áp dụng Kiến trúc AWS Data Lake vào Nền tảng Dữ liệu Tài chính*
@@ -89,7 +89,7 @@ trong kiến trúc Data Lake hiện đại.
 - Thảo luận các hướng cải tiến kiến trúc nhằm nâng cao khả năng mở rộng, khả năng bảo trì, tối ưu chi phí và hỗ trợ tích hợp Machine Learning trong tương lai.
 - Tài liệu tham khảo:
 > **Kiến thức rút ra:** Việc áp dụng các nguyên tắc thiết kế của AWS ngay từ giai đoạn đầu giúp xây dựng nền tảng dữ liệu có khả năng mở rộng, dễ bảo trì và sẵn sàng phục vụ các tác vụ phân tích, trực quan hóa dữ liệu cũng như các ứng dụng AI trong tương lai.
-
+---
 ### Kết quả đạt được
 - Hiểu rõ kiến trúc **AWS Data Lake** và vai trò của các dịch vụ hỗ trợ trong hệ sinh thái AWS.
 - Nắm được các nguyên tắc và thực tiễn tốt trong việc thu thập dữ liệu, tổ chức lưu trữ, quản lý metadata và quản trị dữ liệu trên AWS.

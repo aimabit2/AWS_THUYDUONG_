@@ -16,7 +16,7 @@ During Week 3, I focused on understanding **AWS Data Lake architecture** and its
 | A | AWS Data Lake Foundations | Understanding the core architecture and design principles of AWS Data Lakes provides the foundation for building scalable, cost-effective, and analytics-ready data platforms.
 | B | Data Ingestion, Storage & Governance | Organizing data into logical storage zones and applying proper ingestion, metadata, and governance strategies improve data quality, discoverability, and long-term maintainability.
 | C | Financial Data Lake Architecture Enhancement | Applying AWS Data Lake best practices helps design a scalable ETL architecture that supports analytics, dashboard visualization, and future machine learning applications.
-
+---
 ### Domain A: AWS DATA LAKE FOUNDATIONS
 
 #### *Mon, Jul 06 | Building Data Lakes on AWS – Architecture Overview*
@@ -40,7 +40,7 @@ During Week 3, I focused on understanding **AWS Data Lake architecture** and its
 - Ref:
 
 > Key takeaway: **Batch-oriented ingestion** provides a simple, reliable, and cost-effective solution for financial datasets that are updated periodically rather than continuously.
-
+---
 ### Domain B: DATA LAKE STORAGE & DATA PROCESSING
 
 #### *Wed, Jul 08 | Organizing Data Lakes with Amazon S3*
@@ -64,7 +64,7 @@ During Week 3, I focused on understanding **AWS Data Lake architecture** and its
 - Ref:
 
 > Key takeaway: Metadata management and centralized governance are essential for maintaining discoverable, secure, and reusable datasets within enterprise-scale Data Lakes.
-
+---
 ### Domain C: PROJECT ARCHITECTURE ENHANCEMENT
 
 #### *Fri, Jul 10 | Applying AWS Data Lake Architecture to the Financial Data Platform*
@@ -77,7 +77,7 @@ During Week 3, I focused on understanding **AWS Data Lake architecture** and its
 - Ref:
 
 > Key takeaway: Applying AWS architectural best practices early in the project establishes a scalable and maintainable foundation for future analytics, visualization, and AI-driven financial applications.
-
+---
 ### Achievements
 
 - Developed a comprehensive understanding of **AWS Data Lake** architecture and its supporting services. 
