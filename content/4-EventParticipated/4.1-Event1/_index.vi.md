@@ -92,4 +92,6 @@ Những kiến thức thu được từ sự kiện có thể được áp dụn
 - Áp dụng các nguyên tắc thiết kế mạng Cloud an toàn khi xây dựng hạ tầng AWS cho dự án, đặc biệt là trong thiết kế **Amazon VPC** và cơ chế kiểm soát quyền truy cập.
 - Nâng cao nhận thức về quản lý chi phí trên nền tảng Cloud, từ đó hỗ trợ lựa chọn các dịch vụ AWS phù hợp và tối ưu chi phí cho phiên bản MVP, như **Amazon S3, AWS Lambda, AWS Glue** và **Amazon Athena**.
 - Định hướng các hướng phát triển trong tương lai bằng cách nghiên cứu khả năng tích hợp **AI Agents** và **Amazon Bedrock** vào nền tảng nhằm hỗ trợ phân tích dữ liệu tài chính thông minh, giám sát chất lượng dữ liệu tự động và cung cấp các gợi ý đầu tư có sự hỗ trợ của AI.
-
+--- 
+Hình ảnh ngày sự kiện
+![Community-Day-FCAJ](/images/community_day.jpg)

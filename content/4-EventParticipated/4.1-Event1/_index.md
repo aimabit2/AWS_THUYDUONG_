@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-<!-- {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}} -->
+
 
 ### General Information
 - **Event name: FCAJ COMMUNITY DAY – "DATA DRIVEN, AI RISEN"**
@@ -62,5 +60,7 @@ The knowledge gained from this event can be directly applied to the Financial Da
 - Applied the concepts of secure cloud networking when designing the project's AWS infrastructure, particularly regarding VPC architecture and access control. 
 - Improved awareness of cloud cost management, which supports selecting cost-effective AWS services such as Amazon S3, AWS Lambda, AWS Glue, and Amazon Athena for the MVP. 
 - Inspired future enhancements by exploring how AI agents and Amazon Bedrock could be integrated into the platform for intelligent financial analysis, automated data quality monitoring, and AI-assisted investment insights.
-
+--- 
+Photo of the Day
+![Community-Day-FCAJ](/images/community_day.jpg)
 
