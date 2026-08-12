@@ -27,13 +27,13 @@ Through this event, I gained a deeper understanding of modern AI technologies, A
 ---
 
 ### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** AWS AgentCore Workshop – Day 1: Foundations & Agent Setup
+**Event Name:** AWS AgentCore Workshop – Day 1: Foundations & Agent Setup
 
-&emsp;**Date & Time:** 09:00 – 11:00, August 1, 2026
+**Date & Time:** 09:00 – 11:00, August 1, 2026
 
-&emsp;**Location:** Workshop / Training Session
+**Location:** Workshop / Training Session
 
-&emsp;**Role:** Participant
+**Role:** Participant
 
 **Description:**
 The workshop introduced Amazon Bedrock AgentCore fundamentals through hands-on labs focused on deploying functional AI agents, connecting external APIs and Knowledge Bases, and securing session access using Amazon Cognito user authentication and IAM policies.
